@@ -6,14 +6,15 @@ public enum Enemy1State
 {
     Follow,
     Wander,
-    Die
+    Die,
+    Attack
 };
 public class Enemy1Controller : MonoBehaviour
 {
     GameObject player;
     /*
      Para 2 players:
-     GameObeject[] player;
+     GameObject[] player;
 
     Colocar na bala:
     void OnTriggerEnter2S(Collider2D col){
@@ -39,7 +40,18 @@ public class Enemy1Controller : MonoBehaviour
 
     // Dano
     public float health;
+
     public float maxHealth;
+
+    // Dano no player
+
+    public float attackRange;
+
+    public int damagePlayer;
+
+    public int coolDownEnemy;
+
+    private bool coolDownAttackEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +74,9 @@ public class Enemy1Controller : MonoBehaviour
             case(Enemy1State.Die):
                 Die();
             break;
+            case (Enemy1State.Attack):
+                Attack(damagePlayer);
+            break;
         }
         if(IsPlayerInRange(range) && currentState != Enemy1State.Die)
         {
@@ -69,6 +84,9 @@ public class Enemy1Controller : MonoBehaviour
         }else if(!IsPlayerInRange(range) && currentState!= Enemy1State.Die)
         {
             currentState = Enemy1State.Wander;
+        }if(Vector3.Distance(transform.position, player.transform.position) <= attackRange)
+        {
+            currentState = Enemy1State.Attack;
         }
     }
     private bool IsPlayerInRange(float range)
@@ -85,6 +103,8 @@ public class Enemy1Controller : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
         chooseDir = false;
     }
+
+   
     void Wander()
     {
         if(!chooseDir)
@@ -112,9 +132,25 @@ public class Enemy1Controller : MonoBehaviour
         }
     }
 
-    public void DealDamage(float damage)
+    public void Attack(int damagePlayer)
     {
-        health -= damage;
+        if (!coolDownAttackEnemy)
+        {
+            GameController.DamagePlayer(damagePlayer);
+            StartCoroutine(CoolDownAttack());
+        }
+    }
+
+    private IEnumerator CoolDownAttack()
+    {
+        coolDownAttackEnemy = true;
+        yield return new WaitForSeconds(coolDownEnemy);
+        coolDownAttackEnemy = false;
+    }
+
+    public void DealDamage(float damageEnemy)
+    {
+        health -= damageEnemy;
         Die();
     }
 

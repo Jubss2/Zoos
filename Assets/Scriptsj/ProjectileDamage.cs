@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileDamage : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float damage;
+    public float damageEnemy;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,7 +13,7 @@ public class ProjectileDamage : MonoBehaviour
         {
             if(collision.GetComponent<Enemy1Controller>() != null) 
             {
-                collision.GetComponent<Enemy1Controller>().DealDamage(damage);
+                collision.GetComponent<Enemy1Controller>().DealDamage(damageEnemy);
 
             }
             Destroy(gameObject);
