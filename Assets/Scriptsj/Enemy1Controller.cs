@@ -9,9 +9,18 @@ public enum Enemy1State
     Die,
     Attack
 };
+
+public enum Enemy1Type
+{
+    Meele,
+    Ranged,
+    Explosion
+};
+
 public class Enemy1Controller : MonoBehaviour
 {
     GameObject player;
+
     /*
      Para 2 players:
      GameObject[] player;
@@ -27,6 +36,8 @@ public class Enemy1Controller : MonoBehaviour
 
     */
     public Enemy1State currentState = Enemy1State.Wander;
+
+    public Enemy1Type enemy1Type;
 
     public float range;
 
@@ -49,9 +60,15 @@ public class Enemy1Controller : MonoBehaviour
 
     public int damagePlayer;
 
+
+
     public int coolDownEnemy;
 
+    public int coolDownEnemyRanged;
+
     private bool coolDownAttackEnemy;
+
+    public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -131,13 +148,32 @@ public class Enemy1Controller : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    public void Destroy()
+    {
+        Destroy(gameObject);
+        
+    }
     public void Attack(int damagePlayer)
     {
         if (!coolDownAttackEnemy)
         {
-            GameController.DamagePlayer(damagePlayer);
-            StartCoroutine(CoolDownAttack());
+            switch (enemy1Type)
+            {
+                case(Enemy1Type.Meele):
+                    GameController.DamagePlayer(damagePlayer);
+                    StartCoroutine(CoolDownAttack());
+                break;
+                case(Enemy1Type.Ranged):
+                    GameObject bullet = Instantiate(projectilePrefab, transform.position, Quaternion.identity) as GameObject;
+                    bullet.GetComponent<ProjectileDamage>().GetPlayer(player.transform);
+                    bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
+                    bullet.GetComponent<ProjectileDamage>().isEnemyBullet = true;
+                    StartCoroutine(CoolDownAttackRanged());
+                break;
+                case(Enemy1Type.Explosion): 
+                break;
+            }
+            
         }
     }
 
@@ -147,7 +183,12 @@ public class Enemy1Controller : MonoBehaviour
         yield return new WaitForSeconds(coolDownEnemy);
         coolDownAttackEnemy = false;
     }
-
+    private IEnumerator CoolDownAttackRanged()
+    {
+        coolDownAttackEnemy = true;
+        yield return new WaitForSeconds(coolDownEnemyRanged);
+        coolDownAttackEnemy = false;
+    }
     public void DealDamage(float damageEnemy)
     {
         health -= damageEnemy;
