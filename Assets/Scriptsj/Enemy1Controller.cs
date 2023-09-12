@@ -13,8 +13,7 @@ public enum Enemy1State
 public enum Enemy1Type
 {
     Meele,
-    Ranged,
-    Explosion
+    Ranged
 };
 
 public class Enemy1Controller : MonoBehaviour
@@ -58,13 +57,15 @@ public class Enemy1Controller : MonoBehaviour
 
     public float attackRange;
 
-    public int damagePlayer;
+    public int damagePlayerMeele;
 
 
 
     public int coolDownEnemy;
 
     public int coolDownEnemyRanged;
+
+    
 
     private bool coolDownAttackEnemy;
 
@@ -92,7 +93,7 @@ public class Enemy1Controller : MonoBehaviour
                 Die();
             break;
             case (Enemy1State.Attack):
-                Attack(damagePlayer);
+                Attack();
             break;
         }
         if(IsPlayerInRange(range) && currentState != Enemy1State.Die)
@@ -153,14 +154,14 @@ public class Enemy1Controller : MonoBehaviour
         Destroy(gameObject);
         
     }
-    public void Attack(int damagePlayer)
+    public void Attack()
     {
         if (!coolDownAttackEnemy)
         {
             switch (enemy1Type)
             {
                 case(Enemy1Type.Meele):
-                    GameController.DamagePlayer(damagePlayer);
+                    GameController.DamagePlayer(damagePlayerMeele);
                     StartCoroutine(CoolDownAttack());
                 break;
                 case(Enemy1Type.Ranged):
@@ -170,8 +171,7 @@ public class Enemy1Controller : MonoBehaviour
                     bullet.GetComponent<ProjectileDamage>().isEnemyBullet = true;
                     StartCoroutine(CoolDownAttackRanged());
                 break;
-                case(Enemy1Type.Explosion): 
-                break;
+                
             }
             
         }
@@ -189,6 +189,7 @@ public class Enemy1Controller : MonoBehaviour
         yield return new WaitForSeconds(coolDownEnemyRanged);
         coolDownAttackEnemy = false;
     }
+   
     public void DealDamage(float damageEnemy)
     {
         health -= damageEnemy;

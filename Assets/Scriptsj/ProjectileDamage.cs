@@ -9,6 +9,8 @@ public class ProjectileDamage : MonoBehaviour
 
     public bool isEnemyBullet = false;
 
+    public bool isEnemyBomb = false;
+
     private Vector2 lastPos;
 
     private Vector2 currentPos;
@@ -16,6 +18,10 @@ public class ProjectileDamage : MonoBehaviour
     private Vector2 playerPos;
 
     public int damagePlayer;
+
+
+   
+
 
     public float speed;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,9 +40,12 @@ public class ProjectileDamage : MonoBehaviour
             GameController.DamagePlayer(damagePlayer);
             Destroy(gameObject);
         }
-    }
 
-     void Update()
+
+        }
+   
+
+    void Update()
     {
         if (isEnemyBullet)
         {
