@@ -12,8 +12,7 @@ public class Room : MonoBehaviour
 
     public int Y;
 
-
-
+    public bool updatedDoors = false;
     public Room(int x, int y)
     {
         X = x;
@@ -59,6 +58,14 @@ public class Room : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if(name.Contains("End") && !updatedDoors)
+        {
+            RemoveUnconnectedDoors();
+            updatedDoors = true;
+        }
+    }
     public void RemoveUnconnectedDoors()
     {
         foreach(Door door in doors)
@@ -89,23 +96,23 @@ public class Room : MonoBehaviour
     {
         if(RoomController.instance.DoesRoomExist(X+1, Y))
         {
-            return RoomController.instance.FindRoom(X + 1, Y);
+            return RoomController.instance.FindRoom(X+1, Y);
 
         }
         return null;
     }
     public Room GetLeft()
     {
-        if (RoomController.instance.DoesRoomExist(X - 1, Y))
+        if (RoomController.instance.DoesRoomExist(X-1, Y))
         {
-            return RoomController.instance.FindRoom(X - 1, Y);
+            return RoomController.instance.FindRoom(X-1, Y);
 
         }
         return null;
     }
     public Room GetUp()
     {
-        if (RoomController.instance.DoesRoomExist(X, Y +1))
+        if (RoomController.instance.DoesRoomExist(X, Y+1))
         {
             return RoomController.instance.FindRoom(X , Y+1);
 
@@ -114,7 +121,7 @@ public class Room : MonoBehaviour
     }
     public Room GetDown()
     {
-        if (RoomController.instance.DoesRoomExist(X , Y -1))
+        if (RoomController.instance.DoesRoomExist(X , Y-1))
         {
             return RoomController.instance.FindRoom(X , Y-1);
 
@@ -131,11 +138,6 @@ public class Room : MonoBehaviour
         Gizmos.DrawWireCube(transform.position, new Vector3(Width, Height));
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
