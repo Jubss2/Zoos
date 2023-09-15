@@ -65,6 +65,8 @@ public class RoomController : MonoBehaviour
                 {
                     room.RemoveUnconnectedDoors();
                 }
+                UpdatedRooms();
+
                 updatedRooms = true;
             }
             return;
@@ -153,11 +155,80 @@ public class RoomController : MonoBehaviour
     {
         return loadedRooms.Find(item => item.X == x && item.Y == y)!=null;
     }
-
+    public string GetRandomRoom()
+    {
+        // Lugar de colocar quartos
+        string[] possiblerooms = new string[]
+        {
+            "1Room",
+            "2Room"
+        };
+        return possiblerooms[Random.Range(0, possiblerooms.Length)];
+    }
     public void OnPlayerEnterRoom(Room room)
     {
         CameraController.instance.currRoom = room;
         currRoom = room;
+
+        StartCoroutine(RoomCourotine());
+    }
+
+    public IEnumerator RoomCourotine()
+    {
+        yield return new WaitForSeconds(0.2f);
+        UpdatedRooms();
+    }
+    public void UpdatedRooms()
+    {
+        foreach(Room room in loadedRooms)
+        {
+            if(currRoom != room)
+            {
+                Enemy1Controller[] enemies = room.GetComponentsInChildren<Enemy1Controller>();
+                if(enemies!= null)
+                {
+                    foreach(Enemy1Controller enemy in enemies)
+                    {
+                        enemy.notInRoom = true;
+                        Debug.Log("Não esta");
+                    }
+                    foreach(Door door in room.GetComponentsInChildren<Door>())
+                    {
+                        door.doorCollider.SetActive(false);
+                    }
+                }
+                else
+                {
+                    foreach (Door door in room.GetComponentsInChildren<Door>())
+                    {
+                        door.doorCollider.SetActive(false);
+                    }
+                }
+            }
+            else
+            {
+                Enemy1Controller[] enemies = room.GetComponentsInChildren<Enemy1Controller>();
+                if (enemies.Length > 0)
+                {
+                    foreach (Enemy1Controller enemy in enemies)
+                    {
+                        enemy.notInRoom = false;
+                        Debug.Log("esta");
+                    }
+                    foreach (Door door in room.GetComponentsInChildren<Door>())
+                    {
+                        door.doorCollider.SetActive(true);
+                    }
+                }
+                else
+                {
+                    foreach (Door door in room.GetComponentsInChildren<Door>())
+                    {
+                        door.doorCollider.SetActive(false);
+                    }
+                }
+            }
+        }
     }
     public Room FindRoom(int x, int y)
     {

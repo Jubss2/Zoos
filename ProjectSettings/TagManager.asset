@@ -49,3 +49,6 @@ TagManager:
   - name: Door
     uniqueID: 4224167235
     locked: 0
+  - name: Wals
+    uniqueID: 3867056609
+    locked: 0
