@@ -1,0 +1,3 @@
+Frame 1: 	Padrão (Lança-granadas ocioso)
+Frame 2-8: 	Lança-granadas atirando
+Frame 9-19:	Lança-granadas recarregando

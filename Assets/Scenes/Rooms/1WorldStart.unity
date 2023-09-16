@@ -157,6 +157,7 @@ MonoBehaviour:
   Height: 12
   X: 0
   Y: 0
+  updatedDoors: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   upDoor: {fileID: 0}

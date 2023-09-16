@@ -1,0 +1,6 @@
+Frame 1: 	Padrão (Sabre de luz ocioso)
+Frame 2-6: 	Sabre de luz atacando
+Frame 7-11:	Sabre de luz voltando
+
+Minha ideia: Durante o frame 2 até o 6, o ataque causa dano aos inimigos.
+Após, carrega a animação do sabre voltando (frame 7 até o 11), que não machuca inimigos.

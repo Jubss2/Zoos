@@ -1,0 +1,3 @@
+Frame 1-12: 	Robô ocioso/parado
+Frame 13-20: 	Robô perseguindo jogador
+Frame 21-37:	Robô morrendo

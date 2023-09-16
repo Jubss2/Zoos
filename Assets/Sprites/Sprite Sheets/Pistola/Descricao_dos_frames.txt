@@ -1,0 +1,7 @@
+Frame 1-3: 	Padrão (Pistola ociosa)
+Frame 4-6: 	Pistola atirando
+Frame 7-12:	Pistola esfriando
+
+Minha ideia: Enquanto o jogador atirar com a pistola, a animação fará loop da pistola atirando (frame 4 até o 6).
+Quando o jogador parar de atirar, a pistola entra no estado esfriando (frame 7 até o 12).
+Ao terminar, volta ao padrão (frame 1 até o 6 loopando).
