@@ -933,10 +933,10 @@ MonoBehaviour:
   X: 0
   Y: 0
   updatedDoors: 0
-  leftDoor: {fileID: 0}
-  rightDoor: {fileID: 0}
-  upDoor: {fileID: 0}
-  downDoor: {fileID: 0}
+  leftDoor: {fileID: 1490394082}
+  rightDoor: {fileID: 829917855}
+  upDoor: {fileID: 74193777}
+  downDoor: {fileID: 107072639}
   doors: []
 --- !u!4 &407226027
 Transform:
@@ -1216,8 +1216,8 @@ MonoBehaviour:
   grid:
     columns: 0
     rows: 0
-    verticalOffset: 5
-    horizontalOffset: 12
+    verticalOffset: 3
+    horizontalOffset: 11.5
   gridTile: {fileID: 6686306380406661116, guid: ac45a7021cf6bf146bbe822813fb111a, type: 3}
   avaliablePoints: []
 --- !u!4 &797892547

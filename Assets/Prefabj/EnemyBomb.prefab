@@ -172,13 +172,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 1
-  enemy1Type: 1
+  enemy1Type: 0
   range: 20
   speed: 2
   health: 0
   maxHealth: 1
-  attackRange: 6
-  damagePlayerMeele: 0
+  attackRange: 2
+  damagePlayerMeele: 2
   coolDownEnemy: 3
   coolDownEnemyRanged: 2
   notInRoom: 0
