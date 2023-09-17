@@ -47,10 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4587e56e76057c84eb9c4da43ba4cb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageEnemy: 2
+  damageEnemy: 1
   isEnemyBullet: 0
-  damagePlayer: 0
-  speed: 0
+  isEnemyBomb: 0
+  damagePlayer: 1
+  speed: 2
 --- !u!212 &9150708375020418771
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4587e56e76057c84eb9c4da43ba4cb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageEnemy: 2
+  damageEnemy: 1
   isEnemyBullet: 0
   isEnemyBomb: 0
-  damagePlayer: 2
+  damagePlayer: 1
   speed: 5
 --- !u!61 &5470805394198769485
 BoxCollider2D:

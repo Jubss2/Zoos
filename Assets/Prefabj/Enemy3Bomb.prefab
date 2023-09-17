@@ -29,11 +29,11 @@ Transform:
   m_GameObject: {fileID: 5902738671162048646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.94, y: -2.85, z: 0}
-  m_LocalScale: {x: 2.3681033, y: 2.25, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2684636097156528957
 BoxCollider2D:
@@ -173,12 +173,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 1
   enemy1Type: 1
-  range: 0
+  range: 2
   speed: 2
   health: 0
-  maxHealth: 5
-  attackRange: 0
+  maxHealth: 1
+  attackRange: 1
   damagePlayerMeele: 0
   coolDownEnemy: 2
   coolDownEnemyRanged: 3
+  notInRoom: 0
   projectilePrefab: {fileID: 4326829274784498285, guid: 17c57454beeec084fb750e6e5cb84766, type: 3}
