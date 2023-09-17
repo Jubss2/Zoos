@@ -8,8 +8,19 @@ public class SwordAttack : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        if(time > 0.5f ) {
+        if(time > 0.1f ) {
+            Destroy(GetComponent<BoxCollider2D>());
+        }
+        if(time > 0.3f)
+        {
             Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Inimigo")
+        {
+            collision.GetComponent<Enemy1Controller>().DealDamage(1);
         }
     }
 }

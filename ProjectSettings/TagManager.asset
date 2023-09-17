@@ -9,6 +9,9 @@ TagManager:
   - PowerUp
   - 'Enemy '
   - Attack
+  - PowerUp
+  - Attack
+  - Inimigo
   layers:
   - Default
   - TransparentFX

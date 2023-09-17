@@ -8,7 +8,8 @@ public class PowerUpWeapons : MonoBehaviour
     private Boolean inside;
     private PlayerAttacks attack;
     private GameObject powerUp;
-    private int weapon;
+    private int weapon; 
+    private int bullets;
     private void Awake()
     {
         inside = false;
@@ -21,6 +22,7 @@ public class PowerUpWeapons : MonoBehaviour
             inside = true;
             powerUp = collision.gameObject;
             weapon = collision.GetComponent<WeaponPowerUp>().GetWeapon();
+            bullets = collision.GetComponent<WeaponPowerUp>().GetBullets();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -41,9 +43,10 @@ public class PowerUpWeapons : MonoBehaviour
                 {
                     GameObject spawn = powerUp;
                     spawn.GetComponent<WeaponPowerUp>().SetWeapon(attack.GetWeapon()); //cria uma copia do powerup em spawn, apos isso muda a arma com base na arma que o player possui
+                    spawn.GetComponent<WeaponPowerUp>().SetBullets(attack.GetBullets());
                     Instantiate(spawn, powerUp.transform.position, Quaternion.identity);
                 }
-                attack.SetWeapon(weapon);
+                attack.SetWeapon(weapon, bullets);
                 Destroy(powerUp);
             }
         }

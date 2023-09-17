@@ -8,6 +8,7 @@ public class WeaponPowerUp : MonoBehaviour
     [SerializeField] private Sprite sword;
     [SerializeField] private Sprite pistol;
     [SerializeField] private Sprite bomb;
+    [SerializeField] private int bullets;
     private SpriteRenderer atual;
     private void Awake()
     {
@@ -33,4 +34,13 @@ public class WeaponPowerUp : MonoBehaviour
     {
         this.weapon = weapon;
     }
+    public int GetBullets()
+    {
+        return bullets;
+    }
+    public void SetBullets(int bullets)
+    {
+        this.bullets = bullets;
+    }
+
 }

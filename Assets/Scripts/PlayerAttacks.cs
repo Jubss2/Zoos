@@ -16,8 +16,10 @@ public class PlayerAttacks : MonoBehaviour
     private Boolean haveSword;
     private Boolean havePistol;
     private int activeWeapon;
+    private int bullets;
     private PlayerMovement playerMovement;
     private GameObject ultimoataque;
+
     private void Awake()
     {
         haveSword = false;
@@ -44,15 +46,29 @@ public class PlayerAttacks : MonoBehaviour
         {
             ultimoataque = Instantiate(bomb, rb.transform.position + playerMovement.GetLastMove(), Quaternion.identity);
             ultimoataque.GetComponent<ThrowBomb>().SetMovimento(playerMovement.GetLastMove());
+            bullets--;
         }
         if (haveSword)
         {
-            Instantiate(cut, rb.transform.position + playerMovement.GetLastMove(), Quaternion.identity);
+            if (playerMovement.GetLastMove().x < 0)
+            {
+                Instantiate(cut, rb.transform.position + playerMovement.GetLastMove(), Quaternion.Euler(0, 180f, 0));
+            }
+            else
+            {
+                Instantiate(cut, rb.transform.position + playerMovement.GetLastMove(), Quaternion.identity);
+            }
         }
         if (havePistol)
         {
             ultimoataque = Instantiate(bullet, rb.transform.position + playerMovement.GetLastMove(), Quaternion.identity);
             ultimoataque.GetComponent<Bullet>().SetMovimento(playerMovement.GetLastMove());
+            bullets--;
+        }
+        if((bullets <= 0) && (haveBomb||havePistol))
+        {
+            ResetWeapons();
+            activeWeapon = 0;
         }
     }
     public void ResetWeapons()
@@ -65,34 +81,37 @@ public class PlayerAttacks : MonoBehaviour
     {
         return activeWeapon;
     }
-    public void SetWeapon(int w)
+    public void SetWeapon(int weapon, int bullets)
     {
-        activeWeapon = w;
-        if (w == 0)
+        activeWeapon = weapon;
+        this.bullets = bullets;
+        if (weapon == 0)
         {
             ResetWeapons();
         }
-        activeWeapon = w;
-        if (w == 1)
+        if (weapon == 1)
         {
             ResetWeapons();
             haveSword = true;
         }
-        activeWeapon = w;
-        if (w == 2)
+        if (weapon == 2)
         {
             ResetWeapons();
             havePistol = true;
         }
+
         activeWeapon = w;
         if (w == 3)
-        {
-            ResetWeapons();
-            haveBomb = true;
+
+        if (weapon == 3)
         }
-    }
     public Rigidbody2D GetRigidbody()
     {
         return rb;
     }
+    public int GetBullets()
+    {
+        return bullets;
+    }
+
 }

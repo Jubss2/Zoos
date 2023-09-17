@@ -13,4 +13,16 @@ public class Explosao : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Inimigo")
+        {
+            collision.GetComponent<Enemy1Controller>().DealDamage(3);
+        }
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerLife>().PlayerDamage();
+        }
+
+    }
 }

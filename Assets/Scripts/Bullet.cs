@@ -13,4 +13,12 @@ public class Bullet : MonoBehaviour
         this.movimento = movimento;
         rb.velocity = movimento * speed;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Inimigo")
+        {
+            collision.GetComponent<Enemy1Controller>().DealDamage(1);
+            Destroy(gameObject);
+        }
+    }
 }
