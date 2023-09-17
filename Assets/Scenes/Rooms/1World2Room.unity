@@ -249,6 +249,10 @@ MonoBehaviour:
     spawnerData: {fileID: 11400000, guid: 825734a9222c69349aae627ff6d169c7, type: 2}
   - name: Item Spawner
     spawnerData: {fileID: 11400000, guid: 3faadd7f7014fd64f858e44a5783c0bf, type: 2}
+  - name: EnemyShoot1
+    spawnerData: {fileID: 11400000, guid: 42d50db953aadab40aae6cab3ed42f7b, type: 2}
+  - name: EnemyShoot1
+    spawnerData: {fileID: 11400000, guid: 6d0b5cd9b21db08448840aa89892b0c0, type: 2}
 --- !u!1 &644126955
 GameObject:
   m_ObjectHideFlags: 0

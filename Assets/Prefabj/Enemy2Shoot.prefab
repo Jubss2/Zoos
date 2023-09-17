@@ -173,13 +173,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 1
   enemy1Type: 1
-  range: 3
+  range: 6
   speed: 2
   health: 0
   maxHealth: 1
-  attackRange: 1
+  attackRange: 4
   damagePlayerMeele: 0
   coolDownEnemy: 2
-  coolDownEnemyRanged: 3
+  coolDownEnemyRanged: 2
   notInRoom: 0
   projectilePrefab: {fileID: 4326829274784498285, guid: 0f2799584d86bd14894874032c6b2c5c, type: 3}
