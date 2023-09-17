@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cf85e480bd9a5c248bd5c6160018f4a8
+guid: bd887d02ea475404183225bdac95327c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: objeto_quebravel-Sheet_0
+      name: PortaFechadaEsquerdo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be068bf13f95f5045b9e2a726f05baef
+      internalID: -2145834509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortaFechadaEsquerdo_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 19
+        width: 27
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,50 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c8686d4881583747962d735714aee12
-      internalID: 391237852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: objeto_quebravel-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43bc4be05740e76438931ab7d5482891
-      internalID: 2077016923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: objeto_quebravel-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddfa6a826c413b44da7e9bdf0433e405
-      internalID: 1621115014
+      spriteID: b8648466bb0cd4749a49c97539ecc3b1
+      internalID: 2091858874
       vertices: []
       indices: 
       edges: []
@@ -183,9 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      objeto_quebravel-Sheet_0: 391237852
-      objeto_quebravel-Sheet_1: 2077016923
-      objeto_quebravel-Sheet_2: 1621115014
+      PortaFechadaEsquerdo_0: -2145834509
+      PortaFechadaEsquerdo_1: 2091858874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

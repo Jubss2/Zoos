@@ -145,8 +145,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1318172199
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.9811321, g: 0.32858673, b: 0.32858673, a: 1}
@@ -173,11 +173,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 1
   enemy1Type: 1
-  range: 6
+  range: 20
   speed: 2
   health: 0
   maxHealth: 1
-  attackRange: 4
+  attackRange: 1
   damagePlayerMeele: 0
   coolDownEnemy: 2
   coolDownEnemyRanged: 2
