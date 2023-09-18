@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5769952923478922124}
   - component: {fileID: 2735965142615467815}
   - component: {fileID: 4744563207520801994}
-  - component: {fileID: 7618217341917285891}
+  - component: {fileID: 2062200326013249861}
   m_Layer: 0
   m_Name: Enemy2Shoot
   m_TagString: Enemy1
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7618217341917285891
+--- !u!114 &2062200326013249861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,18 +168,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 806276917531178510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0192f33824760454fa473a3768557168, type: 3}
+  m_Script: {fileID: 11500000, guid: b048a5480bc1abc4bb42244491771010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 1
   enemy1Type: 1
   range: 20
-  speed: 2
+  speed: 3
   health: 0
   maxHealth: 1
-  attackRange: 1
+  attackRange: 2
   damagePlayerMeele: 0
   coolDownEnemy: 2
   coolDownEnemyRanged: 2
   notInRoom: 0
-  projectilePrefab: {fileID: 4326829274784498285, guid: 0f2799584d86bd14894874032c6b2c5c, type: 3}
+  projectilePrefab: {fileID: 4289374843903267186, guid: aec8b08b44de3fa4dbe6a3c7a93ea8ab, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum Enemy1State
 {
+    Idle,
     Follow,
     Wander,
     Die,
@@ -66,7 +67,9 @@ public class Enemy1Controller : MonoBehaviour
 
     public int coolDownEnemyRanged;
 
-    
+    public bool notInRoom = true;
+
+
 
     private bool coolDownAttackEnemy;
 
@@ -84,30 +87,43 @@ public class Enemy1Controller : MonoBehaviour
     {
         switch (currentState)
         {
-            case(Enemy1State.Wander):
+            case (Enemy1State.Idle):
+                Idle();
+                break;
+            case (Enemy1State.Wander):
                 Wander();
-            break;
-            case(Enemy1State.Follow):
+                break;
+            case (Enemy1State.Follow):
                 Follow();
-            break;
-            case(Enemy1State.Die):
+                break;
+            case (Enemy1State.Die):
                 Die();
-            break;
+                break;
             case (Enemy1State.Attack):
                 Attack();
-            break;
+                break;
         }
-        if(IsPlayerInRange(range) && currentState != Enemy1State.Die)
+        if (!notInRoom)
         {
-            currentState = Enemy1State.Follow;
-        }else if(!IsPlayerInRange(range) && currentState!= Enemy1State.Die)
+            if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
+            {
+                currentState = Enemy1State.Follow;
+            }
+            else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
+            {
+                currentState = Enemy1State.Wander;
+            }
+            if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
+            {
+                currentState = Enemy1State.Attack;
+            }
+        }
+        else
         {
-            currentState = Enemy1State.Wander;
-        }if(Vector3.Distance(transform.position, player.transform.position) <= attackRange)
-        {
-            currentState = Enemy1State.Attack;
+            currentState = Enemy1State.Idle;
         }
     }
+
     private bool IsPlayerInRange(float range)
     {
         return Vector3.Distance(transform.position, player.transform.position) <= range;
@@ -135,6 +151,7 @@ public class Enemy1Controller : MonoBehaviour
             currentState = Enemy1State.Follow;
         }
     }
+    void Idle() { }
 
     void Follow()
     {

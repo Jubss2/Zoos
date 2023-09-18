@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6753683310022812753}
-  - component: {fileID: 4459407940776036965}
   - component: {fileID: 9150708375020418771}
   - component: {fileID: 7144436974359723234}
   - component: {fileID: 5743803461405237422}
+  - component: {fileID: 6528667027074984587}
   m_Layer: 0
   m_Name: Projectile (1) 1
   m_TagString: Untagged
@@ -35,23 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4459407940776036965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4289374843903267186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4587e56e76057c84eb9c4da43ba4cb66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageEnemy: 1
-  isEnemyBullet: 0
-  isEnemyBomb: 0
-  damagePlayer: 1
-  speed: 2
 --- !u!212 &9150708375020418771
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -176,3 +159,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6528667027074984587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289374843903267186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c0f6fcab8aad74190ae54e24a37e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageEnemy: 0
+  isEnemyBullet: 0
+  isEnemyBomb: 0
+  playerPos: {x: 0, y: 0}
+  damagePlayer: 1
+  speed: 3

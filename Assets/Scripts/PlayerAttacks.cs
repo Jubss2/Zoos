@@ -99,12 +99,12 @@ public class PlayerAttacks : MonoBehaviour
             ResetWeapons();
             havePistol = true;
         }
-
-        activeWeapon = w;
-        if (w == 3)
-
         if (weapon == 3)
-        }
+        {
+                ResetWeapons();
+                haveBomb = true;
+         }
+    }
     public Rigidbody2D GetRigidbody()
     {
         return rb;

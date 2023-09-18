@@ -25,6 +25,7 @@ public class RoomController : MonoBehaviour
     public List<Room> loadedRooms = new List<Room>();
 
     bool isLoadingRoom = false;
+   
 
     Room currRoom;
 
