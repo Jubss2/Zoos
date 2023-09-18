@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class WeaponPowerUp : MonoBehaviour
 {
     [SerializeField] private int weapon = 1;
     [SerializeField] private Sprite sword;
-    [SerializeField] private Sprite pistol;
+    [SerializeField] private RuntimeAnimatorController pistol; 
     [SerializeField] private Sprite bomb;
     [SerializeField] private int bullets;
     private SpriteRenderer atual;
@@ -15,14 +16,18 @@ public class WeaponPowerUp : MonoBehaviour
         atual = GetComponent<SpriteRenderer>();
         if(weapon == 1)
         {
+            Destroy(GetComponent<Animator>());
             atual.sprite = sword;
+            
         }
         if (weapon == 2)
         {
-            atual.sprite = pistol;
+            gameObject.AddComponent<Animator>();
+            GetComponent<Animator>().runtimeAnimatorController = pistol;
         }
         if (weapon == 3)
         {
+            Destroy(GetComponent<Animator>());
             atual.sprite = bomb;
         }
     }

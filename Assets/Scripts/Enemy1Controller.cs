@@ -46,7 +46,7 @@ public class Enemy1Controller : MonoBehaviour
 
     //private bool chooseDir = false;
 
-    //private bool died = false;
+    private bool died = false;
 
     private Vector3 randomDir;
 
@@ -74,18 +74,26 @@ public class Enemy1Controller : MonoBehaviour
     private bool coolDownAttackEnemy;
 
     public GameObject projectilePrefab;
+    [SerializeField] private RuntimeAnimatorController robot;
+    private Animator animator;
+    private float time = 0f;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         //FindGameObjectsWithTag
         health = maxHealth;
+        animator = GetComponent<Animator>();
+        if (enemy1Type == Enemy1Type.Meele)
+        {
+            animator.runtimeAnimatorController = robot;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (currentState)
+        if (died == true)
         {
             case (Enemy1State.Idle):
                 Idle();
@@ -105,6 +113,32 @@ public class Enemy1Controller : MonoBehaviour
         }
         if (!notInRoom)
         {
+            time += Time.deltaTime;
+            if (time > 0.8f)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            switch (currentState)
+            {
+                case (Enemy1State.Idle):
+                    Idle();
+                break;
+                case (Enemy1State.Wander):
+                    Wander();
+                    break;
+                case (Enemy1State.Follow):
+                    Follow();
+                    break;
+                case (Enemy1State.Die):
+                    Die();
+                    break;
+                case (Enemy1State.Attack):
+                    Attack();
+                    break;
+            }
             if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
             {
                 currentState = Enemy1State.Follow;
@@ -144,8 +178,12 @@ public class Enemy1Controller : MonoBehaviour
         {
             StartCoroutine(ChooseDirection());
         }
-
         transform.position += -transform.right * speed * Time.deltaTime;*/
+        animator.SetBool("Morreu", false);
+        animator.SetBool("Parou", true);
+        animator.SetBool("SeguindoCima", false);
+        animator.SetBool("SeguindoAbaixo", false);
+        animator.SetBool("SeguindoLados", false);
         if (IsPlayerInRange(range))
         {
             currentState = Enemy1State.Follow;
@@ -155,14 +193,61 @@ public class Enemy1Controller : MonoBehaviour
 
     void Follow()
     {
+        Vector2 distancia;
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        distancia = player.transform.position - transform.position;
+        if(Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
+        {
+            if (distancia.y > 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", true);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+            }
+            if(distancia.y < 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", true);
+                animator.SetBool("SeguindoLados", false);
+            }
+        }
+        else
+        {
+            if (distancia.x > 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", true);
+                transform.eulerAngles = new Vector3(0, 180f, 0);
+            }
+            if (distancia.x < 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", true);
+                transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            }
+        }
     }
     public void Die()
     {
        // Destroy(gameObject);
        if(health <= 0)
         {
-            Destroy(gameObject);
+            animator.SetBool("Morreu", true);
+            animator.SetBool("Parou", false);
+            animator.SetBool("SeguindoCima", false);
+            animator.SetBool("SeguindoAbaixo", false);
+            animator.SetBool("SeguindoLados", false);
+            died = true;
         }
     }
     public void Explode()
@@ -216,7 +301,6 @@ public class Enemy1Controller : MonoBehaviour
    
     public void DealDamage(float damageEnemy)
     {
-        Debug.Log(health);
         health -= damageEnemy;
         Die();
     }
@@ -228,6 +312,4 @@ public class Enemy1Controller : MonoBehaviour
             health = maxHealth;
         }
     }
-
-    
 }
