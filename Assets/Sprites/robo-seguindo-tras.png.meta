@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9dfab72239cdd3428a04b174dfdf910
+guid: f863e7bce8280804baafd71c70e52d8c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pistola-padrao_0
+      name: robo-seguindo-tras_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccd15d3e5fe18ad41a0be88270db147b
-      internalID: -1175886557
+      spriteID: 60d5e09ecc938994497def007192f70a
+      internalID: 1554858401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pistola-padrao_1
+      name: robo-seguindo-tras_1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2873ff76600ad040b5d47e89fef7f35
-      internalID: 1441253956
+      spriteID: b843e6e1f43fa814191141426ec53fd8
+      internalID: -1673125509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pistola-padrao_2
+      name: robo-seguindo-tras_2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,8 +166,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a31c2c3bdcd74d047b0da4f7cf657a6e
-      internalID: 1734787272
+      spriteID: fd9b69fde7b019a40a9a5c9fefd02841
+      internalID: -1958747989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-seguindo-tras_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd70009aa761bf54893eb94514678ef3
+      internalID: -649905358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-seguindo-tras_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48f1413919a097468130d2d40dba20a
+      internalID: -66288388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-seguindo-tras_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fa40c4a2283094198b61c0f1bff69f
+      internalID: 1141043340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-seguindo-tras_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c075bdde681404dbac5d8782ac8175
+      internalID: -1979092278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-seguindo-tras_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71e0350be9156040a30ab0f5cb730a2
+      internalID: -1137264988
       vertices: []
       indices: 
       edges: []
@@ -183,9 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pistola-padrao_0: -1175886557
-      pistola-padrao_1: 1441253956
-      pistola-padrao_2: 1734787272
+      robo-seguindo-tras_0: 1554858401
+      robo-seguindo-tras_1: -1673125509
+      robo-seguindo-tras_2: -1958747989
+      robo-seguindo-tras_3: -649905358
+      robo-seguindo-tras_4: -66288388
+      robo-seguindo-tras_5: 1141043340
+      robo-seguindo-tras_6: -1979092278
+      robo-seguindo-tras_7: -1137264988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

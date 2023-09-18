@@ -14,7 +14,7 @@ public class PlayerLife : MonoBehaviour
         health--;
         if(health <= 0)
         {
-
+            Debug.Log("Morreu");
         }
     }
 }
