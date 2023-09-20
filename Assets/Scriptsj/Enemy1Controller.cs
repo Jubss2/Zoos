@@ -229,10 +229,10 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("ExplodindoLados", false);
                 
             }
-            RoomController.instance.StartCoroutine(RoomController.instance.RoomCourotine());
+           
             died = true;
             RoomController.instance.StartCoroutine(RoomController.instance.RoomCourotine());
-            Destroy(gameObject);
+            
         }
     }
     public void Explode()
