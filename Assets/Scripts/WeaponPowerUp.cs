@@ -27,7 +27,8 @@ public class WeaponPowerUp : MonoBehaviour
         }
         if (weapon == 3)
         {
-            Destroy(GetComponent<Animator>());
+                        Destroy(GetComponent<Animator>());
+
             atual.sprite = bomb;
         }
     }

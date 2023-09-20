@@ -59,7 +59,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoAbaixo
+    m_ConditionEvent: ExplodindoAbaixo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1175190571026679942}
@@ -84,7 +84,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoAbaixo
+    m_ConditionEvent: ExplodindoAbaixo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1175190571026679942}
@@ -132,7 +132,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienParadoLados
+  m_Name: SlimeParadoLados
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -150,7 +150,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 337f0bf6452d53a4a957ce2cede02707, type: 2}
+  m_Motion: {fileID: 7400000, guid: d0d20d0aabe321342ac9b95eff25a97b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -165,7 +165,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoCima
+    m_ConditionEvent: ExplodindoCima
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5551541093683576009}
@@ -190,7 +190,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoLados
+    m_ConditionEvent: ExplodindoLados
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3216449230678483953}
@@ -313,7 +313,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienAtirandoFrente
+  m_Name: SlimeExplodindoFrente
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -331,7 +331,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a698bc9e2613a8249bfec0f01b37d6a1, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4e66c8fb63443da4fa62fbc54d1eb5ca, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -421,7 +421,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoLados
+    m_ConditionEvent: ExplodindoLados
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3216449230678483953}
@@ -471,7 +471,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoLados
+    m_ConditionEvent: ExplodindoLados
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3216449230678483953}
@@ -594,7 +594,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienSeguindoFrente
+  m_Name: SlimeAndandoFrente
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -612,7 +612,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7600b829a0212344b9929e74d0447eef, type: 2}
+  m_Motion: {fileID: 7400000, guid: dbc9b4446540bca49900306ad604d403, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -649,7 +649,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Alien
+  m_Name: Slime
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Morreu
@@ -682,19 +682,19 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: AtirandoAbaixo
+  - m_Name: ExplodindoAbaixo
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: AtirandoCima
+  - m_Name: ExplodindoCima
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: AtirandoLados
+  - m_Name: ExplodindoLados
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -795,7 +795,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienParadoAtras
+  m_Name: SlimeParadoAtras
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -813,7 +813,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2bc6ba9781e83cc49b101d734307a6b0, type: 2}
+  m_Motion: {fileID: 7400000, guid: ea82c5e1200a4444082bc4da1e0ad526, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -826,7 +826,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienAtirandoAtras
+  m_Name: SlimeExplodindoAtras
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -844,7 +844,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 42f003b949d1ce9449852c7c73316e0a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 300729aaf00a04249a5835a5a554773a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -934,7 +934,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoAbaixo
+    m_ConditionEvent: ExplodindoAbaixo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1175190571026679942}
@@ -982,7 +982,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienAtirandoLados
+  m_Name: SlimeExplodindoLados
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1000,7 +1000,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7572c29bd2dfd34489fd130ce033bf87, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1bab694bf7bf6d34eb10ca1944e30c66, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1013,7 +1013,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienSeguindoLados
+  m_Name: SlimeAndandoLados
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1031,7 +1031,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e1362dd43718d814e94e1f819d917d4c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 20d0168af6f4e2748951415e205dc141, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1076,31 +1076,31 @@ AnimatorStateMachine:
     m_Position: {x: 920, y: -190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1061899042321028283}
-    m_Position: {x: 970, y: -90, z: 0}
+    m_Position: {x: 870, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7909552474916740972}
-    m_Position: {x: 890, y: 100, z: 0}
+    m_Position: {x: 880, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6584913655464538562}
-    m_Position: {x: 740, y: 260, z: 0}
+    m_Position: {x: 720, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -941608728943964984}
-    m_Position: {x: 630, y: -230, z: 0}
+    m_Position: {x: 650, y: -260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5031149265242596622}
-    m_Position: {x: 460, y: -120, z: 0}
+    m_Position: {x: 430, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3397516778489511226}
-    m_Position: {x: 470, y: 160, z: 0}
+    m_Position: {x: 480, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1175190571026679942}
-    m_Position: {x: 1140, y: 10, z: 0}
+    m_Position: {x: 1290, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5551541093683576009}
     m_Position: {x: 960, y: -340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3216449230678483953}
-    m_Position: {x: 1110, y: 230, z: 0}
+    m_Position: {x: 1120, y: 210, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -1120,7 +1120,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoCima
+    m_ConditionEvent: ExplodindoCima
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5551541093683576009}
@@ -1145,7 +1145,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoAbaixo
+    m_ConditionEvent: ExplodindoAbaixo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1175190571026679942}
@@ -1193,7 +1193,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienSeguindoAtras
+  m_Name: SlimeAndandoAtras
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1211,7 +1211,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2e5067f5c69ecc9448635d8686f37db2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9754adb18673d4f47be71441efcfef78, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1251,7 +1251,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoCima
+    m_ConditionEvent: ExplodindoCima
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5551541093683576009}
@@ -1349,7 +1349,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienMorrendo
+  m_Name: SlimeMorrendo
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -1362,7 +1362,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 33106daae41cb4b4f9c52fa90ed7dddc, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7d0d17ab7ac3cd7449dcb0fede9c6666, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1375,7 +1375,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienParadoFrente
+  m_Name: SlimeParadoFrente
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1393,7 +1393,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3e241ee2304b3ea47917789db1298eb5, type: 2}
+  m_Motion: {fileID: 7400000, guid: 65dfb6a16ae639741a64d34d53cdced4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1433,7 +1433,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoLados
+    m_ConditionEvent: ExplodindoLados
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3216449230678483953}
@@ -1508,7 +1508,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AtirandoCima
+    m_ConditionEvent: ExplodindoCima
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5551541093683576009}

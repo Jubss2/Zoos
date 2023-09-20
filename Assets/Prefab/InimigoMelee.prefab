@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 7667086913535407074}
   - component: {fileID: 4029081674703111315}
   - component: {fileID: -6783826882348090624}
-  - component: {fileID: 1183652336500974028}
-  - component: {fileID: 3566288636109080827}
+  - component: {fileID: 8843498134257138278}
   m_Layer: 0
   m_Name: InimigoMelee
   m_TagString: Inimigo
@@ -88,6 +87,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6012920689670385232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965074472718680338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192f33824760454fa473a3768557168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 1
+  enemy1Type: 0
+  range: 5
+  speed: 8
+  health: 1
+  maxHealth: 2
+  attackRange: 1
+  damagePlayerMeele: 1
+  coolDownEnemy: 1
+  coolDownEnemyRanged: 0
+  notInRoom: 0
+  projectilePrefab: {fileID: 0}
+  robot: {fileID: 9100000, guid: 1b4c0da7a404ac44fbf649e46ed04ad2, type: 2}
+  alien: {fileID: 9100000, guid: 71ade5bd02c698f4796729eff962222d, type: 2}
+  slime: {fileID: 9100000, guid: 693b2f2e62e781f409c3ac928c85f3fb, type: 2}
 --- !u!61 &4029081674703111315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160,32 +186,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1183652336500974028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8965074472718680338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b048a5480bc1abc4bb42244491771010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 2
-  enemy1Type: 0
-  range: 9
-  speed: 1
-  health: 0
-  maxHealth: 2
-  attackRange: 4
-  damagePlayerMeele: 1
-  coolDownEnemy: 1
-  coolDownEnemyRanged: 0
-  notInRoom: 0
-  projectilePrefab: {fileID: 4326829274784498285, guid: 0f2799584d86bd14894874032c6b2c5c, type: 3}
-  robot: {fileID: 9100000, guid: 1b4c0da7a404ac44fbf649e46ed04ad2, type: 2}
---- !u!95 &3566288636109080827
+--- !u!95 &8843498134257138278
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
