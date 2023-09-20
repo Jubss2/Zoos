@@ -67,7 +67,7 @@ public class Enemy1Controller : MonoBehaviour
 
     public int coolDownEnemyRanged;
 
-    public bool notInRoom = false;
+    public bool notInRoom = true;
 
 
 
@@ -91,7 +91,7 @@ public class Enemy1Controller : MonoBehaviour
         {
             animator.runtimeAnimatorController = robot;
         }
-        if(enemy1Type == Enemy1Type.Ranged)
+        if (enemy1Type == Enemy1Type.Ranged)
         {
             animator.runtimeAnimatorController = alien;
         }
@@ -150,52 +150,28 @@ public class Enemy1Controller : MonoBehaviour
         }
         else
         {
-            switch (currentState)
-            {
-                case (Enemy1State.Idle):
-                    Idle();
-                    break;
-                case (Enemy1State.Wander):
-                    Wander();
-                    break;
-                case (Enemy1State.Follow):
-                    Follow();
-                    break;
-                case (Enemy1State.Die):
-                    Die();
-                    break;
-                case (Enemy1State.Attack):
-                    Attack();
-                    break;
-            }
-
-            if (!notInRoom)
-            {
-
-                if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
-                {
-                    currentState = Enemy1State.Follow;
-                }
-                else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
-                {
-                    currentState = Enemy1State.Wander;
-                }
-                if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
-                {
-                    currentState = Enemy1State.Attack;
-                }
-              
-            }
-            else
-            {
-                currentState = Enemy1State.Idle;
-            }
+            currentState = Enemy1State.Idle;
         }
     }
-
-        private bool IsPlayerInRange(float range)
+    private bool IsPlayerInRange(float range)
+    {
+        return Vector3.Distance(transform.position, player.transform.position) <= range;
+    }
+    /*
+    private IEnumerator ChooseDirection()
+    {
+        chooseDir = true;
+        yield return new WaitForSeconds(Random.Range(2f, 8f));
+        randomDir = new Vector3(0, 0, Random.Range(0, 360));
+        Quaternion nextRotation = Quaternion.Euler(randomDir);
+        transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
+        chooseDir = false;
+    }*/
+    void Wander()
+    {
+        /*if(!chooseDir)
         {
-            return Vector3.Distance(transform.position, player.transform.position) <= range;
+            StartCoroutine(ChooseDirection());
         }
         transform.position += -transform.right * speed * Time.deltaTime;*/
         animator.SetBool("Morreu", false);
@@ -203,13 +179,13 @@ public class Enemy1Controller : MonoBehaviour
         animator.SetBool("SeguindoCima", false);
         animator.SetBool("SeguindoAbaixo", false);
         animator.SetBool("SeguindoLados", false);
-        if(enemy1Type == Enemy1Type.Ranged)
+        if (enemy1Type == Enemy1Type.Ranged)
         {
             animator.SetBool("AtirandoAbaixo", false);
             animator.SetBool("AtirandoCima", false);
             animator.SetBool("AtirandoLados", false);
         }
-        if(enemy1Type == Enemy1Type.Explosive)
+        if (enemy1Type == Enemy1Type.Explosive)
         {
             animator.SetBool("ExplodindoAbaixo", false);
             animator.SetBool("ExplodindoCima", false);
@@ -220,7 +196,7 @@ public class Enemy1Controller : MonoBehaviour
             currentState = Enemy1State.Follow;
         }
     }
-    void Idle() {}
+    void Idle() { }
     void Follow()
     {
         FollowAnimation();
@@ -228,8 +204,8 @@ public class Enemy1Controller : MonoBehaviour
     }
     public void Die()
     {
-       // Destroy(gameObject);
-       if(health <= 0)
+        // Destroy(gameObject);
+        if (health <= 0)
         {
             animator.SetBool("Morreu", true);
             animator.SetBool("Parou", false);
@@ -267,11 +243,11 @@ public class Enemy1Controller : MonoBehaviour
         {
             switch (enemy1Type)
             {
-                case(Enemy1Type.Meele):
+                case (Enemy1Type.Meele):
                     player.GetComponent<PlayerLife>().PlayerDamage();
                     StartCoroutine(CoolDownAttack());
-                break;
-                case(Enemy1Type.Ranged):
+                    break;
+                case (Enemy1Type.Ranged):
                     GameObject bullet = projectilePrefab;
                     ShootingAnimation();
                     bullet.GetComponent<ProjectileDamage>().isEnemyBullet = true;
@@ -280,11 +256,11 @@ public class Enemy1Controller : MonoBehaviour
                     //Debug.Log(bullet.GetComponent<ProjectileDamage>().playerPos);
                     //bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
                     StartCoroutine(CoolDownAttackRanged());
-                break;
+                    break;
                 case (Enemy1Type.Explosive):
                     ExplosionAnimation();
                     Explode();
-                break;
+                    break;
             }
         }
     }
@@ -301,7 +277,7 @@ public class Enemy1Controller : MonoBehaviour
         yield return new WaitForSeconds(coolDownEnemyRanged);
         coolDownAttackEnemy = false;
     }
-   
+
     public void DealDamage(float damageEnemy)
     {
         health -= damageEnemy;
@@ -310,7 +286,7 @@ public class Enemy1Controller : MonoBehaviour
 
     public void CheckOverheal()
     {
-        if(health > maxHealth)
+        if (health > maxHealth)
         {
             health = maxHealth;
         }
@@ -357,12 +333,12 @@ public class Enemy1Controller : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }
-            if(distancia.x < 0)
+            if (distancia.x < 0)
             {
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
         }
-        
+
     }
     private void ExplosionAnimation()
     {

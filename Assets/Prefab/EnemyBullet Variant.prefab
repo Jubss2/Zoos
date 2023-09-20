@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 73361564431379047, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 73361564431379047, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.78
       objectReference: {fileID: 0}
@@ -60,34 +64,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5062875654111673717, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2425224938077456970}
+      addedObject: {fileID: 2005377529921709101}
     - targetCorrespondingSourceObject: {fileID: 5062875654111673717, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2005377529921709101}
+      addedObject: {fileID: -7957496807179215630}
   m_SourcePrefab: {fileID: 100100000, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
 --- !u!1 &5269703286046316066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5062875654111673717, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
   m_PrefabInstance: {fileID: 1108815294617578327}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2425224938077456970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5269703286046316066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4587e56e76057c84eb9c4da43ba4cb66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageEnemy: 1
-  isEnemyBullet: 1
-  isEnemyBomb: 0
-  playerPos: {x: 0.03, y: 0.33}
-  damagePlayer: 1
-  speed: 5
 --- !u!50 &2005377529921709101
 Rigidbody2D:
   serializedVersion: 4
@@ -115,3 +101,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7957496807179215630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5269703286046316066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c0f6fcab8aad74190ae54e24a37e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageEnemy: 0
+  isEnemyBullet: 0
+  isEnemyBomb: 0
+  playerPos: {x: 0, y: 0}
+  damagePlayer: 1
+  speed: 2

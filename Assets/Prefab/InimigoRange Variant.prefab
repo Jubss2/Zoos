@@ -84,6 +84,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: alien
+      value: 
+      objectReference: {fileID: 9100000, guid: 71ade5bd02c698f4796729eff962222d, type: 2}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: robot
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: notInRoom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: enemy1Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: attackRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5269703286046316066, guid: 1139e514adce5584691d25a7c76da618, type: 3}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: damagePlayerMeele
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: coolDownEnemyRanged
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7667086913535407074, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: m_Sprite
       value: 

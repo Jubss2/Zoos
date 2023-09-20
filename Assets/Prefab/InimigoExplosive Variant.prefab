@@ -84,6 +84,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: alien
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: robot
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: slime
+      value: 
+      objectReference: {fileID: 9100000, guid: 693b2f2e62e781f409c3ac928c85f3fb, type: 2}
+    - target: {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7667086913535407074, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: m_Sprite
       value: 
