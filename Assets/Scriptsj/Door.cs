@@ -17,7 +17,9 @@ public class Door : MonoBehaviour
     private float widthOffset = 4f;
 
     public GameObject doorCollider;
-        //mudar pelo tamanho do player
+
+    public GameObject parCollider;
+    //mudar pelo tamanho do player
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

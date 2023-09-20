@@ -65,6 +65,7 @@ public class RoomController : MonoBehaviour
                 foreach(Room room in loadedRooms)
                 {
                     room.RemoveUnconnectedDoors();
+                    room.AddWalls();
                 }
                 UpdatedRooms();
 
@@ -229,6 +230,7 @@ public class RoomController : MonoBehaviour
                     }
                 }
             }
+            
         }
     }
     public Room FindRoom(int x, int y)

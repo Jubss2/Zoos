@@ -284,7 +284,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &312898461
 MonoBehaviour:
@@ -378,7 +378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1416399378586666995, guid: 230f90e189595114289831e5bf2f756e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1416399378586666995, guid: 230f90e189595114289831e5bf2f756e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -452,24 +452,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1677387974969698695, guid: 230f90e189595114289831e5bf2f756e, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3192581799707220132, guid: 230f90e189595114289831e5bf2f756e, type: 3}
-      propertyPath: weapon
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3192581799707220132, guid: 230f90e189595114289831e5bf2f756e, type: 3}
-      propertyPath: bullets
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 3276594475189532384, guid: 230f90e189595114289831e5bf2f756e, type: 3}
       propertyPath: m_Name
       value: PowerUP
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -632,7 +619,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602429772
 GameObject:
@@ -731,7 +718,7 @@ RectTransform:
   - {fileID: 1468984333}
   - {fileID: 1105895023}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1172,14 +1159,3 @@ MonoBehaviour:
   sword: {fileID: 21300000, guid: db0f82cafd6ba0b458f664a52b4fa8a6, type: 3}
   pistol: {fileID: -1175886557, guid: f9dfab72239cdd3428a04b174dfdf910, type: 3}
   bomb: {fileID: 21300000, guid: 1f7a1c211b37d1e41b9e78283f7ca47c, type: 3}
---- !u!1660057539 &9223372036854775807
-SceneRoots:
-  m_ObjectHideFlags: 0
-  m_Roots:
-  - {fileID: 519420032}
-  - {fileID: 1331628512}
-  - {fileID: 312898460}
-  - {fileID: 602429776}
-  - {fileID: 403326851}
-  - {fileID: 342478481}
-  - {fileID: 1103094568}

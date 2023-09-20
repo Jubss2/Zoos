@@ -13,6 +13,8 @@ public class Room : MonoBehaviour
     public int Y;
 
     public bool updatedDoors = false;
+
+
     public Room(int x, int y)
     {
         X = x;
@@ -24,7 +26,14 @@ public class Room : MonoBehaviour
     public Door upDoor;
     public Door downDoor;
 
+    public Pared leftPared;
+    public Pared rightPared;
+    public Pared upPared;
+    public Pared downPared;
+
     public List<Door> doors = new List<Door>();
+
+    public List<Pared> walls = new List<Pared>();
     // Start is called before the first frame update
     void Start()
     {
@@ -53,8 +62,7 @@ public class Room : MonoBehaviour
                     break;
             }
         }
-
-        RoomController.instance.RegisterRoom(this);
+       RoomController.instance.RegisterRoom(this);
 
     }
 
@@ -63,6 +71,7 @@ public class Room : MonoBehaviour
         if(name.Contains("End") && !updatedDoors)
         {
             RemoveUnconnectedDoors();
+            AddWalls();
             updatedDoors = true;
         }
     }
@@ -75,23 +84,54 @@ public class Room : MonoBehaviour
                  case Door.DoorType.R:
                     if (GetRight() == null)
                         door.gameObject.SetActive(false);
+                        door.parCollider.SetActive(true);
                     break;
                 case Door.DoorType.L:
                     if (GetLeft() == null)
                         door.gameObject.SetActive(false);
+                        door.parCollider.SetActive(true);
                     break;
                 case Door.DoorType.Up:
                     if (GetUp() == null)
                         door.gameObject.SetActive(false);
+                        door.parCollider.SetActive(true);
                     break;
                 case Door.DoorType.Down:
                     if (GetDown() == null)
                         door.gameObject.SetActive(false);
+                        door.parCollider.SetActive(true);
                     break;
             }
         }
     }
-
+    public void AddWalls()
+    {
+        foreach (Door door in doors)
+        {
+            switch (door.type)
+            {
+                case Door.DoorType.R:
+                    if (GetRight() != null)
+                        door.parCollider.SetActive(false);
+                    break;
+                case Door.DoorType.L:
+                    if (GetLeft() != null)
+                        
+                    door.parCollider.SetActive(false);
+                    break;
+                case Door.DoorType.Up:
+                    if (GetUp() != null)
+                        
+                    door.parCollider.SetActive(false);
+                    break;
+                case Door.DoorType.Down:
+                    if (GetDown() != null)
+                       
+                    door.parCollider.SetActive(false);
+                    break;
+            }
+        }
+    }
     public Room GetRight()
     {
         if(RoomController.instance.DoesRoomExist(X+1, Y))
