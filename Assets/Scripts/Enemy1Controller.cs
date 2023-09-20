@@ -67,7 +67,7 @@ public class Enemy1Controller : MonoBehaviour
 
     public int coolDownEnemyRanged;
 
-    public bool notInRoom = true;
+    public bool notInRoom = false;
 
 
 
@@ -95,24 +95,6 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (died == true)
         {
-            case (Enemy1State.Idle):
-                Idle();
-                break;
-            case (Enemy1State.Wander):
-                Wander();
-                break;
-            case (Enemy1State.Follow):
-                Follow();
-                break;
-            case (Enemy1State.Die):
-                Die();
-                break;
-            case (Enemy1State.Attack):
-                Attack();
-                break;
-        }
-        if (!notInRoom)
-        {
             time += Time.deltaTime;
             if (time > 0.8f)
             {
@@ -125,7 +107,7 @@ public class Enemy1Controller : MonoBehaviour
             {
                 case (Enemy1State.Idle):
                     Idle();
-                break;
+                    break;
                 case (Enemy1State.Wander):
                     Wander();
                     break;
@@ -139,177 +121,183 @@ public class Enemy1Controller : MonoBehaviour
                     Attack();
                     break;
             }
-            if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
+
+            if (!notInRoom)
             {
-                currentState = Enemy1State.Follow;
+
+                if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
+                {
+                    currentState = Enemy1State.Follow;
+                }
+                else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
+                {
+                    currentState = Enemy1State.Wander;
+                }
+                if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
+                {
+                    currentState = Enemy1State.Attack;
+                }
+              
             }
-            else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
+            else
             {
-                currentState = Enemy1State.Wander;
+                currentState = Enemy1State.Idle;
             }
-            if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
-            {
-                currentState = Enemy1State.Attack;
-            }
-        }
-        else
-        {
-            currentState = Enemy1State.Idle;
         }
     }
 
-    private bool IsPlayerInRange(float range)
-    {
-        return Vector3.Distance(transform.position, player.transform.position) <= range;
-    }
-    /*
-    private IEnumerator ChooseDirection()
-    {
-        chooseDir = true;
-        yield return new WaitForSeconds(Random.Range(2f, 8f));
-        randomDir = new Vector3(0, 0, Random.Range(0, 360));
-        Quaternion nextRotation = Quaternion.Euler(randomDir);
-        transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
-        chooseDir = false;
-    }*/
-    void Wander()
-    {
-        /*if(!chooseDir)
+        private bool IsPlayerInRange(float range)
         {
-            StartCoroutine(ChooseDirection());
+            return Vector3.Distance(transform.position, player.transform.position) <= range;
         }
-        transform.position += -transform.right * speed * Time.deltaTime;*/
-        animator.SetBool("Morreu", false);
-        animator.SetBool("Parou", true);
-        animator.SetBool("SeguindoCima", false);
-        animator.SetBool("SeguindoAbaixo", false);
-        animator.SetBool("SeguindoLados", false);
-        if (IsPlayerInRange(range))
+        /*
+        private IEnumerator ChooseDirection()
         {
-            currentState = Enemy1State.Follow;
-        }
-    }
-    void Idle() { }
-
-    void Follow()
-    {
-        Vector2 distancia;
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        distancia = player.transform.position - transform.position;
-        if(Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
+            chooseDir = true;
+            yield return new WaitForSeconds(Random.Range(2f, 8f));
+            randomDir = new Vector3(0, 0, Random.Range(0, 360));
+            Quaternion nextRotation = Quaternion.Euler(randomDir);
+            transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
+            chooseDir = false;
+        }*/
+        void Wander()
         {
-            if (distancia.y > 0)
+            /*if(!chooseDir)
             {
-                animator.SetBool("Morreu", false);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", true);
-                animator.SetBool("SeguindoAbaixo", false);
-                animator.SetBool("SeguindoLados", false);
+                StartCoroutine(ChooseDirection());
             }
-            if(distancia.y < 0)
-            {
-                animator.SetBool("Morreu", false);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", false);
-                animator.SetBool("SeguindoAbaixo", true);
-                animator.SetBool("SeguindoLados", false);
-            }
-        }
-        else
-        {
-            if (distancia.x > 0)
-            {
-                animator.SetBool("Morreu", false);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", false);
-                animator.SetBool("SeguindoAbaixo", false);
-                animator.SetBool("SeguindoLados", true);
-                transform.eulerAngles = new Vector3(0, 180f, 0);
-            }
-            if (distancia.x < 0)
-            {
-                animator.SetBool("Morreu", false);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", false);
-                animator.SetBool("SeguindoAbaixo", false);
-                animator.SetBool("SeguindoLados", true);
-                transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            }
-        }
-    }
-    public void Die()
-    {
-       // Destroy(gameObject);
-       if(health <= 0)
-        {
-            animator.SetBool("Morreu", true);
-            animator.SetBool("Parou", false);
+            transform.position += -transform.right * speed * Time.deltaTime;*/
+            animator.SetBool("Morreu", false);
+            animator.SetBool("Parou", true);
             animator.SetBool("SeguindoCima", false);
             animator.SetBool("SeguindoAbaixo", false);
             animator.SetBool("SeguindoLados", false);
-            died = true;
-        }
-    }
-    public void Explode()
-    {
-        Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
-    public void Destroy()
-    {
-        Destroy(gameObject);
-        
-    }
-    public void Attack()
-    {
-        if (!coolDownAttackEnemy)
-        {
-            switch (enemy1Type)
+            if (IsPlayerInRange(range))
             {
-                case(Enemy1Type.Meele):
-                    player.GetComponent<PlayerLife>().PlayerDamage();
-                    StartCoroutine(CoolDownAttack());
-                break;
-                case(Enemy1Type.Ranged):
-                    GameObject bullet = projectilePrefab;
-                    bullet.GetComponent<ProjectileDamage>().isEnemyBullet = true;
-                    bullet.GetComponent<ProjectileDamage>().GetPlayer(player.transform);
-                    Instantiate(bullet, transform.position, Quaternion.identity);
-                    //Debug.Log(bullet.GetComponent<ProjectileDamage>().playerPos);
-                    //bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
-                    StartCoroutine(CoolDownAttackRanged());
-                break;
-                case (Enemy1Type.Explosive):
-                    Explode();
-                break;
+                currentState = Enemy1State.Follow;
+            }
+        }
+        void Idle() { }
+
+        void Follow()
+        {
+            Vector2 distancia;
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            distancia = player.transform.position - transform.position;
+            if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
+            {
+                if (distancia.y > 0)
+                {
+                    animator.SetBool("Morreu", false);
+                    animator.SetBool("Parou", false);
+                    animator.SetBool("SeguindoCima", true);
+                    animator.SetBool("SeguindoAbaixo", false);
+                    animator.SetBool("SeguindoLados", false);
+                }
+                if (distancia.y < 0)
+                {
+                    animator.SetBool("Morreu", false);
+                    animator.SetBool("Parou", false);
+                    animator.SetBool("SeguindoCima", false);
+                    animator.SetBool("SeguindoAbaixo", true);
+                    animator.SetBool("SeguindoLados", false);
+                }
+            }
+            else
+            {
+                if (distancia.x > 0)
+                {
+                    animator.SetBool("Morreu", false);
+                    animator.SetBool("Parou", false);
+                    animator.SetBool("SeguindoCima", false);
+                    animator.SetBool("SeguindoAbaixo", false);
+                    animator.SetBool("SeguindoLados", true);
+                    transform.eulerAngles = new Vector3(0, 180f, 0);
+                }
+                if (distancia.x < 0)
+                {
+                    animator.SetBool("Morreu", false);
+                    animator.SetBool("Parou", false);
+                    animator.SetBool("SeguindoCima", false);
+                    animator.SetBool("SeguindoAbaixo", false);
+                    animator.SetBool("SeguindoLados", true);
+                    transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                }
+            }
+        }
+        public void Die()
+        {
+            // Destroy(gameObject);
+            if (health <= 0)
+            {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                died = true;
+            }
+        }
+        public void Explode()
+        {
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+        public void Destroy()
+        {
+            Destroy(gameObject);
+
+        }
+        public void Attack()
+        {
+            if (!coolDownAttackEnemy)
+            {
+                switch (enemy1Type)
+                {
+                    case (Enemy1Type.Meele):
+                        player.GetComponent<PlayerLife>().PlayerDamage();
+                        StartCoroutine(CoolDownAttack());
+                        break;
+                    case (Enemy1Type.Ranged):
+                        GameObject bullet = projectilePrefab;
+                        bullet.GetComponent<ProjectileDamage>().isEnemyBullet = true;
+                        bullet.GetComponent<ProjectileDamage>().GetPlayer(player.transform);
+                        Instantiate(bullet, transform.position, Quaternion.identity);
+                        //Debug.Log(bullet.GetComponent<ProjectileDamage>().playerPos);
+                        //bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
+                        StartCoroutine(CoolDownAttackRanged());
+                        break;
+                    case (Enemy1Type.Explosive):
+                        Explode();
+                        break;
+                }
+            }
+        }
+
+        private IEnumerator CoolDownAttack()
+        {
+            coolDownAttackEnemy = true;
+            yield return new WaitForSeconds(coolDownEnemy);
+            coolDownAttackEnemy = false;
+        }
+        private IEnumerator CoolDownAttackRanged()
+        {
+            coolDownAttackEnemy = true;
+            yield return new WaitForSeconds(coolDownEnemyRanged);
+            coolDownAttackEnemy = false;
+        }
+
+        public void DealDamage(float damageEnemy)
+        {
+            health -= damageEnemy;
+            Die();
+        }
+
+        public void CheckOverheal()
+        {
+            if (health > maxHealth)
+            {
+                health = maxHealth;
             }
         }
     }
-
-    private IEnumerator CoolDownAttack()
-    {
-        coolDownAttackEnemy = true;
-        yield return new WaitForSeconds(coolDownEnemy);
-        coolDownAttackEnemy = false;
-    }
-    private IEnumerator CoolDownAttackRanged()
-    {
-        coolDownAttackEnemy = true;
-        yield return new WaitForSeconds(coolDownEnemyRanged);
-        coolDownAttackEnemy = false;
-    }
-   
-    public void DealDamage(float damageEnemy)
-    {
-        health -= damageEnemy;
-        Die();
-    }
-
-    public void CheckOverheal()
-    {
-        if(health > maxHealth)
-        {
-            health = maxHealth;
-        }
-    }
-}

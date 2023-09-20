@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.7058824
       objectReference: {fileID: 0}
+    - target: {fileID: 7667086913535407074, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8965074472718680338, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: m_Name
       value: InimigoRange Variant
