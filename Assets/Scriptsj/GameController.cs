@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public Text healthtxt;
+  
     // Start is called before the first frame update
     // tem como colocar a vida na tela Binding of Isaac stats setup + enemy melee attack - Unity 2019 Beginner Tutorial 10 min
     public static GameController instance;
@@ -38,26 +38,21 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthtxt.text = "Vida: " + health;
-    }
 
-    public static void DamagePlayer(int damage)
+    }
+    public static void DamagePlayer()
     {
-        health -= damage;
-        
-        if(health < 0)
-        {
-            KillPlayer();
-        }
+            health--;
+            if (health <= 0)
+            {
+                Debug.Log("Morreu");
+            }
 
-    }
+        }
 
     public static void HealPlayer(int heal)
     {
         health = Mathf.Min(maxHealth, health + heal);
     }
-    private static void KillPlayer()
-    {
-
-    }
+   
 }

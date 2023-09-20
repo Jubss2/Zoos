@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] private int health = 5;
-    public int GetHealth()
+    [SerializeField] private static int health = 3;
+    public static int GetHealth()
     {
         return health;
     }
