@@ -59,6 +59,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -4550017913403560045, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
     - {fileID: 7145869212322681345, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
+    - {fileID: -1747703057884637140, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -67,7 +68,7 @@ PrefabInstance:
       addedObject: {fileID: 2005377529921709101}
     - targetCorrespondingSourceObject: {fileID: 5062875654111673717, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4582257401496182485}
+      addedObject: {fileID: 416164218055289920}
   m_SourcePrefab: {fileID: 100100000, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
 --- !u!1 &5269703286046316066 stripped
 GameObject:
@@ -101,7 +102,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4582257401496182485
+--- !u!114 &416164218055289920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5269703286046316066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce6d4e6ec655134a9293d9bf3bd90a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 47460fcea6d87844c95c71929722a3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnemy: 0
@@ -118,4 +119,4 @@ MonoBehaviour:
   isEnemyBomb: 0
   playerPos: {x: 0, y: 0}
   damagePlayer: 1
-  speed: 3
+  speed: 2

@@ -154,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8965074472718680338, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: m_TagString
-      value: Enemy1
+      value: Inimigo
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}

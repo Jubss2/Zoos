@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4259674192489469164}
   m_Layer: 0
   m_Name: InimigoMelee
-  m_TagString: Enemy1
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,14 +197,14 @@ MonoBehaviour:
   enemy1Type: 1
   range: 10
   speed: 2
-  health: 2
-  maxHealth: 0
+  health: 0
+  maxHealth: 2
   attackRange: 0.5
   damagePlayerMeele: 1
   coolDownEnemy: 2
   coolDownEnemyRanged: 0
   notInRoom: 1
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 5269703286046316066, guid: 1139e514adce5584691d25a7c76da618, type: 3}
   robot: {fileID: 9100000, guid: 1b4c0da7a404ac44fbf649e46ed04ad2, type: 2}
   alien: {fileID: 0}
   slime: {fileID: 0}

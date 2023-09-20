@@ -452,6 +452,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3192581799707220132, guid: 230f90e189595114289831e5bf2f756e, type: 3}
+      propertyPath: weapon
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3276594475189532384, guid: 230f90e189595114289831e5bf2f756e, type: 3}
       propertyPath: m_Name
       value: PowerUP

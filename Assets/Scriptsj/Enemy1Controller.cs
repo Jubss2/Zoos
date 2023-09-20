@@ -206,7 +206,7 @@ public class Enemy1Controller : MonoBehaviour
     }
     public void Die()
     {
-        // Destroy(gameObject);
+       
         if (health <= 0)
         {
             animator.SetBool("Morreu", true);
@@ -214,19 +214,25 @@ public class Enemy1Controller : MonoBehaviour
             animator.SetBool("SeguindoCima", false);
             animator.SetBool("SeguindoAbaixo", false);
             animator.SetBool("SeguindoLados", false);
+
             if (enemy1Type == Enemy1Type.Ranged)
             {
                 animator.SetBool("AtirandoAbaixo", false);
                 animator.SetBool("AtirandoCima", false);
                 animator.SetBool("AtirandoLados", false);
+                
             }
             if (enemy1Type == Enemy1Type.Explosive)
             {
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
+                
             }
+            RoomController.instance.StartCoroutine(RoomController.instance.RoomCourotine());
             died = true;
+            RoomController.instance.StartCoroutine(RoomController.instance.RoomCourotine());
+            Destroy(gameObject);
         }
     }
     public void Explode()

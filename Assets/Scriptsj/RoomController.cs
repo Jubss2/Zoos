@@ -177,7 +177,7 @@ public class RoomController : MonoBehaviour
 
     public IEnumerator RoomCourotine()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
         UpdatedRooms();
     }
     public void UpdatedRooms()
