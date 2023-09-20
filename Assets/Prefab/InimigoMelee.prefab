@@ -110,9 +110,11 @@ MonoBehaviour:
   damagePlayerMeele: 1
   coolDownEnemy: 1
   coolDownEnemyRanged: 0
+  notInRoom: 0
   projectilePrefab: {fileID: 0}
   robot: {fileID: 9100000, guid: 1b4c0da7a404ac44fbf649e46ed04ad2, type: 2}
   alien: {fileID: 9100000, guid: 71ade5bd02c698f4796729eff962222d, type: 2}
+  slime: {fileID: 9100000, guid: 693b2f2e62e781f409c3ac928c85f3fb, type: 2}
 --- !u!61 &4029081674703111315
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 1103094567}
   - component: {fileID: 1103094566}
   m_Layer: 0
-  m_Name: Alien
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,7 +792,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1634325099, guid: 9595a46ed3bc65344bba69b427f8aaf6, type: 3}
+  m_Sprite: {fileID: 1848594683, guid: fb262c4e652324041b6841196c2ff1a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -813,7 +813,7 @@ Animator:
   m_GameObject: {fileID: 1103094565}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 693b2f2e62e781f409c3ac928c85f3fb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1165,75 +1165,6 @@ MonoBehaviour:
   sword: {fileID: 21300000, guid: db0f82cafd6ba0b458f664a52b4fa8a6, type: 3}
   pistol: {fileID: -1175886557, guid: f9dfab72239cdd3428a04b174dfdf910, type: 3}
   bomb: {fileID: 21300000, guid: 1f7a1c211b37d1e41b9e78283f7ca47c, type: 3}
---- !u!1001 &1485187900
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.084282875
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.5071492
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964499104399981066, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3176308539410362274, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3176308539410362274, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3176308539410362274, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186133921154145618, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
-      propertyPath: m_Name
-      value: InimigoRange Variant
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1742dab6afd318d4c983ed8953e93639, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1245,4 +1176,3 @@ SceneRoots:
   - {fileID: 403326851}
   - {fileID: 342478481}
   - {fileID: 1103094568}
-  - {fileID: 1485187900}

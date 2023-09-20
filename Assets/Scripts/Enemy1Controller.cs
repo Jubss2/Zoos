@@ -76,6 +76,7 @@ public class Enemy1Controller : MonoBehaviour
     public GameObject projectilePrefab;
     [SerializeField] private RuntimeAnimatorController robot;
     [SerializeField] private RuntimeAnimatorController alien;
+    [SerializeField] private RuntimeAnimatorController slime;
     private Animator animator;
     private float time = 0f;
     private Vector2 distancia;
@@ -93,6 +94,10 @@ public class Enemy1Controller : MonoBehaviour
         if(enemy1Type == Enemy1Type.Ranged)
         {
             animator.runtimeAnimatorController = alien;
+        }
+        if (enemy1Type == Enemy1Type.Explosive)
+        {
+            animator.runtimeAnimatorController = slime;
         }
     }
 
@@ -114,12 +119,15 @@ public class Enemy1Controller : MonoBehaviour
                 switch (currentState)
                 {
                     case (Enemy1State.Wander):
+                        time = 0f;
                         Wander();
                         break;
                     case (Enemy1State.Follow):
+                        time = 0f;
                         Follow();
                         break;
                     case (Enemy1State.Die):
+                        time = 0f;
                         Die();
                         break;
                     case (Enemy1State.Attack):
@@ -177,6 +185,12 @@ public class Enemy1Controller : MonoBehaviour
             animator.SetBool("AtirandoCima", false);
             animator.SetBool("AtirandoLados", false);
         }
+        if(enemy1Type == Enemy1Type.Explosive)
+        {
+            animator.SetBool("ExplodindoAbaixo", false);
+            animator.SetBool("ExplodindoCima", false);
+            animator.SetBool("ExplodindoLados", false);
+        }
         if (IsPlayerInRange(range))
         {
             currentState = Enemy1State.Follow;
@@ -185,62 +199,8 @@ public class Enemy1Controller : MonoBehaviour
     void Idle() {}
     void Follow()
     {
+        FollowAnimation();
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        distancia = player.transform.position - transform.position;
-        if(Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
-        {
-            if (distancia.y > 0)
-            {
-                animator.SetBool("Morreu", false);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", true);
-                animator.SetBool("SeguindoAbaixo", false);
-                animator.SetBool("SeguindoLados", false);
-                if (enemy1Type == Enemy1Type.Ranged)
-                {
-                    animator.SetBool("AtirandoAbaixo", false);
-                    animator.SetBool("AtirandoCima", false);
-                    animator.SetBool("AtirandoLados", false);
-                }
-            }
-            if(distancia.y < 0)
-            {
-                animator.SetBool("Morreu", false);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", false);
-                animator.SetBool("SeguindoAbaixo", true);
-                animator.SetBool("SeguindoLados", false);
-                if (enemy1Type == Enemy1Type.Ranged)
-                {
-                    animator.SetBool("AtirandoAbaixo", false);
-                    animator.SetBool("AtirandoCima", false);
-                    animator.SetBool("AtirandoLados", false);
-                }
-            }
-        }
-        else
-        {
-            animator.SetBool("Morreu", false);
-            animator.SetBool("Parou", false);
-            animator.SetBool("SeguindoCima", false);
-            animator.SetBool("SeguindoAbaixo", false);
-            animator.SetBool("SeguindoLados", true);
-            if (enemy1Type == Enemy1Type.Ranged)
-            {
-                animator.SetBool("AtirandoAbaixo", false);
-                animator.SetBool("AtirandoCima", false);
-                animator.SetBool("AtirandoLados", false);
-            }
-            if (distancia.x > 0)
-            {
-                transform.eulerAngles = new Vector3(0f, 180f, 0f);
-            }
-            if (distancia.x < 0)
-            {
-                transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            }
-
-        }
     }
     public void Die()
     {
@@ -258,18 +218,24 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("AtirandoCima", false);
                 animator.SetBool("AtirandoLados", false);
             }
+            if (enemy1Type == Enemy1Type.Explosive)
+            {
+                animator.SetBool("ExplodindoAbaixo", false);
+                animator.SetBool("ExplodindoCima", false);
+                animator.SetBool("ExplodindoLados", false);
+            }
             died = true;
         }
     }
     public void Explode()
     {
-        Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
-    public void Destroy()
-    {
-        Destroy(gameObject);
-        
+        ExplosionAnimation();
+        time += Time.deltaTime;
+        if (time > 0.5f)
+        {
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
     public void Attack()
     {
@@ -292,6 +258,7 @@ public class Enemy1Controller : MonoBehaviour
                     StartCoroutine(CoolDownAttackRanged());
                 break;
                 case (Enemy1Type.Explosive):
+                    ExplosionAnimation();
                     Explode();
                 break;
             }
@@ -372,5 +339,128 @@ public class Enemy1Controller : MonoBehaviour
             }
         }
         
+    }
+    private void ExplosionAnimation()
+    {
+        distancia = player.transform.position - transform.position;
+        if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
+        {
+            if (distancia.y > 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                animator.SetBool("ExplodindoAbaixo", false);
+                animator.SetBool("ExplodindoCima", true);
+                animator.SetBool("ExplodindoLados", false);
+            }
+            if (distancia.y < 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                animator.SetBool("ExplodindoAbaixo", true);
+                animator.SetBool("ExplodindoCima", false);
+                animator.SetBool("ExplodindoLados", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("Morreu", false);
+            animator.SetBool("Parou", false);
+            animator.SetBool("SeguindoCima", false);
+            animator.SetBool("SeguindoAbaixo", false);
+            animator.SetBool("SeguindoLados", false);
+            animator.SetBool("ExplodindoAbaixo", false);
+            animator.SetBool("ExplodindoCima", false);
+            animator.SetBool("ExplodindoLados", true);
+            if (distancia.x > 0)
+            {
+                transform.eulerAngles = new Vector3(0f, 180f, 0f);
+            }
+            if (distancia.x < 0)
+            {
+                transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            }
+        }
+    }
+    private void FollowAnimation()
+    {
+        distancia = player.transform.position - transform.position;
+        if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
+        {
+            if (distancia.y > 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", true);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                if (enemy1Type == Enemy1Type.Ranged)
+                {
+                    animator.SetBool("AtirandoAbaixo", false);
+                    animator.SetBool("AtirandoCima", false);
+                    animator.SetBool("AtirandoLados", false);
+                }
+                if (enemy1Type == Enemy1Type.Explosive)
+                {
+                    animator.SetBool("ExplodindoAbaixo", false);
+                    animator.SetBool("ExplodindoCima", false);
+                    animator.SetBool("ExplodindoLados", false);
+                }
+            }
+            if (distancia.y < 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", true);
+                animator.SetBool("SeguindoLados", false);
+                if (enemy1Type == Enemy1Type.Ranged)
+                {
+                    animator.SetBool("AtirandoAbaixo", false);
+                    animator.SetBool("AtirandoCima", false);
+                    animator.SetBool("AtirandoLados", false);
+                }
+                if (enemy1Type == Enemy1Type.Explosive)
+                {
+                    animator.SetBool("ExplodindoAbaixo", false);
+                    animator.SetBool("ExplodindoCima", false);
+                    animator.SetBool("ExplodindoLados", false);
+                }
+            }
+        }
+        else
+        {
+            animator.SetBool("Morreu", false);
+            animator.SetBool("Parou", false);
+            animator.SetBool("SeguindoCima", false);
+            animator.SetBool("SeguindoAbaixo", false);
+            animator.SetBool("SeguindoLados", true);
+            if (enemy1Type == Enemy1Type.Ranged)
+            {
+                animator.SetBool("AtirandoAbaixo", false);
+                animator.SetBool("AtirandoCima", false);
+                animator.SetBool("AtirandoLados", false);
+            }
+            if (enemy1Type == Enemy1Type.Explosive)
+            {
+                animator.SetBool("ExplodindoAbaixo", false);
+                animator.SetBool("ExplodindoCima", false);
+                animator.SetBool("ExplodindoLados", false);
+            }
+            if (distancia.x > 0)
+            {
+                transform.eulerAngles = new Vector3(0f, 180f, 0f);
+            }
+            if (distancia.x < 0)
+            {
+                transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            }
+        }
     }
 }
