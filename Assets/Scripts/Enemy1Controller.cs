@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum Enemy1State
 {
+    Idle,
     Follow,
     Wander,
     Die,
@@ -66,14 +67,18 @@ public class Enemy1Controller : MonoBehaviour
 
     public int coolDownEnemyRanged;
 
+    public bool notInRoom =true;
+
     
 
     private bool coolDownAttackEnemy;
 
     public GameObject projectilePrefab;
     [SerializeField] private RuntimeAnimatorController robot;
+    [SerializeField] private RuntimeAnimatorController alien;
     private Animator animator;
     private float time = 0f;
+    private Vector2 distancia;
     // Start is called before the first frame update
     void Start()
     {
@@ -85,48 +90,59 @@ public class Enemy1Controller : MonoBehaviour
         {
             animator.runtimeAnimatorController = robot;
         }
+        if(enemy1Type == Enemy1Type.Ranged)
+        {
+            animator.runtimeAnimatorController = alien;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (died == true)
+        if (!notInRoom)
         {
-            time += Time.deltaTime;
-            if (time > 0.8f)
+            if (died == true)
             {
-                Destroy(gameObject);
+                time += Time.deltaTime;
+                if (time > 0.8f)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                switch (currentState)
+                {
+                    case (Enemy1State.Wander):
+                        Wander();
+                        break;
+                    case (Enemy1State.Follow):
+                        Follow();
+                        break;
+                    case (Enemy1State.Die):
+                        Die();
+                        break;
+                    case (Enemy1State.Attack):
+                        Attack();
+                        break;
+                }
+                if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
+                {
+                    currentState = Enemy1State.Follow;
+                }
+                else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
+                {
+                    currentState = Enemy1State.Wander;
+                }
+                if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
+                {
+                    currentState = Enemy1State.Attack;
+                }
             }
         }
         else
         {
-            switch (currentState)
-            {
-                case (Enemy1State.Wander):
-                    Wander();
-                    break;
-                case (Enemy1State.Follow):
-                    Follow();
-                    break;
-                case (Enemy1State.Die):
-                    Die();
-                    break;
-                case (Enemy1State.Attack):
-                    Attack();
-                    break;
-            }
-            if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
-            {
-                currentState = Enemy1State.Follow;
-            }
-            else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
-            {
-                currentState = Enemy1State.Wander;
-            }
-            if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
-            {
-                currentState = Enemy1State.Attack;
-            }
+            currentState = Enemy1State.Idle;
         }
     }
     private bool IsPlayerInRange(float range)
@@ -155,14 +171,20 @@ public class Enemy1Controller : MonoBehaviour
         animator.SetBool("SeguindoCima", false);
         animator.SetBool("SeguindoAbaixo", false);
         animator.SetBool("SeguindoLados", false);
+        if(enemy1Type == Enemy1Type.Ranged)
+        {
+            animator.SetBool("AtirandoAbaixo", false);
+            animator.SetBool("AtirandoCima", false);
+            animator.SetBool("AtirandoLados", false);
+        }
         if (IsPlayerInRange(range))
         {
             currentState = Enemy1State.Follow;
         }
     }
+    void Idle() {}
     void Follow()
     {
-        Vector2 distancia;
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         distancia = player.transform.position - transform.position;
         if(Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
@@ -174,6 +196,12 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoCima", true);
                 animator.SetBool("SeguindoAbaixo", false);
                 animator.SetBool("SeguindoLados", false);
+                if (enemy1Type == Enemy1Type.Ranged)
+                {
+                    animator.SetBool("AtirandoAbaixo", false);
+                    animator.SetBool("AtirandoCima", false);
+                    animator.SetBool("AtirandoLados", false);
+                }
             }
             if(distancia.y < 0)
             {
@@ -182,28 +210,36 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoCima", false);
                 animator.SetBool("SeguindoAbaixo", true);
                 animator.SetBool("SeguindoLados", false);
+                if (enemy1Type == Enemy1Type.Ranged)
+                {
+                    animator.SetBool("AtirandoAbaixo", false);
+                    animator.SetBool("AtirandoCima", false);
+                    animator.SetBool("AtirandoLados", false);
+                }
             }
         }
         else
         {
+            animator.SetBool("Morreu", false);
+            animator.SetBool("Parou", false);
+            animator.SetBool("SeguindoCima", false);
+            animator.SetBool("SeguindoAbaixo", false);
+            animator.SetBool("SeguindoLados", true);
+            if (enemy1Type == Enemy1Type.Ranged)
+            {
+                animator.SetBool("AtirandoAbaixo", false);
+                animator.SetBool("AtirandoCima", false);
+                animator.SetBool("AtirandoLados", false);
+            }
             if (distancia.x > 0)
             {
-                animator.SetBool("Morreu", false);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", false);
-                animator.SetBool("SeguindoAbaixo", false);
-                animator.SetBool("SeguindoLados", true);
-                transform.eulerAngles = new Vector3(0, 180f, 0);
+                transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }
             if (distancia.x < 0)
             {
-                animator.SetBool("Morreu", false);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", false);
-                animator.SetBool("SeguindoAbaixo", false);
-                animator.SetBool("SeguindoLados", true);
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
+
         }
     }
     public void Die()
@@ -216,6 +252,12 @@ public class Enemy1Controller : MonoBehaviour
             animator.SetBool("SeguindoCima", false);
             animator.SetBool("SeguindoAbaixo", false);
             animator.SetBool("SeguindoLados", false);
+            if (enemy1Type == Enemy1Type.Ranged)
+            {
+                animator.SetBool("AtirandoAbaixo", false);
+                animator.SetBool("AtirandoCima", false);
+                animator.SetBool("AtirandoLados", false);
+            }
             died = true;
         }
     }
@@ -241,6 +283,7 @@ public class Enemy1Controller : MonoBehaviour
                 break;
                 case(Enemy1Type.Ranged):
                     GameObject bullet = projectilePrefab;
+                    ShootingAnimation();
                     bullet.GetComponent<ProjectileDamage>().isEnemyBullet = true;
                     bullet.GetComponent<ProjectileDamage>().GetPlayer(player.transform);
                     Instantiate(bullet, transform.position, Quaternion.identity);
@@ -280,5 +323,54 @@ public class Enemy1Controller : MonoBehaviour
         {
             health = maxHealth;
         }
+    }
+    private void ShootingAnimation()
+    {
+        distancia = player.transform.position - transform.position;
+        if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
+        {
+            if (distancia.y > 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                animator.SetBool("AtirandoAbaixo", false);
+                animator.SetBool("AtirandoCima", true);
+                animator.SetBool("AtirandoLados", false);
+            }
+            if (distancia.y < 0)
+            {
+                animator.SetBool("Morreu", false);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                animator.SetBool("AtirandoAbaixo", true);
+                animator.SetBool("AtirandoCima", false);
+                animator.SetBool("AtirandoLados", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("Morreu", false);
+            animator.SetBool("Parou", false);
+            animator.SetBool("SeguindoCima", false);
+            animator.SetBool("SeguindoAbaixo", false);
+            animator.SetBool("SeguindoLados", false);
+            animator.SetBool("AtirandoAbaixo", false);
+            animator.SetBool("AtirandoCima", false);
+            animator.SetBool("AtirandoLados", true);
+            if (distancia.x > 0)
+            {
+                transform.eulerAngles = new Vector3(0f, 180f, 0f);
+            }
+            if(distancia.x < 0)
+            {
+                transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            }
+        }
+        
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6012920689670385232}
   - component: {fileID: 4029081674703111315}
   - component: {fileID: -6783826882348090624}
+  - component: {fileID: 8843498134257138278}
   m_Layer: 0
   m_Name: InimigoMelee
   m_TagString: Inimigo
@@ -111,6 +112,7 @@ MonoBehaviour:
   coolDownEnemyRanged: 0
   projectilePrefab: {fileID: 0}
   robot: {fileID: 9100000, guid: 1b4c0da7a404ac44fbf649e46ed04ad2, type: 2}
+  alien: {fileID: 9100000, guid: 71ade5bd02c698f4796729eff962222d, type: 2}
 --- !u!61 &4029081674703111315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,3 +185,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &8843498134257138278
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965074472718680338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

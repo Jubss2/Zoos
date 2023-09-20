@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 943222fce9f8d4643b2c42f18aa3aeb1
+guid: b27aae7d93e211b45945199ba0732c5e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: alien-mirando-tras_0
+      name: alien-atirando-lado_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03ce14256a7019e439886d83b3bb3a2e
-      internalID: -1249477550
+      spriteID: ed7cb2ab4e7bed6469c506941e5b967d
+      internalID: -1573546915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alien-mirando-tras_1
+      name: alien-atirando-lado_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6f76fd867ef32a4f894b9d9b345a927
-      internalID: -1133468492
+      spriteID: d029a74b73f0d4643807ff22a9fb23d8
+      internalID: -850765477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alien-mirando-tras_2
+      name: alien-atirando-lado_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,71 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33e229053cee17447972057dc82eb5a5
-      internalID: -1964404165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien-mirando-tras_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b779f39b4acdeb34f97b3a8b133eb91c
-      internalID: -990245007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien-mirando-tras_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7d32246e11a704419e2d55f675c4c73
-      internalID: 1900783482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien-mirando-tras_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e2f0aba634386547a0f08b3f34ac097
-      internalID: -1939312989
+      spriteID: d5e7352f4695e5346b8f85e43d69b914
+      internalID: -108299760
       vertices: []
       indices: 
       edges: []
@@ -246,12 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      alien-mirando-tras_0: -1249477550
-      alien-mirando-tras_1: -1133468492
-      alien-mirando-tras_2: -1964404165
-      alien-mirando-tras_3: -990245007
-      alien-mirando-tras_4: 1900783482
-      alien-mirando-tras_5: -1939312989
+      alien-atirando-lado_0: -1573546915
+      alien-atirando-lado_1: -850765477
+      alien-atirando-lado_2: -108299760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
