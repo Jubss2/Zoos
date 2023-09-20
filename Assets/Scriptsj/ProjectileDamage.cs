@@ -20,30 +20,30 @@ public class ProjectileDamage : MonoBehaviour
     public int damagePlayer;
 
 
-   
+
 
 
     public float speed;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name != "Player" && !isEnemyBullet)
+        if (collision.name != "Player" && !isEnemyBullet)
         {
-            if(collision.GetComponent<Enemy1Controller>() != null) 
+            if (collision.GetComponent<Enemy1Controller>() != null)
             {
                 collision.GetComponent<Enemy1Controller>().DealDamage(damageEnemy);
 
             }
             Destroy(gameObject);
         }
-        if(collision.tag == "Player" && isEnemyBullet)
+        if (collision.tag == "Player" && isEnemyBullet)
         {
             collision.GetComponent<PlayerLife>().PlayerDamage();
             Destroy(gameObject);
         }
 
 
-        }
-   
+    }
+
 
     void Update()
     {
@@ -65,3 +65,4 @@ public class ProjectileDamage : MonoBehaviour
     }
 
 }
+

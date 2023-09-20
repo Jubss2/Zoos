@@ -11,5 +11,5 @@ public class Pared : MonoBehaviour
     }
 
     public ParedeType Patype;
-    public GameObject parCollider;
+   
 }

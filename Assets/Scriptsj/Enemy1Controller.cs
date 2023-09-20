@@ -104,36 +104,38 @@ public class Enemy1Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!notInRoom)
+
+        if (died == true)
         {
-            if (died == true)
+            time += Time.deltaTime;
+            if (time > 0.8f)
             {
-                time += Time.deltaTime;
-                if (time > 0.8f)
-                {
-                    Destroy(gameObject);
-                }
+                Destroy(gameObject);
             }
-            else
+        }
+
+        else
+        {
+            switch (currentState)
             {
-                switch (currentState)
-                {
-                    case (Enemy1State.Wander):
-                        time = 0f;
-                        Wander();
-                        break;
-                    case (Enemy1State.Follow):
-                        time = 0f;
-                        Follow();
-                        break;
-                    case (Enemy1State.Die):
-                        time = 0f;
-                        Die();
-                        break;
-                    case (Enemy1State.Attack):
-                        Attack();
-                        break;
-                }
+                case (Enemy1State.Wander):
+                    time = 0f;
+                    Wander();
+                    break;
+                case (Enemy1State.Follow):
+                    time = 0f;
+                    Follow();
+                    break;
+                case (Enemy1State.Die):
+                    time = 0f;
+                    Die();
+                    break;
+                case (Enemy1State.Attack):
+                    Attack();
+                    break;
+            }
+            if (!notInRoom)
+            {
                 if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
                 {
                     currentState = Enemy1State.Follow;
@@ -147,10 +149,10 @@ public class Enemy1Controller : MonoBehaviour
                     currentState = Enemy1State.Attack;
                 }
             }
-        }
-        else
-        {
-            currentState = Enemy1State.Idle;
+            else
+            {
+                currentState = Enemy1State.Idle;
+            }
         }
     }
     private bool IsPlayerInRange(float range)

@@ -709,7 +709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &137213974
 Transform:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0003182888, y: 0.69933224}
+  m_Offset: {x: 0.0003182888, y: 0.86031437}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -820,7 +820,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.532793, y: 0.8605659}
+  m_Size: {x: 1.532793, y: 0.53860164}
   m_EdgeRadius: 0
 --- !u!1 &147153179
 GameObject:
@@ -1025,6 +1025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493437240}
   - component: {fileID: 493437239}
+  - component: {fileID: 493437241}
   m_Layer: 0
   m_Name: ParedeD
   m_TagString: Untagged
@@ -1092,6 +1093,19 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.028}
+--- !u!114 &493437241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493437237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac559ae2c242d4d98f65452c695ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patype: 3
 --- !u!1 &495471534
 GameObject:
   m_ObjectHideFlags: 0
@@ -5251,6 +5265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819562610}
   - component: {fileID: 1819562609}
+  - component: {fileID: 1819562611}
   m_Layer: 0
   m_Name: ParedeL
   m_TagString: Untagged
@@ -5318,6 +5333,19 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.015}
+--- !u!114 &1819562611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819562607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac559ae2c242d4d98f65452c695ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patype: 0
 --- !u!1 &1902177808
 GameObject:
   m_ObjectHideFlags: 0
@@ -5328,6 +5356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1902177811}
   - component: {fileID: 1902177810}
+  - component: {fileID: 1902177812}
   m_Layer: 0
   m_Name: ParedeUp
   m_TagString: Untagged
@@ -5395,6 +5424,19 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.094}
+--- !u!114 &1902177812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902177808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac559ae2c242d4d98f65452c695ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patype: 2
 --- !u!1 &1975739071
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,6 +5601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2045862675}
   - component: {fileID: 2045862674}
+  - component: {fileID: 2045862676}
   m_Layer: 0
   m_Name: ParedeR
   m_TagString: Untagged
@@ -5626,3 +5669,16 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 191.37, y: -0.028015137, z: 90.143}
+--- !u!114 &2045862676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045862672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac559ae2c242d4d98f65452c695ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patype: 1

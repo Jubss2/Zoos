@@ -84,22 +84,22 @@ public class Room : MonoBehaviour
                  case Door.DoorType.R:
                     if (GetRight() == null)
                         door.gameObject.SetActive(false);
-                        door.parCollider.SetActive(true);
+                       
                     break;
                 case Door.DoorType.L:
                     if (GetLeft() == null)
                         door.gameObject.SetActive(false);
-                        door.parCollider.SetActive(true);
+                        
                     break;
                 case Door.DoorType.Up:
                     if (GetUp() == null)
                         door.gameObject.SetActive(false);
-                        door.parCollider.SetActive(true);
+                        
                     break;
                 case Door.DoorType.Down:
                     if (GetDown() == null)
                         door.gameObject.SetActive(false);
-                        door.parCollider.SetActive(true);
+                        
                     break;
             }
         }

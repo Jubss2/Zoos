@@ -709,7 +709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &137213974
 Transform:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009519458, y: 0.552675}
+  m_Offset: {x: -0.009519458, y: 0.6853993}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -820,7 +820,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7888606, y: 0.8808162}
+  m_Size: {x: 1.7888606, y: 0.6153676}
   m_EdgeRadius: 0
 --- !u!1 &147153179
 GameObject:
@@ -1050,6 +1050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419887061}
   - component: {fileID: 419887060}
+  - component: {fileID: 419887062}
   m_Layer: 0
   m_Name: ParedeUp
   m_TagString: Untagged
@@ -1117,6 +1118,19 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.094}
+--- !u!114 &419887062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419887058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac559ae2c242d4d98f65452c695ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patype: 2
 --- !u!1 &495471534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1272,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.1764183, y: 6.2541294}
+  m_Offset: {x: 4.1764183, y: 5.7182217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1269,7 +1283,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.4468136, y: 1.7977734}
+  m_Size: {x: 7.4468136, y: 1.9926476}
   m_EdgeRadius: 0
 --- !u!1 &829917853
 GameObject:
@@ -1469,6 +1483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1015729477}
   - component: {fileID: 1015729476}
+  - component: {fileID: 1015729478}
   m_Layer: 0
   m_Name: ParedeR
   m_TagString: Untagged
@@ -1536,6 +1551,19 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 191.37, y: -0.028015137, z: 90.143}
+--- !u!114 &1015729478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015729474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac559ae2c242d4d98f65452c695ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patype: 1
 --- !u!1 &1105178591
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,7 +3802,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.4529054, y: 6.9137516}
+  m_Offset: {x: 2.4529054, y: 6.2989025}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3785,7 +3813,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.0616803, y: 0.88339615}
+  m_Size: {x: 7.0616803, y: 1.0024009}
   m_EdgeRadius: 0
 --- !u!1 &1380922336
 GameObject:
@@ -4058,7 +4086,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.3218775, y: 7.0702615}
+  m_Offset: {x: 4.3218775, y: 6.4752464}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4069,7 +4097,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.3766956, y: 0.83952045}
+  m_Size: {x: 7.3766956, y: 0.99819326}
   m_EdgeRadius: 0
 --- !u!1 &1490394078
 GameObject:
@@ -5381,7 +5409,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.3956628, y: 5.7536197}
+  m_Offset: {x: 2.3956628, y: 5.266431}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5392,7 +5420,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.0104504, y: 1.7890825}
+  m_Size: {x: 7.0104504, y: 1.9839578}
   m_EdgeRadius: 0
 --- !u!1 &1994798696
 GameObject:
@@ -5404,6 +5432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994798699}
   - component: {fileID: 1994798698}
+  - component: {fileID: 1994798700}
   m_Layer: 0
   m_Name: ParedeL
   m_TagString: Untagged
@@ -5471,6 +5500,19 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.015}
+--- !u!114 &1994798700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994798696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac559ae2c242d4d98f65452c695ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patype: 0
 --- !u!1 &2012299605
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,6 +5600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040607596}
   - component: {fileID: 2040607595}
+  - component: {fileID: 2040607597}
   m_Layer: 0
   m_Name: ParedeD
   m_TagString: Untagged
@@ -5617,11 +5660,24 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040607593}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0002460096, w: 1}
-  m_LocalPosition: {x: -0.21050864, y: -6.550032, z: 0.14625393}
-  m_LocalScale: {x: 6.249998, y: 6, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.00024601817, w: 1}
+  m_LocalPosition: {x: -0.21051025, y: -6.5500298, z: 0.14625393}
+  m_LocalScale: {x: 6.249994, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.028}
+--- !u!114 &2040607597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040607593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac559ae2c242d4d98f65452c695ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patype: 3

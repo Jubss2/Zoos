@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4259674192489469164, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5269703286046316066, guid: 1139e514adce5584691d25a7c76da618, type: 3}
     - target: {fileID: 6012920689670385232, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: maxHealth
       value: 1
@@ -150,15 +154,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8965074472718680338, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: m_TagString
-      value: Inimigo
+      value: Enemy1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6844961846810497267, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8965074472718680338, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2855478066453871079}
+    - targetCorrespondingSourceObject: {fileID: 8965074472718680338, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5408644685268831317}
   m_SourcePrefab: {fileID: 100100000, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
 --- !u!1 &4186133921154145618 stripped
 GameObject:
@@ -192,3 +200,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5408644685268831317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4186133921154145618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c961a519420ce304c9cea48b673fa9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 2
+  enemy1Type: 1
+  range: 10
+  speed: 3
+  health: 1
+  maxHealth: 0
+  attackRange: 7
+  damagePlayerMeele: 0
+  coolDownEnemy: 0
+  coolDownEnemyRanged: 2
+  notInRoom: 0
+  projectilePrefab: {fileID: 5269703286046316066, guid: 1139e514adce5584691d25a7c76da618, type: 3}
+  robot: {fileID: 0}
+  alien: {fileID: 9100000, guid: 71ade5bd02c698f4796729eff962222d, type: 2}
+  slime: {fileID: 0}
