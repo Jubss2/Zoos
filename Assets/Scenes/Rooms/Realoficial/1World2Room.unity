@@ -709,7 +709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &137213974
 Transform:
   m_ObjectHideFlags: 0
@@ -939,10 +939,10 @@ MonoBehaviour:
   rightDoor: {fileID: 829917855}
   upDoor: {fileID: 829917855}
   downDoor: {fileID: 107072639}
-  leftPared: {fileID: 0}
-  rightPared: {fileID: 0}
-  upPared: {fileID: 0}
-  downPared: {fileID: 0}
+  leftPared: {fileID: 1994798700}
+  rightPared: {fileID: 1015729478}
+  upPared: {fileID: 419887062}
+  downPared: {fileID: 2040607597}
   doors: []
   walls: []
 --- !u!4 &407226027

@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] private int health = 5;
-    public int GetHealth()
+    [SerializeField] private static int health =3;
+    public static int GetHealth()
     {
         return health;
     }
@@ -15,6 +16,7 @@ public class PlayerLife : MonoBehaviour
         if(health <= 0)
         {
             Debug.Log("Morreu");
+            SceneManager.LoadScene("Morreu");
         }
     }
 }
