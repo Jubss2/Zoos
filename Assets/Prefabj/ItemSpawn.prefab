@@ -45,5 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+<<<<<<< Updated upstream
   - gameObject: {fileID: 3276594475189532384, guid: 230f90e189595114289831e5bf2f756e, type: 3}
     weight: 0.5
+=======
+  - gameObject: {fileID: 4000571362495352904, guid: 0e30ddc3731dd774985e5a52148a8d86, type: 3}
+    weight: 0.7
+  - gameObject: {fileID: 1571290103528448926, guid: a6f20f6e2ef9f82459bfdd89923b36d4, type: 3}
+    weight: 0.4
+  - gameObject: {fileID: 4757496207175492710, guid: a01796a0238397e42a5ed57a15abfac7, type: 3}
+    weight: 0.8
+>>>>>>> Stashed changes

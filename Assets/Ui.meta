@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Ui.meta
 guid: a55ad693d057abe4aa6af364efac219f
 folderAsset: yes
+=======
+guid: e6cb7ea512d24dc47a622ebe12123cf4
+>>>>>>> Stashed changes:Assets/Scenes/Morreu.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

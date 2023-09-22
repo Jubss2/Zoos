@@ -14,4 +14,8 @@ public void StartGame()
     {
         Application.Quit();
     }
+    public void StartMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
