@@ -12,6 +12,7 @@ public class UiHeart1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fillVa = PlayerLife.GetHealth();
 
     }
 
