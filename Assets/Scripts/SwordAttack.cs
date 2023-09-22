@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     private float time;
+    public float damage;
     private void Update()
     {
         time += Time.deltaTime;
@@ -20,7 +21,7 @@ public class SwordAttack : MonoBehaviour
     {
         if (collision.tag == "Inimigo")
         {
-            collision.GetComponent<Enemy1Controller>().DealDamage(1);
+            collision.GetComponent<Enemy1Controller>().DealDamage(damage);
         }
     }
 }
