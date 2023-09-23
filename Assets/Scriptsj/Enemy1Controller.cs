@@ -239,6 +239,7 @@ public class Enemy1Controller : MonoBehaviour
         if (time > 0.5f)
         {
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            RoomController.instance.StartCoroutine(RoomController.instance.RoomCourotine());
             Destroy(gameObject);
         }
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosao : MonoBehaviour
+public class SlimeExplosao : MonoBehaviour
 {
     private float time;
     private void Update()
@@ -10,23 +10,18 @@ public class Explosao : MonoBehaviour
         time += Time.deltaTime;
         if (time > 0.1f)
         {
-            Destroy(GetComponent<CircleCollider2D>());
+            Destroy(gameObject.GetComponent<CircleCollider2D>());
         }
-        if(time > 0.3f)
+        if (time > 0.3f)
         {
             Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Inimigo")
-        {
-            collision.GetComponent<Enemy1Controller>().DealDamage(3);
-        }
         if (collision.tag == "Player")
         {
             collision.GetComponent<PlayerLife>().PlayerDamage();
         }
-
     }
 }

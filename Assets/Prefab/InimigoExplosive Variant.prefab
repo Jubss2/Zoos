@@ -42,12 +42,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4259674192489469164, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: attackRange
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4259674192489469164, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: projectilePrefab
       value: 
-      objectReference: {fileID: 5496263668828920015, guid: 9263df46e72e86d42800cfe867e803d9, type: 3}
+      objectReference: {fileID: 2752086191293802098, guid: 002353291918e8744ad95e9c79ea7b5a, type: 3}
     - target: {fileID: 4259674192489469164, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: coolDownEnemyRanged
       value: 1
