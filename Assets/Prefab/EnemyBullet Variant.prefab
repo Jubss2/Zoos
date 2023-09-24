@@ -119,4 +119,4 @@ MonoBehaviour:
   isEnemyBomb: 0
   playerPos: {x: 0, y: 0}
   damagePlayer: 1
-  speed: 2
+  speed: 3
