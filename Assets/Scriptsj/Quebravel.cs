@@ -51,7 +51,7 @@ public class Quebravel : MonoBehaviour
         if (died == true)
         {
             time += Time.deltaTime;
-            if (time > 0.8f)
+            if (time > 0.6f)
             {
                 Destroy(gameObject);
             }
