@@ -20,5 +20,9 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<Enemy1Controller>().DealDamage(1);
             Destroy(gameObject);
         }
+        if (collision.tag == "ObjetoQuebravel")
+        {
+            collision.GetComponent<Quebravel>().DealDamage(1);
+        }
     }
 }

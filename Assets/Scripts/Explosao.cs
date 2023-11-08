@@ -27,6 +27,9 @@ public class Explosao : MonoBehaviour
         {
             collision.GetComponent<PlayerLife>().PlayerDamage();
         }
-
+        if (collision.tag == "ObjetoQuebravel")
+        {
+            collision.GetComponent<Quebravel>().DealDamage(1);
+        }
     }
 }
