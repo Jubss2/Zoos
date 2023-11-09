@@ -53,11 +53,11 @@ TagManager:
   - name: BackGround
     uniqueID: 3697777039
     locked: 0
-  - name: Door Up
-    uniqueID: 2297004619
-    locked: 0
   - name: Wals up
     uniqueID: 4192372793
+    locked: 0
+  - name: Door Up
+    uniqueID: 2297004619
     locked: 0
   - name: Player
     uniqueID: 2976795097

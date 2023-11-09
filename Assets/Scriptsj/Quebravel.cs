@@ -33,7 +33,8 @@ public class Quebravel : MonoBehaviour
         // Destroy(gameObject);
         if (health <= 0)
         {
-            Quebrou = true;
+            FindObjectOfType<AudioManager>().PlaySound("OQAtingido");
+            Quebrou = true;   
   
         }
         died = true;
@@ -46,6 +47,7 @@ public class Quebravel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         animator.SetBool("Quebrou", Quebrou);
 
         if (died == true)
@@ -53,6 +55,7 @@ public class Quebravel : MonoBehaviour
             time += Time.deltaTime;
             if (time > 0.6f)
             {
+
                 Destroy(gameObject);
             }
         }

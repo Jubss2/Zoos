@@ -12,7 +12,7 @@ public class PlayerLife : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        health = 3;
+        health = 10;
     }
     private void Update()
     {
@@ -32,11 +32,15 @@ public class PlayerLife : MonoBehaviour
     public void PlayerDamage()
     {
         health--;
-        if(health <= 0)
+        FindObjectOfType<AudioManager>().PlaySound("PAtingido");
+        if (health <= 0)
         {
+            
             animator.SetBool("Morreu", true);
+            AudioManager.instance.PlaySound("PMorto");
             morto = true;
             Destroy(GetComponent<PlayerMovement>());
+
         }
     }
 }

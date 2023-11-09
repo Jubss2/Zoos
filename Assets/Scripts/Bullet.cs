@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.tag == "Inimigo")
         {
-            collision.GetComponent<Enemy1Controller>().DealDamage(1);
+            collision.GetComponentInParent<Enemy1Controller>().DealDamage(1);
             Destroy(gameObject);
         }
         if (collision.tag == "ObjetoQuebravel")
