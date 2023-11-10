@@ -19,6 +19,7 @@ public class PlayerAttacks : MonoBehaviour
     private int bullets;
     private PlayerMovement playerMovement;
     private GameObject ultimoataque;
+    public bool armaEstado = false;
 
     private void Awake()
     {
@@ -29,9 +30,11 @@ public class PlayerAttacks : MonoBehaviour
         input = new PlayerControls();
         activeWeapon = 0;
         playerMovement = GetComponent<PlayerMovement>();
+        
     }
     private void OnEnable()
     {
+        
         input.Enable();
         input.Player.Attack.performed += OnAttack;
     }
@@ -42,8 +45,9 @@ public class PlayerAttacks : MonoBehaviour
     }
     void OnAttack(InputAction.CallbackContext context)
     {
+        
         if (haveBomb)
-        {
+        {       
             ultimoataque = Instantiate(bomb, rb.transform.position + playerMovement.GetLastMove(), Quaternion.identity);
             ultimoataque.GetComponent<ThrowBomb>().SetMovimento(playerMovement.GetLastMove());
             bullets--;
@@ -52,6 +56,7 @@ public class PlayerAttacks : MonoBehaviour
         {
             if (playerMovement.GetLastMove().x < 0)
             {
+               
                 Instantiate(cut, rb.transform.position + playerMovement.GetLastMove(), Quaternion.Euler(0, 180f, 0));
             }
             else
@@ -76,15 +81,17 @@ public class PlayerAttacks : MonoBehaviour
         haveSword = false;
         havePistol = false;
         haveBomb = false;
+     
     }
     public int GetWeapon()
     {
-        return activeWeapon;
+        return activeWeapon;   
     }
     public void SetWeapon(int weapon, int bullets)
     {
         activeWeapon = weapon;
         this.bullets = bullets;
+       
         if (weapon == 0)
         {
             ResetWeapons();
