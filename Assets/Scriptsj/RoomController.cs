@@ -25,7 +25,7 @@ public class RoomController : MonoBehaviour
     public List<Room> loadedRooms = new List<Room>();
 
     bool isLoadingRoom = false;
-   
+
 
     Room currRoom;
 
@@ -33,14 +33,14 @@ public class RoomController : MonoBehaviour
 
     bool updatedRooms = false;
 
-     void Awake()
+    void Awake()
     {
         instance = this;
     }
 
-     void Start()
+    void Start()
     {
-        
+
     }
 
     void Update()
@@ -51,18 +51,19 @@ public class RoomController : MonoBehaviour
 
     void UpdateRoomQueue()
     {
-        if(isLoadingRoom)
+        if (isLoadingRoom)
         {
             return;
         }
-        if(currentRoomQueue.Count == 0) 
+        if (currentRoomQueue.Count == 0)
         {
             if (!spawnBossRoom)
             {
                 StartCoroutine(SpawnBossRoom());
-            }else if(spawnBossRoom && !updatedRooms)
+            }
+            else if (spawnBossRoom && !updatedRooms)
             {
-                foreach(Room room in loadedRooms)
+                foreach (Room room in loadedRooms)
                 {
                     room.RemoveUnconnectedDoors();
                     room.AddWalls();
@@ -84,7 +85,7 @@ public class RoomController : MonoBehaviour
     {
         spawnBossRoom = true;
         yield return new WaitForSeconds(0.5f);
-        if(currentRoomQueue.Count == 0)
+        if (currentRoomQueue.Count == 0)
         {
             Room bossRoom = loadedRooms[loadedRooms.Count - 1];
             Room tempRoom = new Room(bossRoom.X, bossRoom.Y);
@@ -92,15 +93,14 @@ public class RoomController : MonoBehaviour
             var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
             loadedRooms.Remove(roomToRemove);
             LoadRoom("End", tempRoom.X, tempRoom.Y);
-
         }
     }
 
 
 
-    public void LoadRoom(string name,int x, int y)
+    public void LoadRoom(string name, int x, int y)
     {
-        if(DoesRoomExist(x,y))
+        if (DoesRoomExist(x, y))
         {
             return;
         }
@@ -117,8 +117,8 @@ public class RoomController : MonoBehaviour
         string roomName = currentWorld + info.name;
 
         AsyncOperation loadRoom = SceneManager.LoadSceneAsync(roomName, LoadSceneMode.Additive);
-        
-        while(loadRoom.isDone == false)
+
+        while (loadRoom.isDone == false)
         {
             yield return null;
         }
@@ -145,7 +145,7 @@ public class RoomController : MonoBehaviour
                 CameraController.instance.currRoom = room;
             }
             loadedRooms.Add(room);
-            
+
         }
         else
         {
@@ -155,7 +155,7 @@ public class RoomController : MonoBehaviour
     }
     public bool DoesRoomExist(int x, int y)
     {
-        return loadedRooms.Find(item => item.X == x && item.Y == y)!=null;
+        return loadedRooms.Find(item => item.X == x && item.Y == y) != null;
     }
     public string GetRandomRoom()
     {
@@ -182,18 +182,18 @@ public class RoomController : MonoBehaviour
     }
     public void UpdatedRooms()
     {
-        foreach(Room room in loadedRooms)
+        foreach (Room room in loadedRooms)
         {
-            if(currRoom != room)
+            if (currRoom != room)
             {
                 Enemy1Controller[] enemies = room.GetComponentsInChildren<Enemy1Controller>();
-                if(enemies!= null)
+                if (enemies != null)
                 {
-                    foreach(Enemy1Controller enemy in enemies)
+                    foreach (Enemy1Controller enemy in enemies)
                     {
                         enemy.notInRoom = true;
                     }
-                    foreach(Door door in room.GetComponentsInChildren<Door>())
+                    foreach (Door door in room.GetComponentsInChildren<Door>())
                     {
                         door.doorCollider.SetActive(false);
                     }
@@ -209,6 +209,7 @@ public class RoomController : MonoBehaviour
             else
             {
                 Enemy1Controller[] enemies = room.GetComponentsInChildren<Enemy1Controller>();
+                CatStateMachine boss = room.GetComponentInChildren<CatStateMachine>();
                 if (enemies.Length > 0)
                 {
                     foreach (Enemy1Controller enemy in enemies)
@@ -228,7 +229,7 @@ public class RoomController : MonoBehaviour
                     }
                 }
             }
-            
+
         }
     }
     public Room FindRoom(int x, int y)
