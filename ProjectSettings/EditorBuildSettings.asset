@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/Realoficial/1World2Room.unity
     guid: aa434a2d57087f94babe60a33a7b44a1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Rooms/Realoficial/1WorldEnd.unity
-    guid: 898c3f43e30762d48aa4ce59deae5d5d
+    guid: eace75b4c82d6c8449117a150c72282c
   m_configObjects: {}
