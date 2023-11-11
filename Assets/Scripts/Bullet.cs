@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     public void Update()
     {
         time += Time.deltaTime;
-        if (time > 0.5f)
+        if (time > 0.8f)
         {
             Destroy(gameObject);
         }
