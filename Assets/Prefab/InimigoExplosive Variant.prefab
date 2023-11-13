@@ -92,6 +92,14 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5496263668828920015, guid: 9263df46e72e86d42800cfe867e803d9, type: 3}
+    - target: {fileID: 6676176652981426416, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676176652981426416, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6715210788973291082, guid: ecb9f1bb38c95f247a1d809e31920927, type: 3}
       propertyPath: m_RootOrder
       value: 0
