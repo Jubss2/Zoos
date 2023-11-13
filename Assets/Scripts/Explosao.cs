@@ -27,7 +27,7 @@ public class Explosao : MonoBehaviour
         }
         if (collision.tag == "Player")
         {
-            collision.GetComponent<PlayerLife>().PlayerDamage();
+            collision.GetComponentInChildren<PlayerLife>().PlayerDamage();
         }
         if (collision.tag == "ObjetoQuebravel")
         {

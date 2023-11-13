@@ -37,7 +37,7 @@ public class ProjectileDamage : MonoBehaviour
         }
         if (collision.tag == "Player" && isEnemyBullet)
         {
-            collision.GetComponent<PlayerLife>().PlayerDamage();
+            collision.GetComponentInParent<PlayerLife>().PlayerDamage();
             Destroy(gameObject);
         }
 

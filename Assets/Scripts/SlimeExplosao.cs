@@ -21,7 +21,7 @@ public class SlimeExplosao : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponent<PlayerLife>().PlayerDamage();
+            collision.GetComponentInParent<PlayerLife>().PlayerDamage();
         }
     }
 }

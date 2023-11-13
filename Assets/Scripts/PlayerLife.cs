@@ -12,7 +12,7 @@ public class PlayerLife : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        health = 3;
+        health = 10;
     }
     private void Update()
     {

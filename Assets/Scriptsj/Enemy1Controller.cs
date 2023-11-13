@@ -265,7 +265,7 @@ public class Enemy1Controller : MonoBehaviour
             switch (enemy1Type)
             {
                 case (Enemy1Type.Meele):                   
-                    player.GetComponent<PlayerLife>().PlayerDamage();
+                    player.GetComponentInParent<PlayerLife>().PlayerDamage();
                     StartCoroutine(CoolDownAttack());
                     break;
                 case (Enemy1Type.Ranged):
