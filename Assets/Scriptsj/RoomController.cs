@@ -179,21 +179,11 @@ public class RoomController : MonoBehaviour
     }
     public void OnPlayerEnterRoom(Room room)
     {
-       
-        time += Time.deltaTime;
-        if (time > 0.8f)
-        {
-            Room1 = true;
-
-        }
-        if (Room1 == true)
-        {
-            UIScore.instance.AddPointRoom();
-        }
         CameraController.instance.currRoom = room;
         currRoom = room;
 
         StartCoroutine(RoomCourotine());
+       
     }
 
     public IEnumerator RoomCourotine()

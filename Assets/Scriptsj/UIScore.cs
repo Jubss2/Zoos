@@ -8,19 +8,24 @@ public class UIScore : MonoBehaviour
 {
     public static UIScore instance;
     public TextMeshProUGUI textScore;
-
-    int score = 0;
+    
+    public int score = 0;
     // Start is called before the first frame update
 
     private void Awake()
     {
         instance = this;
+
+        DontDestroyOnLoad(this.gameObject);
     }
     void Start()
     {
         textScore.text = score.ToString() + " POINTS";
     }
-
+    void Update()
+    {
+        PlayerPrefs.SetInt("currentScore", score);
+    }
     // Update is called once per frame
     public void AddPointRobot()
     {
@@ -28,6 +33,7 @@ public class UIScore : MonoBehaviour
         textScore.text = score.ToString() + " POINTS";
 
     }
+
     public void AddPointSlime()
     {
         score += 3;
