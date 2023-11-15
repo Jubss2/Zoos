@@ -10,7 +10,7 @@ public class Explosao : MonoBehaviour
         time += Time.deltaTime;
         if (time > 0.1f)
         {
-            FindObjectOfType<AudioManager>().PlaySound("GEExplosao");
+            AudioManager.instance.PlaySound("GEExplosao");
             Destroy(GetComponent<CircleCollider2D>());
         }
         if(time > 0.3f)
@@ -27,7 +27,7 @@ public class Explosao : MonoBehaviour
         }
         if (collision.tag == "Player")
         {
-            collision.GetComponentInChildren<PlayerLife>().PlayerDamage();
+            collision.GetComponentInParent<PlayerLife>().PlayerDamage();
         }
         if (collision.tag == "ObjetoQuebravel")
         {

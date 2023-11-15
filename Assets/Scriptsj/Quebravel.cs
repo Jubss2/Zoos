@@ -33,7 +33,7 @@ public class Quebravel : MonoBehaviour
         // Destroy(gameObject);
         if (health <= 0)
         {
-            FindObjectOfType<AudioManager>().PlaySound("OQAtingido");
+            AudioManager.instance.PlaySound("OQAtingido");
             Quebrou = true;   
   
         }
@@ -55,7 +55,7 @@ public class Quebravel : MonoBehaviour
             time += Time.deltaTime;
             if (time > 0.6f)
             {
-
+                UIScore.instance.AddPointQuebravel();
                 Destroy(gameObject);
             }
         }

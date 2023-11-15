@@ -32,7 +32,7 @@ public class PlayerLife : MonoBehaviour
     public void PlayerDamage()
     {
         health--;
-        FindObjectOfType<AudioManager>().PlaySound("PAtingido");
+        AudioManager.instance.PlaySound("PAtingido");
         if (health <= 0)
         {
             

@@ -113,7 +113,23 @@ public class Enemy1Controller : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 0.8f)
                 {
+                    switch(enemy1Type)
+                    {
+                        case (Enemy1Type.Meele):
+                            UIScore.instance.AddPointRobot();
+                           
+                        break;
+                        case (Enemy1Type.Ranged):
+                            UIScore.instance.AddPointAlien();
+                           
+                        break;
+                        case (Enemy1Type.Explosive):
+                            UIScore.instance.AddPointSlime();
+                           
+                        break;
+                    }
                     Destroy(gameObject);
+
                 }
             }
             else
@@ -223,14 +239,15 @@ public class Enemy1Controller : MonoBehaviour
             animator.SetBool("SeguindoCima", false);
             animator.SetBool("SeguindoAbaixo", false);
             animator.SetBool("SeguindoLados", false);
-            FindObjectOfType<AudioManager>().PlaySound("RMorte");
+            AudioManager.instance.PlaySound("RMorte");
+            
 
             if (enemy1Type == Enemy1Type.Ranged)
             {
                 animator.SetBool("AtirandoAbaixo", false);
                 animator.SetBool("AtirandoCima", false);
                 animator.SetBool("AtirandoLados", false);
-                FindObjectOfType<AudioManager>().PlaySound("AMorte");
+                AudioManager.instance.PlaySound("AMorte");
 
 
             }
@@ -239,7 +256,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
-                FindObjectOfType<AudioManager>().PlaySound("SMorte");
+                AudioManager.instance.PlaySound("SMorte");
 
             }
             died = true;
@@ -305,15 +322,15 @@ public class Enemy1Controller : MonoBehaviour
         health -= damageEnemy;
         if (enemy1Type == Enemy1Type.Ranged)
         {
-            FindObjectOfType<AudioManager>().PlaySound("RAtingido");
+            AudioManager.instance.PlaySound("RAtingido");
         }
         if (enemy1Type == Enemy1Type.Explosive)
         {
-            FindObjectOfType<AudioManager>().PlaySound("SAtingido");
+            AudioManager.instance.PlaySound("SAtingido");
         }
         if (enemy1Type == Enemy1Type.Meele)
         {
-            FindObjectOfType<AudioManager>().PlaySound("RAtingido");
+            AudioManager.instance.PlaySound("RAtingido");
         }
         Die();
     }
@@ -389,7 +406,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoLados", false);
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", true);
-                FindObjectOfType<AudioManager>().PlaySound("SSPulo");
+                AudioManager.instance.PlaySound("SSPulo");
                 animator.SetBool("ExplodindoLados", false);
             }
             if (distancia.y < 0)
@@ -400,7 +417,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoAbaixo", false);
                 animator.SetBool("SeguindoLados", false);
                 animator.SetBool("ExplodindoAbaixo", true);
-                FindObjectOfType<AudioManager>().PlaySound("SSPulo");
+                AudioManager.instance.PlaySound("SSPulo");
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
             }
@@ -415,7 +432,7 @@ public class Enemy1Controller : MonoBehaviour
             animator.SetBool("ExplodindoAbaixo", false);
             animator.SetBool("ExplodindoCima", false);
             animator.SetBool("ExplodindoLados", true);
-            FindObjectOfType<AudioManager>().PlaySound("SSPulo");
+            AudioManager.instance.PlaySound("SSPulo");
             if (distancia.x > 0)
             {
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);

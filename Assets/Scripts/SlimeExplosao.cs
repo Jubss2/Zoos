@@ -10,7 +10,7 @@ public class SlimeExplosao : MonoBehaviour
         time += Time.deltaTime;
         if (time > 0.1f)
         {
-            Destroy(gameObject.GetComponent<CircleCollider2D>());
+            Destroy(gameObject.GetComponent<BoxCollider2D>());
         }
         if (time > 0.3f)
         {
