@@ -36,11 +36,19 @@ public class PlayerLife : MonoBehaviour
         if (health <= 0)
         {
             
-            animator.SetBool("Morreu", true);
-            AudioManager.instance.PlaySound("PMorto");
-            morto = true;
-            Destroy(GetComponent<PlayerMovement>());
+            KillPlayer();
 
         }
+    }
+    public void KillPlayer()
+    {
+        if(morto == true && !AudioManager.instance.IsSoundPlaying("PMorto"))
+        {
+            AudioManager.instance.PlaySound("PMorto");
+            
+        }
+        animator.SetBool("Morreu", true);   
+        morto = true;
+        Destroy(GetComponent<PlayerMovement>());
     }
 }
