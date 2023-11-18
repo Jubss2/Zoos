@@ -40,11 +40,11 @@ public class Quebravel : MonoBehaviour
     }
     public void Die()
     {
-      
+        int num = random.Next(1, 10);
         // Destroy(gameObject);
         if (health <= 0)
         {
-            int num = random.Next(1, 10);
+            
             if (num == 10)
             {
                 powerup.SetActive(true);

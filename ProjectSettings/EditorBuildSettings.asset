@@ -36,6 +36,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World6Room.unity
     guid: c3d2fee10a648b8499a55a1ee766da2c
   - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World7Room.unity
+    guid: 2bcab19240ff16c429d6a140a0c0d6c4
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World8Room.unity
+    guid: d98e2903f58474545bf95e4e174b5740
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World9Room.unity
+    guid: 29814a8f6322bbf4894784c91734d2c8
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World10Room.unity
+    guid: 84a7ac176f9b533499ce2c3c2c71bdcd
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World11Room.unity
+    guid: a989c15fc014f2244a8fa23adac12681
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World12Room.unity
+    guid: 5e1331537c393214e92bf5875749075e
+  - enabled: 1
     path: Assets/Scenes/Rooms/Realoficial/1WorldEnd.unity
     guid: eace75b4c82d6c8449117a150c72282c
   - enabled: 1
