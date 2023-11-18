@@ -9,10 +9,11 @@ public class PlayerLife : MonoBehaviour
     private bool morto = false;
     private Animator animator;
     private float time = 0;
+    int maxhealth = 10;
     private void Start()
     {
         animator = GetComponent<Animator>();
-        health = 10;
+        health = maxhealth;
     }
     private void Update()
     {
@@ -50,5 +51,12 @@ public class PlayerLife : MonoBehaviour
         animator.SetBool("Morreu", true);   
         morto = true;
         Destroy(GetComponent<PlayerMovement>());
+    }
+
+    public void RestoreLife(int h)
+    {
+        if (health < maxhealth) {
+            health += h;
+        }
     }
 }

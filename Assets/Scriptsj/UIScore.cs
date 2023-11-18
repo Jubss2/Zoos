@@ -46,12 +46,6 @@ public class UIScore : MonoBehaviour
         textScore.text = score.ToString() + " POINTS";
 
     }
-    public void AddPointRoom()
-    {
-        score += 1;
-        textScore.text = score.ToString() + " POINTS";
-
-    }
     public void AddPointQuebravel()
     {
         score += 1;
