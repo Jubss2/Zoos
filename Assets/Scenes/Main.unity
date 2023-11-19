@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 990, y: 563}
+  m_AnchoredPosition: {x: 990, y: 561}
   m_SizeDelta: {x: 800, y: 450.19608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &568234487
@@ -841,7 +841,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textScore: {fileID: 990949571}
+  textHighscore: {fileID: 0}
   score: 0
+  highscore: 0
 --- !u!114 &568234488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,7 +2078,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008127898, y: 0.06023854}
+  m_Offset: {x: -0.008127898, y: 0.4057435}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.08}
@@ -2087,7 +2089,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62955815, y: 0.33111012}
+  m_Size: {x: 0.62955815, y: 1.02212}
   m_EdgeRadius: 0
 --- !u!50 &1129398186
 Rigidbody2D:
@@ -2439,6 +2441,14 @@ PrefabInstance:
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 1129398179}
+    - target: {fileID: 5994524908392734743, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0470215
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994524908392734743, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.41819417
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1502011029033952716, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
     - {fileID: 8368426466519865513, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
@@ -3128,7 +3138,7 @@ PrefabInstance:
       objectReference: {fileID: 990949571}
     - target: {fileID: 8486716281569993056, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8486716281569993056, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
       propertyPath: m_LocalPosition.x
