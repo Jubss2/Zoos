@@ -6,6 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menu.unity
+    guid: e750baec728c3a64e8e4f41aff3b98b9
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 31e5ecd033acef846a76186c9e713055
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/1WorldStart.unity
+    guid: 56a9c826119d1964e842133661bfd60a
+  - enabled: 1
+    path: Assets/Scenes/Morreu.unity
+    guid: 0f8512e599e7e95499530f0ba3e965ad
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World1Room.unity
+    guid: bc0f8bcb77a162148bfed6adc28ad39d
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World2Room.unity
+    guid: 4045e35144ab96843860773941f13835
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World3Room.unity
+    guid: 6a93fa2b4c8a60845b72c7a8518fb9f0
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World4Room.unity
+    guid: 035e63aa46044064bacc269a9c24452f
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World5Room.unity
+    guid: e7577ca7bee4738439d02a39487a7f5a
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World6Room.unity
+    guid: c3d2fee10a648b8499a55a1ee766da2c
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/1WorldEnd.unity
+    guid: eace75b4c82d6c8449117a150c72282c
   m_configObjects: {}
