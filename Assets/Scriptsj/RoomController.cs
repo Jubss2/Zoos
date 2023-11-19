@@ -11,8 +11,6 @@ public class RoomInfo
     public int X;
 
     public int Y;
-
-    public bool IsActive;
 }
 public class RoomController : MonoBehaviour
 {
@@ -34,10 +32,6 @@ public class RoomController : MonoBehaviour
     bool spawnBossRoom = false;
 
     bool updatedRooms = false;
-
-    bool Room1 = false;
-
-    private float time = 0f;
 
     void Awake()
     {
@@ -226,7 +220,6 @@ public class RoomController : MonoBehaviour
             else
             {
                 Enemy1Controller[] enemies = room.GetComponentsInChildren<Enemy1Controller>();
-                CatStateMachine boss = room.GetComponentInChildren<CatStateMachine>();
                 if (enemies.Length > 0)
                 {
                     foreach (Enemy1Controller enemy in enemies)

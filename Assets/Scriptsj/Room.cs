@@ -34,6 +34,8 @@ public class Room : MonoBehaviour
     public List<Door> doors = new List<Door>();
 
     public List<Pared> walls = new List<Pared>();
+
+    private bool empty;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +64,8 @@ public class Room : MonoBehaviour
                     break;
             }
         }
-       RoomController.instance.RegisterRoom(this);
+        empty = true;
+        RoomController.instance.RegisterRoom(this);
 
     }
 
@@ -180,9 +183,24 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if (empty == true)
         {
-            RoomController.instance.OnPlayerEnterRoom(this);
+            if (other.tag == "Player")
+            {
+                empty = false;
+                RoomController.instance.OnPlayerEnterRoom(this);
+                if (GameControl.multiplayer == true)
+                {
+                    other.GetComponent<OtherPlayer>().otherPlayer.transform.position = other.transform.position;
+                }
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            empty = true;
         }
     }
 }

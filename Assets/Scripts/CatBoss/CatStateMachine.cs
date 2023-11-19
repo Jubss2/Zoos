@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class CatStateMachine : MonoBehaviour
+public class CatStateMachine : Enemy1Controller
 {
-    [SerializeField] private int life = 50;
     [SerializeField] private float attackSpeed = 8f;
     [SerializeField] private float cooldown = 4;
     [SerializeField] private GameObject ballOfFur;
     [SerializeField] private GameObject ballOfWool;
-    public bool notInRoom = false;
     private bool startFight = true;
+    private bool atacando = false;
     public CatBaseState CurrentState { get; private set; }
 
     private void Update()
     {
-        if (!notInRoom)
+        if (notInRoom == false)
         {
             if (startFight)
             {
@@ -26,15 +25,17 @@ public class CatStateMachine : MonoBehaviour
             else
             {
                 CurrentState.UpdateState(this);
-                //SwitchState(RandomState(Randomize()));
             }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (atacando)
         {
-            collision.gameObject.GetComponent<PlayerLife>().PlayerDamage();
+            if (collision.gameObject.tag == "Player")
+            {
+                collision.gameObject.GetComponent<PlayerLife>().PlayerDamage();
+            }
         }
     }
     public int Randomize()
@@ -61,5 +62,9 @@ public class CatStateMachine : MonoBehaviour
             return new CatThrowBallOfFur();
         }
         return new CatAttack();
+    }
+    public void SetAtacando (bool ataque)
+    {
+        atacando = ataque;
     }
 }
