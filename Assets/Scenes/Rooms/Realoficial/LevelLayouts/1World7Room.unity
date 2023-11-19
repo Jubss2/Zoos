@@ -261,6 +261,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -269,7 +277,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -412,6 +422,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -420,7 +438,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -563,6 +583,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -571,7 +599,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -761,6 +791,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -769,7 +807,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1209,6 +1249,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1217,7 +1265,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1286,6 +1336,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1294,7 +1352,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1363,6 +1423,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1371,7 +1439,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1440,6 +1510,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1448,7 +1526,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1517,6 +1597,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1525,7 +1613,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1707,6 +1797,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1715,7 +1813,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1784,6 +1884,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1792,7 +1900,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1861,6 +1971,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1869,7 +1987,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1883,6 +2003,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 764173860}
     m_Modifications:
     - target: {fileID: -6156682503557390422, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -1938,6 +2062,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1946,7 +2082,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2089,6 +2227,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2097,7 +2243,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2200,6 +2348,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2208,7 +2364,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2351,6 +2509,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770763504317765385, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3125
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2359,7 +2525,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
+    - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

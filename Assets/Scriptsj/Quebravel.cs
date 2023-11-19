@@ -44,15 +44,15 @@ public class Quebravel : MonoBehaviour
         // Destroy(gameObject);
         if (health <= 0)
         {
-            
+            if (num < 5)
+            {
+                powerup2.SetActive(true);
+            }
             if (num == 10)
             {
                 powerup.SetActive(true);
             }
-            if (num < 3)
-            {
-                powerup2.SetActive(true);
-            }
+            
             AudioManager.instance.PlaySound("OQAtingido");
             Quebrou = true;   
   

@@ -578,8 +578,6 @@ GameObject:
   - component: {fileID: 1198206893}
   - component: {fileID: 1198206892}
   - component: {fileID: 1198206891}
-  - component: {fileID: 1198206890}
-  - component: {fileID: 1198206889}
   m_Layer: 0
   m_Name: ObjetoQuebravel 2 (5)
   m_TagString: ObjetoQuebravel
@@ -603,43 +601,6 @@ Transform:
   m_Father: {fileID: 46494486}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1198206889
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198206887}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f703acea4c2a054ca876a7ca76e0b37, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1198206890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198206887}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec9e027c2e47f24a8a6aa8029e9505e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 1
-  powerup: {fileID: 0}
-  powerup2: {fileID: 0}
 --- !u!61 &1198206891
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -850,8 +811,6 @@ GameObject:
   - component: {fileID: 1355240341}
   - component: {fileID: 1355240340}
   - component: {fileID: 1355240339}
-  - component: {fileID: 1355240338}
-  - component: {fileID: 1355240337}
   m_Layer: 0
   m_Name: ObjetoQuebravel 2 (4)
   m_TagString: ObjetoQuebravel
@@ -875,43 +834,6 @@ Transform:
   m_Father: {fileID: 46494486}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1355240337
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355240335}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f703acea4c2a054ca876a7ca76e0b37, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1355240338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355240335}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec9e027c2e47f24a8a6aa8029e9505e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 1
-  powerup: {fileID: 0}
-  powerup2: {fileID: 0}
 --- !u!61 &1355240339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1467,22 +1389,6 @@ Transform:
   m_Father: {fileID: 2441526962265681997}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1387406216736946399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5190575467409609271}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec9e027c2e47f24a8a6aa8029e9505e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 1
-  powerup: {fileID: 0}
-  powerup2: {fileID: 0}
 --- !u!4 &2441526962265681997
 Transform:
   m_ObjectHideFlags: 0
@@ -1561,27 +1467,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &4621493372713462213
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5190575467409609271}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f703acea4c2a054ca876a7ca76e0b37, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5190575467409609271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,8 +1479,6 @@ GameObject:
   - component: {fileID: 7538372346028493974}
   - component: {fileID: 7855448226361074430}
   - component: {fileID: 673708485216557723}
-  - component: {fileID: 1387406216736946399}
-  - component: {fileID: 4621493372713462213}
   m_Layer: 0
   m_Name: ObjetoQuebravel 2 (3)
   m_TagString: ObjetoQuebravel

@@ -8,8 +8,10 @@ public class UIScore : MonoBehaviour
 {
     public static UIScore instance;
     public TextMeshProUGUI textScore;
-    
+    public TextMeshProUGUI textHighscore;
+
     public int score = 0;
+    public int highscore = 0;
     // Start is called before the first frame update
 
     private void Awake()
@@ -21,6 +23,7 @@ public class UIScore : MonoBehaviour
     void Start()
     {
         textScore.text = score.ToString() + " POINTS";
+        
     }
     void Update()
     {
@@ -31,25 +34,33 @@ public class UIScore : MonoBehaviour
     {
         score += 1;
         textScore.text = score.ToString() + " POINTS";
-
+        MarkHigscore();
     }
 
     public void AddPointSlime()
     {
         score += 3;
         textScore.text = score.ToString() + " POINTS";
-
+        MarkHigscore();
     }
     public void AddPointAlien()
     {
         score += 2;
         textScore.text = score.ToString() + " POINTS";
-
+        MarkHigscore();
     }
     public void AddPointQuebravel()
     {
         score += 1;
         textScore.text = score.ToString() + " POINTS";
+        MarkHigscore();
+    }
 
+    public void MarkHigscore()
+    {
+        if(highscore < score)
+        {
+            PlayerPrefs.SetInt("highscore", score);
+        }
     }
 }

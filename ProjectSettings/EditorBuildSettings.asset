@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Realoficial/1WorldStart.unity
     guid: 56a9c826119d1964e842133661bfd60a
   - enabled: 1
-    path: Assets/Scenes/Morreu.unity
-    guid: 0f8512e599e7e95499530f0ba3e965ad
-  - enabled: 1
     path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World1Room.unity
     guid: bc0f8bcb77a162148bfed6adc28ad39d
   - enabled: 1
@@ -53,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World12Room.unity
     guid: 5e1331537c393214e92bf5875749075e
+  - enabled: 1
+    path: Assets/Scenes/Morreu.unity
+    guid: 0f8512e599e7e95499530f0ba3e965ad
   - enabled: 1
     path: Assets/Scenes/Rooms/Realoficial/1WorldEnd.unity
     guid: eace75b4c82d6c8449117a150c72282c
