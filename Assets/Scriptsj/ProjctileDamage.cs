@@ -30,6 +30,7 @@ public class ProjectileDamage : MonoBehaviour
         {
             if (collision.GetComponent<Enemy1Controller>() != null)
             {
+                AudioManager.instance.PlaySound("ArmaAlien");
                 collision.GetComponent<Enemy1Controller>().DealDamage(damageEnemy);
 
             }
@@ -37,7 +38,8 @@ public class ProjectileDamage : MonoBehaviour
         }
         if (collision.tag == "Player" && isEnemyBullet)
         {
-            collision.GetComponent<PlayerLife>().PlayerDamage();
+            AudioManager.instance.PlaySound("BalaPlayer");
+            collision.GetComponentInParent<PlayerLife>().PlayerDamage();
             Destroy(gameObject);
         }
 

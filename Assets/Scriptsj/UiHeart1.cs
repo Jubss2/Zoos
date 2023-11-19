@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UiHeart1 : MonoBehaviour
 {
+    [SerializeField] PlayerLife player;
     // Start is called before the first frame update
     public GameObject heart;
 
@@ -12,14 +13,14 @@ public class UiHeart1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fillVa = PlayerLife.GetHealth();
+        fillVa = player.GetHealth();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        fillVa = PlayerLife.GetHealth();
+        fillVa = player.GetHealth();
         fillVa = fillVa / 3;
         heart.GetComponent<Image>().fillAmount = fillVa;
 

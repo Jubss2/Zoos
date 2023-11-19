@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4347298598003214887
 MonoBehaviour:
@@ -49,17 +49,95 @@ MonoBehaviour:
     name: RAtingido
     clip: {fileID: 8300000, guid: 267a73e87c52c5448a29a210fef5ca27, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
   - audioSource: {fileID: 0}
     name: RMorte
     clip: {fileID: 8300000, guid: 29edebf4e9d7483488bcf63dc3004df8, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
   - audioSource: {fileID: 0}
     name: RDeteccao
     clip: {fileID: 8300000, guid: 55d5fc02b7ed6d440a858b9b326562ed, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: AMorte
+    clip: {fileID: 8300000, guid: 7e834268cbdce8741b4ac699fc027fac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: SMorte
+    clip: {fileID: 8300000, guid: 16cc996fce927504499a46af521f3e37, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: SPulo
+    clip: {fileID: 8300000, guid: 1ba84a920768ef949b9cf6e762c2d37c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: SSPulo
+    clip: {fileID: 8300000, guid: c70d210a1e35b9548b2d27fcab45ff0f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: SAtingido
+    clip: {fileID: 8300000, guid: 470be87dfc22096439372c0fa4ba1d62, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: PAtingido
+    clip: {fileID: 8300000, guid: db371a49bc400be42b18b4b2d1ef3e8d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: OQAtingido
+    clip: {fileID: 8300000, guid: 2588723eeacb1494c83662a1adc2103c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: GExplosao
+    clip: {fileID: 8300000, guid: 69bc1718731ef1a42a187c4ea5d8dc08, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: BalaPlayer
+    clip: {fileID: 8300000, guid: 1e28ade0419ba4e40bc8ac0077a33eac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: LancarGranadaP
+    clip: {fileID: 8300000, guid: 6100c7c820623a34ead86ed962c46ff1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: SabreP
+    clip: {fileID: 8300000, guid: 5c5ec701172ef2d43a0a66c58cec6126, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: ArmaAlien
+    clip: {fileID: 8300000, guid: c457a5b6eb10b11409c6483afb7c0cf5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: PMorto
+    clip: {fileID: 8300000, guid: c8829021402cc084a8127f515021a9da, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0

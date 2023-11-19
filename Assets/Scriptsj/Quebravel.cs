@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class Quebravel : MonoBehaviour
 {
+
     public float health;
 
     public float maxHealth;
@@ -14,9 +17,17 @@ public class Quebravel : MonoBehaviour
 
     private bool Quebrou = false;
 
+    public GameObject powerup;
+
+    public GameObject powerup2;
+
     private float time = 0f;
 
     private Animator animator;
+
+    System.Random random = new System.Random();
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +40,20 @@ public class Quebravel : MonoBehaviour
     }
     public void Die()
     {
-      
+        int num = random.Next(1, 10);
         // Destroy(gameObject);
         if (health <= 0)
         {
-            FindObjectOfType<AudioManager>().PlaySound("OQAtingido");
+            if (num < 5)
+            {
+                powerup2.SetActive(true);
+            }
+            if (num == 10)
+            {
+                powerup.SetActive(true);
+            }
+            
+            AudioManager.instance.PlaySound("OQAtingido");
             Quebrou = true;   
   
         }
@@ -52,10 +72,12 @@ public class Quebravel : MonoBehaviour
 
         if (died == true)
         {
+          
             time += Time.deltaTime;
             if (time > 0.6f)
             {
-
+                
+                UIScore.instance.AddPointQuebravel();
                 Destroy(gameObject);
             }
         }

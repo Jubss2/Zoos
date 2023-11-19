@@ -163,7 +163,17 @@ public class RoomController : MonoBehaviour
         string[] possiblerooms = new string[]
         {
             "1Room",
-            "2Room"
+            "2Room",
+            "3Room",
+            "4Room",
+            "5Room",
+            "6Room",
+            "7Room",
+            "8Room",
+            "9Room",
+            "10Room",
+            "11Room",
+            "12Room",
         };
         return possiblerooms[Random.Range(0, possiblerooms.Length)];
     }
@@ -173,6 +183,7 @@ public class RoomController : MonoBehaviour
         currRoom = room;
 
         StartCoroutine(RoomCourotine());
+       
     }
 
     public IEnumerator RoomCourotine()
@@ -209,7 +220,6 @@ public class RoomController : MonoBehaviour
             else
             {
                 Enemy1Controller[] enemies = room.GetComponentsInChildren<Enemy1Controller>();
-                CatStateMachine boss = room.GetComponentInChildren<CatStateMachine>();
                 if (enemies.Length > 0)
                 {
                     foreach (Enemy1Controller enemy in enemies)

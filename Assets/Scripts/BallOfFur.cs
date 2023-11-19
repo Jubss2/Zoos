@@ -22,4 +22,12 @@ public class BallOfFur : MonoBehaviour
     {
         playerPosition = player;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            Instantiate(explosion, currentPosition, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
 }

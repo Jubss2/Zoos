@@ -16,13 +16,15 @@ public enum Enemy1Type
 {
     Meele,
     Ranged,
-    Explosive
+    Explosive,
+    Boss
 };
 
 public class Enemy1Controller : MonoBehaviour
 {
-    GameObject player;
+    protected GameObject player;
 
+    protected GameObject[] comparePlayers;
     /*
      Para 2 players:
      GameObject[] player;
@@ -37,17 +39,17 @@ public class Enemy1Controller : MonoBehaviour
 
 
     */
-    public Enemy1State currentState = Enemy1State.Wander;
+    [SerializeField] private Enemy1State currentState = Enemy1State.Wander;
 
-    public Enemy1Type enemy1Type;
+    [SerializeField] protected Enemy1Type enemy1Type;
 
-    public float range;
+    [SerializeField] private float range;
 
-    public float speed;
+    [SerializeField] private float speed;
 
     //private bool chooseDir = false;
 
-    private bool died = false;
+    protected bool died = false;
 
     private Vector3 randomDir;
 
@@ -58,15 +60,15 @@ public class Enemy1Controller : MonoBehaviour
 
     // Dano no player
 
-    public float attackRange;
+    [SerializeField] private float attackRange;
 
-    public int damagePlayerMeele;
+    [SerializeField] private int damagePlayerMeele;
 
 
 
-    public int coolDownEnemy;
+    [SerializeField] private int coolDownEnemy;
 
-    public int coolDownEnemyRanged;
+    [SerializeField] private int coolDownEnemyRanged;
 
     public bool notInRoom = true;
 
@@ -82,9 +84,16 @@ public class Enemy1Controller : MonoBehaviour
     private float time = 0f;
     private Vector2 distancia;
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (GameControl.multiplayer == true)
+        {
+            comparePlayers = GameObject.FindGameObjectsWithTag("Player");
+        }
+        else
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         //FindGameObjectsWithTag
         health = maxHealth;
         animator = GetComponent<Animator>();
@@ -105,7 +114,11 @@ public class Enemy1Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (GameControl.onePlayerDied == true)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            GameControl.onePlayerDied = false;
+        }
         if (!notInRoom)
         {
             if (died == true)
@@ -118,6 +131,10 @@ public class Enemy1Controller : MonoBehaviour
             }
             else
             {
+                if (GameControl.multiplayer == true)
+                {
+                    GetNearestPlayer();
+                }
                 switch (currentState)
                 {
                     case (Enemy1State.Wander):
@@ -215,16 +232,26 @@ public class Enemy1Controller : MonoBehaviour
     }
     public void Die()
     {
-       
         if (health <= 0)
         {
-            animator.SetBool("Morreu", true);
-            animator.SetBool("Parou", false);
-            animator.SetBool("SeguindoCima", false);
-            animator.SetBool("SeguindoAbaixo", false);
-            animator.SetBool("SeguindoLados", false);
-            FindObjectOfType<AudioManager>().PlaySound("RMorte");
-
+            if (enemy1Type != Enemy1Type.Boss)
+            {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                FindObjectOfType<AudioManager>().PlaySound("RMorte");
+            }
+            if (enemy1Type == Enemy1Type.Meele)
+            {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                FindObjectOfType<AudioManager>().PlaySound("RMorte");
+            }
             if (enemy1Type == Enemy1Type.Ranged)
             {
                 animator.SetBool("AtirandoAbaixo", false);
@@ -265,7 +292,7 @@ public class Enemy1Controller : MonoBehaviour
             switch (enemy1Type)
             {
                 case (Enemy1Type.Meele):                   
-                    player.GetComponent<PlayerLife>().PlayerDamage();
+                    player.GetComponentInParent<PlayerLife>().PlayerDamage();
                     StartCoroutine(CoolDownAttack());
                     break;
                 case (Enemy1Type.Ranged):
@@ -499,6 +526,17 @@ public class Enemy1Controller : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
+        }
+    }
+    public void GetNearestPlayer()
+    {
+        if (Vector3.Distance(transform.position, comparePlayers[0].transform.position) <= Vector3.Distance(transform.position, comparePlayers[1].transform.position))
+        {
+            player = comparePlayers[0];
+        }
+        else
+        {
+            player = comparePlayers[1];
         }
     }
 }

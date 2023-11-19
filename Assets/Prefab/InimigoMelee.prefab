@@ -108,12 +108,12 @@ Transform:
   m_GameObject: {fileID: 8965074472718680338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.7403, y: -3.63, z: 0}
-  m_LocalScale: {x: 3.369603, y: 3.9965649, z: 2}
+  m_LocalScale: {x: 2.8080022, y: 3.9965649, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3548522371914209514}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7667086913535407074
 SpriteRenderer:
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -204,7 +204,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -249,7 +249,7 @@ Animator:
   m_GameObject: {fileID: 8965074472718680338}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b4c0da7a404ac44fbf649e46ed04ad2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 2
   enemy1Type: 0
-  range: 10
+  range: 8
   speed: 2
   health: 1
   maxHealth: 2
@@ -282,7 +282,7 @@ MonoBehaviour:
   damagePlayerMeele: 1
   coolDownEnemy: 1
   coolDownEnemyRanged: 0
-  notInRoom: 0
+  notInRoom: 1
   projectilePrefab: {fileID: 5269703286046316066, guid: 1139e514adce5584691d25a7c76da618, type: 3}
   robot: {fileID: 9100000, guid: 1b4c0da7a404ac44fbf649e46ed04ad2, type: 2}
   alien: {fileID: 9100000, guid: 71ade5bd02c698f4796729eff962222d, type: 2}
@@ -324,7 +324,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
