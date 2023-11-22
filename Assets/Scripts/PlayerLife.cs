@@ -20,7 +20,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (morto)
         {
-            if (GameControl.multiplayer == false)
+            if ((GameControl.multiplayer == false) ||(GameControl.onePlayerDied == true))
             {
                 time += Time.deltaTime;
                 if (time > 0.5f)
@@ -33,7 +33,6 @@ public class PlayerLife : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 0.5f)
                 {
-                    GameControl.multiplayer = false;
                     Destroy(gameObject);
                 }
             }
@@ -56,7 +55,6 @@ public class PlayerLife : MonoBehaviour
             if (GameControl.multiplayer)
             {
                 gameObject.tag = "Untagged";
-                GameControl.onePlayerDied = true;
             }
             //Destroy(GetComponent<PlayerMovement>());
         }
