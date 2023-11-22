@@ -18,6 +18,7 @@ public class CatAttack : CatBaseState
         distance += stateMachine.transform.position;
         time = cooldown;
         speed = attackSpeed;
+        stateMachine.SetAtacando(true);
     }
     public void UpdateState(CatStateMachine stateMachine)
     {
@@ -25,6 +26,7 @@ public class CatAttack : CatBaseState
         if (Vector3.Distance(stateMachine.transform.position, distance) < 0.01f)
         {
             count += Time.deltaTime;
+            stateMachine.SetAtacando(false);
             if (count > time)
             {
                 stateMachine.SwitchState(stateMachine.RandomState(stateMachine.Randomize()));

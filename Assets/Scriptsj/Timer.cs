@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour
         currentTime = currentTime - Time.deltaTime;
         if(currentTime <= 0)
         {
-            playerLife.KillPlayer();
+            playerLife.TimeEnds();
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString("00");

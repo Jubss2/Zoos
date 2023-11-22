@@ -28,4 +28,12 @@ public class ThrowBomb : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Inimigo")
+        {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
 }

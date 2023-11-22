@@ -282,7 +282,7 @@ MonoBehaviour:
   damagePlayerMeele: 1
   coolDownEnemy: 1
   coolDownEnemyRanged: 0
-  notInRoom: 0
+  notInRoom: 1
   projectilePrefab: {fileID: 5269703286046316066, guid: 1139e514adce5584691d25a7c76da618, type: 3}
   robot: {fileID: 9100000, guid: 1b4c0da7a404ac44fbf649e46ed04ad2, type: 2}
   alien: {fileID: 9100000, guid: 71ade5bd02c698f4796729eff962222d, type: 2}

@@ -14,6 +14,8 @@ public class Door : MonoBehaviour
 
     private GameObject player;
 
+    private GameObject[] players;
+
     private float widthOffset = 4f;
 
     public GameObject doorCollider;
@@ -22,7 +24,14 @@ public class Door : MonoBehaviour
     //mudar pelo tamanho do player
     public void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (GameControl.multiplayer == false)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        else
+        {
+            players = GameObject.FindGameObjectsWithTag("Player");
+        }
     }
      void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,16 +41,16 @@ public class Door : MonoBehaviour
             {
                 case DoorType.Down:
                     player.transform.position = new Vector2(transform.position.x, transform.position.y - widthOffset);
-                break;
+                    break;
                 case DoorType.L:
                     player.transform.position = new Vector2(transform.position.x - widthOffset, transform.position.y);
-                break;
+                    break;
                 case DoorType.R:
                     player.transform.position = new Vector2(transform.position.x + widthOffset, transform.position.y);
-                break;
+                    break;
                 case DoorType.Up:
                     player.transform.position = new Vector2(transform.position.x, transform.position.y + widthOffset);
-                break;
+                    break;
             }
         }
     }

@@ -16,13 +16,15 @@ public enum Enemy1Type
 {
     Meele,
     Ranged,
-    Explosive
+    Explosive,
+    Boss
 };
 
 public class Enemy1Controller : MonoBehaviour
 {
-    GameObject player;
+    public GameObject player;
 
+    protected GameObject[] comparePlayers;
     /*
      Para 2 players:
      GameObject[] player;
@@ -37,17 +39,17 @@ public class Enemy1Controller : MonoBehaviour
 
 
     */
-    public Enemy1State currentState = Enemy1State.Wander;
+    [SerializeField] private Enemy1State currentState = Enemy1State.Wander;
 
-    public Enemy1Type enemy1Type;
+    [SerializeField] protected Enemy1Type enemy1Type;
 
-    public float range;
+    [SerializeField] private float range;
 
-    public float speed;
+    [SerializeField] private float speed;
 
     //private bool chooseDir = false;
 
-    private bool died = false;
+    protected bool died = false;
 
     private Vector3 randomDir;
 
@@ -58,15 +60,15 @@ public class Enemy1Controller : MonoBehaviour
 
     // Dano no player
 
-    public float attackRange;
+    [SerializeField] private float attackRange;
 
-    public int damagePlayerMeele;
+    [SerializeField] private int damagePlayerMeele;
 
 
 
-    public int coolDownEnemy;
+    [SerializeField] private int coolDownEnemy;
 
-    public int coolDownEnemyRanged;
+    [SerializeField] private int coolDownEnemyRanged;
 
     public bool notInRoom = true;
 
@@ -82,9 +84,16 @@ public class Enemy1Controller : MonoBehaviour
     private float time = 0f;
     private Vector2 distancia;
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (GameControl.multiplayer == true)
+        {
+            comparePlayers = GameObject.FindGameObjectsWithTag("Player");
+        }
+        else
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         //FindGameObjectsWithTag
         health = maxHealth;
         animator = GetComponent<Animator>();
@@ -105,7 +114,6 @@ public class Enemy1Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (!notInRoom)
         {
             if (died == true)
@@ -113,27 +121,18 @@ public class Enemy1Controller : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 0.8f)
                 {
-                    switch(enemy1Type)
-                    {
-                        case (Enemy1Type.Meele):
-                            UIScore.instance.AddPointRobot();
-                           
-                        break;
-                        case (Enemy1Type.Ranged):
-                            UIScore.instance.AddPointAlien();
-                           
-                        break;
-                        case (Enemy1Type.Explosive):
-                            UIScore.instance.AddPointSlime();
-                           
-                        break;
-                    }
                     Destroy(gameObject);
-
                 }
             }
             else
             {
+                if (GameControl.multiplayer == true)
+                {
+                    if (IsPlayerAlive())
+                    {
+                        GetNearestPlayer();
+                    }
+                }
                 switch (currentState)
                 {
                     case (Enemy1State.Wander):
@@ -231,23 +230,32 @@ public class Enemy1Controller : MonoBehaviour
     }
     public void Die()
     {
-       
         if (health <= 0)
         {
-            animator.SetBool("Morreu", true);
-            animator.SetBool("Parou", false);
-            animator.SetBool("SeguindoCima", false);
-            animator.SetBool("SeguindoAbaixo", false);
-            animator.SetBool("SeguindoLados", false);
-            AudioManager.instance.PlaySound("RMorte");
-            
-
+            if (enemy1Type != Enemy1Type.Boss)
+            {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                FindObjectOfType<AudioManager>().PlaySound("RMorte");
+            }
+            if (enemy1Type == Enemy1Type.Meele)
+            {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                FindObjectOfType<AudioManager>().PlaySound("RMorte");
+            }
             if (enemy1Type == Enemy1Type.Ranged)
             {
                 animator.SetBool("AtirandoAbaixo", false);
                 animator.SetBool("AtirandoCima", false);
                 animator.SetBool("AtirandoLados", false);
-                AudioManager.instance.PlaySound("AMorte");
+                FindObjectOfType<AudioManager>().PlaySound("AMorte");
 
 
             }
@@ -256,7 +264,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
-                AudioManager.instance.PlaySound("SMorte");
+                FindObjectOfType<AudioManager>().PlaySound("SMorte");
 
             }
             died = true;
@@ -322,15 +330,15 @@ public class Enemy1Controller : MonoBehaviour
         health -= damageEnemy;
         if (enemy1Type == Enemy1Type.Ranged)
         {
-            AudioManager.instance.PlaySound("RAtingido");
+            FindObjectOfType<AudioManager>().PlaySound("RAtingido");
         }
         if (enemy1Type == Enemy1Type.Explosive)
         {
-            AudioManager.instance.PlaySound("SAtingido");
+            FindObjectOfType<AudioManager>().PlaySound("SAtingido");
         }
         if (enemy1Type == Enemy1Type.Meele)
         {
-            AudioManager.instance.PlaySound("RAtingido");
+            FindObjectOfType<AudioManager>().PlaySound("RAtingido");
         }
         Die();
     }
@@ -406,7 +414,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoLados", false);
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", true);
-                AudioManager.instance.PlaySound("SSPulo");
+                FindObjectOfType<AudioManager>().PlaySound("SSPulo");
                 animator.SetBool("ExplodindoLados", false);
             }
             if (distancia.y < 0)
@@ -417,7 +425,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoAbaixo", false);
                 animator.SetBool("SeguindoLados", false);
                 animator.SetBool("ExplodindoAbaixo", true);
-                AudioManager.instance.PlaySound("SSPulo");
+                FindObjectOfType<AudioManager>().PlaySound("SSPulo");
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
             }
@@ -432,7 +440,7 @@ public class Enemy1Controller : MonoBehaviour
             animator.SetBool("ExplodindoAbaixo", false);
             animator.SetBool("ExplodindoCima", false);
             animator.SetBool("ExplodindoLados", true);
-            AudioManager.instance.PlaySound("SSPulo");
+            FindObjectOfType<AudioManager>().PlaySound("SSPulo");
             if (distancia.x > 0)
             {
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
@@ -517,5 +525,33 @@ public class Enemy1Controller : MonoBehaviour
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
         }
+    }
+    public void GetNearestPlayer()
+    {
+        if (Vector3.Distance(transform.position, comparePlayers[0].transform.position) <= Vector3.Distance(transform.position, comparePlayers[1].transform.position))
+        {
+            player = comparePlayers[0];
+        }
+        else
+        {
+            player = comparePlayers[1];
+        }
+    }
+    public bool IsPlayerAlive()
+    {
+        if (comparePlayers[0] == null)
+        {
+            GameControl.onePlayerDied = true;
+            player = comparePlayers[1];
+            return false;
+        }
+        if (comparePlayers[1] == null)
+        {
+            GameControl.onePlayerDied = true;
+            player = comparePlayers[0];
+            return false;
+        }
+        GameControl.onePlayerDied = false;
+        return true;
     }
 }

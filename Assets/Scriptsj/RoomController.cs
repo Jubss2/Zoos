@@ -226,7 +226,6 @@ public class RoomController : MonoBehaviour
             else
             {
                 Enemy1Controller[] enemies = room.GetComponentsInChildren<Enemy1Controller>();
-                CatStateMachine boss = room.GetComponentInChildren<CatStateMachine>();
                 if (enemies.Length > 0)
                 {
                     foreach (Enemy1Controller enemy in enemies)

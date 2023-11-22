@@ -5,58 +5,69 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] private static int health;
+    [SerializeField] private int maxHealth;
     private bool morto = false;
     private Animator animator;
     private float time = 0;
-    int maxhealth = 10;
+    private int health;
     private void Start()
     {
+        morto = false;
         animator = GetComponent<Animator>();
-        health = maxhealth;
+        health = maxHealth;
     }
     private void Update()
     {
         if (morto)
         {
-            time += Time.deltaTime;
-            if (time > 0.5f)
+            if ((GameControl.multiplayer == false) ||(GameControl.onePlayerDied == true))
             {
-                SceneManager.LoadScene("Morreu");
+                time += Time.deltaTime;
+                if (time > 0.5f)
+                {
+                    SceneManager.LoadScene("Morreu");
+                }
+            }
+            else
+            {
+                time += Time.deltaTime;
+                if (time > 0.5f)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
-    public static int GetHealth()
+    public int GetHealth()
     {
         return health;
     }
     public void PlayerDamage()
     {
         health--;
-        AudioManager.instance.PlaySound("PAtingido");
+        FindObjectOfType<AudioManager>().PlaySound("PAtingido");
         if (health <= 0)
         {
-            
-            KillPlayer();
 
-        }
-    }
-    public void KillPlayer()
-    {
-        if(morto == true && !AudioManager.instance.IsSoundPlaying("PMorto"))
-        {
+            animator.SetBool("Morreu", true);
             AudioManager.instance.PlaySound("PMorto");
-            
+            morto = true;
+            if (GameControl.multiplayer)
+            {
+                gameObject.tag = "Untagged";
+            }
+            //Destroy(GetComponent<PlayerMovement>());
         }
-        animator.SetBool("Morreu", true);   
-        morto = true;
-        Destroy(GetComponent<PlayerMovement>());
     }
-
     public void RestoreLife(int h)
     {
-        if (health < maxhealth) {
+        if (health < maxHealth)
+        {
             health += h;
         }
+    }
+    public void TimeEnds()
+    {
+        SceneManager.LoadScene("Morreu");
     }
 }
