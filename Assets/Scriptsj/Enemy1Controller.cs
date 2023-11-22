@@ -22,7 +22,7 @@ public enum Enemy1Type
 
 public class Enemy1Controller : MonoBehaviour
 {
-    protected GameObject player;
+    public GameObject player;
 
     protected GameObject[] comparePlayers;
     /*
@@ -114,11 +114,6 @@ public class Enemy1Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameControl.onePlayerDied == true)
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-            GameControl.onePlayerDied = false;
-        }
         if (!notInRoom)
         {
             if (died == true)
@@ -134,7 +129,10 @@ public class Enemy1Controller : MonoBehaviour
                 if (player == null) return;
                 if (GameControl.multiplayer == true)
                 {
-                    GetNearestPlayer();
+                    if (IsPlayerAlive())
+                    {
+                        GetNearestPlayer();
+                    }
                 }
                 switch (currentState)
                 {
@@ -539,5 +537,22 @@ public class Enemy1Controller : MonoBehaviour
         {
             player = comparePlayers[1];
         }
+    }
+    public bool IsPlayerAlive()
+    {
+        if (comparePlayers[0] == null)
+        {
+            GameControl.onePlayerDied = true;
+            player = comparePlayers[1];
+            return false;
+        }
+        if (comparePlayers[1] == null)
+        {
+            GameControl.onePlayerDied = true;
+            player = comparePlayers[0];
+            return false;
+        }
+        GameControl.onePlayerDied = false;
+        return true;
     }
 }

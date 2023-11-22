@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c18e5b868bf5b443ad0d2da599d4da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: {fileID: 1670948847}
   player: {fileID: 1941925904}
+  heart: {fileID: 1670948847}
 --- !u!114 &322143365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,6 +356,10 @@ PrefabInstance:
       propertyPath: health
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 878874042083301570, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1971209957886670767, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -402,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320093748284287727, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
       propertyPath: m_Name
-      value: Player2
+      value: Cosmo
       objectReference: {fileID: 0}
     - target: {fileID: 3320093748284287727, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
       propertyPath: m_IsActive
@@ -1498,6 +1502,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 878874042083301570, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1971209957886670767, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1544,7 +1552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320093748284287727, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Astro
       objectReference: {fileID: 0}
     - target: {fileID: 3927881953795063774, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
       propertyPath: m_SortingOrder
