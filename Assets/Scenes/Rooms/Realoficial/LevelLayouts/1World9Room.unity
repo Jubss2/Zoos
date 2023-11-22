@@ -205,6 +205,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2107934493557844024, guid: 9d4da7445b341cb45afc384452705206, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9244003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107934493557844024, guid: 9d4da7445b341cb45afc384452705206, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.0993023
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107934493557844024, guid: 9d4da7445b341cb45afc384452705206, type: 3}
+      propertyPath: m_Offset.y
+      value: 5.2995462
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447910994042765252, guid: 9d4da7445b341cb45afc384452705206, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9599276
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447910994042765252, guid: 9d4da7445b341cb45afc384452705206, type: 3}
+      propertyPath: m_Offset.x
+      value: 3.4905195
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447910994042765252, guid: 9d4da7445b341cb45afc384452705206, type: 3}
+      propertyPath: m_Offset.y
+      value: 5.783894
+      objectReference: {fileID: 0}
     - target: {fileID: 3501563863468487255, guid: 9d4da7445b341cb45afc384452705206, type: 3}
       propertyPath: m_Name
       value: Room

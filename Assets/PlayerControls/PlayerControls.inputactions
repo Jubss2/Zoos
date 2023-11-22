@@ -83,7 +83,7 @@
                 {
                     "name": "",
                     "id": "91136f94-ada9-4370-9eb9-828518e55a85",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

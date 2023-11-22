@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -292,6 +296,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -462,6 +470,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -469,6 +481,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -639,6 +655,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -646,6 +666,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -863,6 +887,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -870,6 +898,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -1337,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1344,6 +1380,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -1440,6 +1480,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1447,6 +1491,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -1543,6 +1591,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1550,6 +1602,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -1646,6 +1702,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1653,6 +1713,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -1749,6 +1813,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1756,6 +1824,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -1965,6 +2037,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1972,6 +2048,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -2068,6 +2148,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2075,6 +2159,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -2171,6 +2259,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2178,6 +2270,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -2282,6 +2378,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2289,6 +2389,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2114555945336005711, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -2459,6 +2563,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2466,6 +2574,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -2596,6 +2708,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2603,6 +2719,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
@@ -2773,6 +2893,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3125
       objectReference: {fileID: 0}
+    - target: {fileID: 6132820527631871872, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7063291863419167943, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2780,6 +2904,10 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
       propertyPath: m_Name
       value: ObjetoNaoQuebravel (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198450833874089282, guid: 996add883f01cba488a31aa53692d881, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 819093940834111163, guid: 996add883f01cba488a31aa53692d881, type: 3}
