@@ -22,8 +22,18 @@ public class End : MonoBehaviour
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
-    {     
-         //   SceneManager.LoadScene("Main2");             
+    {
+        if (collision.tag == "Player")
+        {
+            if (a == 0)
+            {
+                SceneManager.LoadScene("Main2");
+                a = 1;
+            }else if (a == 1)
+            {
+                SceneManager.LoadScene("Main3");
+            }
+        }
     }
         // Start is called before the first frame update
 }

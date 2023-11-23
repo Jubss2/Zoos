@@ -114,23 +114,18 @@ public class Enemy1Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
         if (!notInRoom)
         {
             if (died == true)
             {
                 time += Time.deltaTime;
-                if (time > 0.6f)
+                if (time > 0.8f)
                 {
                     Destroy(gameObject);
                 }
             }
             else
             {
-               
                 if (GameControl.multiplayer == true)
                 {
                     if (IsPlayerAlive())
@@ -163,19 +158,15 @@ public class Enemy1Controller : MonoBehaviour
                         AudioManager.instance.PlaySound("RDeteccao");
                     }
                     currentState = Enemy1State.Follow;
-                    
+
                 }
                 else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
                 {
                     currentState = Enemy1State.Wander;
                 }
-                if (player != null)
+                if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
                 {
-                    
-                    if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
-                    {
-                        currentState = Enemy1State.Attack;
-                    }
+                    currentState = Enemy1State.Attack;
                 }
             }
         }
@@ -183,11 +174,9 @@ public class Enemy1Controller : MonoBehaviour
         {
             currentState = Enemy1State.Idle;
         }
-
     }
     private bool IsPlayerInRange(float range)
     {
-        if (player == null) return false;
         return Vector3.Distance(transform.position, player.transform.position) <= range;
     }
     /*
@@ -232,9 +221,12 @@ public class Enemy1Controller : MonoBehaviour
     void Idle() { }
     void Follow()
     {
-        if (player == null) return;
+
+
         FollowAnimation();
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);     
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+
+
     }
     public void Die()
     {
@@ -257,6 +249,8 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoAbaixo", false);
                 animator.SetBool("SeguindoLados", false);
                 FindObjectOfType<AudioManager>().PlaySound("RMorte");
+                UIScore.instance.AddPointRobot();
+
             }
             if (enemy1Type == Enemy1Type.Ranged)
             {
@@ -264,7 +258,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("AtirandoCima", false);
                 animator.SetBool("AtirandoLados", false);
                 FindObjectOfType<AudioManager>().PlaySound("AMorte");
-
+                UIScore.instance.AddPointAlien();
 
             }
             if (enemy1Type == Enemy1Type.Explosive)
@@ -273,6 +267,8 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
                 FindObjectOfType<AudioManager>().PlaySound("SMorte");
+                UIScore.instance.AddPointSlime();
+
 
             }
             died = true;
@@ -297,7 +293,7 @@ public class Enemy1Controller : MonoBehaviour
         {
             switch (enemy1Type)
             {
-                case (Enemy1Type.Meele):                   
+                case (Enemy1Type.Meele):
                     player.GetComponentInParent<PlayerLife>().PlayerDamage();
                     StartCoroutine(CoolDownAttack());
                     break;
@@ -409,7 +405,6 @@ public class Enemy1Controller : MonoBehaviour
     }
     private void ExplosionAnimation()
     {
-        
         distancia = player.transform.position - transform.position;
         if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
         {
@@ -462,7 +457,6 @@ public class Enemy1Controller : MonoBehaviour
     }
     private void FollowAnimation()
     {
-        
         distancia = player.transform.position - transform.position;
         if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
         {
@@ -551,21 +545,17 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (comparePlayers[0] == null)
         {
-           
+            GameControl.onePlayerDied = true;
             player = comparePlayers[1];
             return false;
         }
         if (comparePlayers[1] == null)
         {
-           
+            GameControl.onePlayerDied = true;
             player = comparePlayers[0];
             return false;
         }
         GameControl.onePlayerDied = false;
         return true;
-    }
-    public float getHealth()
-    {
-        return health;
     }
 }

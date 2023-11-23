@@ -189,7 +189,7 @@ public class Room : MonoBehaviour
             {
                 empty = false;
                 RoomController.instance.OnPlayerEnterRoom(this);
-                if (GameControl.multiplayer == true)
+                if ((GameControl.multiplayer == true) &&(GameControl.onePlayerDied==false))
                 {
                     other.GetComponent<OtherPlayer>().otherPlayer.transform.position = other.transform.position;
                 }
