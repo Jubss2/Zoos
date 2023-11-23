@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   playerName: 
-  highscoreHandler: {fileID: 0}
+  highscoreHandler: {fileID: 7066072506287754456}
 --- !u!61 &1129398185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2360,6 +2360,14 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 878874042083301570, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
+      propertyPath: playerName
+      value: ju
+      objectReference: {fileID: 0}
+    - target: {fileID: 878874042083301570, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
+      propertyPath: highscoreHandler
+      value: 
+      objectReference: {fileID: 7066072506287754456}
     - target: {fileID: 1971209957886670767, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2432,6 +2440,10 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7667605415006567095, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 87269e2968a5dbf40a13dd57e424531f, type: 2}
     m_RemovedComponents:
     - {fileID: 1502011029033952716, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
     - {fileID: 8368426466519865513, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
@@ -3202,8 +3214,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1458889022755120476, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7066072506287754456}
   m_SourcePrefab: {fileID: 100100000, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
+--- !u!1 &7066072506287754455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1458889022755120476, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
+  m_PrefabInstance: {fileID: 7066072506287754454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7066072506287754456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066072506287754455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ddf7ca1eb14864b982f03705e6119b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCount: 5
+  fileName: highscore.json
 --- !u!1001 &9044819120448873856
 PrefabInstance:
   m_ObjectHideFlags: 0

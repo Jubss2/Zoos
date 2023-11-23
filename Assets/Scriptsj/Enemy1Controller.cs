@@ -126,7 +126,7 @@ public class Enemy1Controller : MonoBehaviour
             }
             else
             {
-                if (player == null) return;
+               
                 if (GameControl.multiplayer == true)
                 {
                     if (IsPlayerAlive())
@@ -165,7 +165,7 @@ public class Enemy1Controller : MonoBehaviour
                 {
                     currentState = Enemy1State.Wander;
                 }
-                if (Vector3.Distance(transform.position, this.player.transform.position) <= attackRange)
+                if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
                 {
                     currentState = Enemy1State.Attack;
                 }
@@ -178,8 +178,8 @@ public class Enemy1Controller : MonoBehaviour
     }
     private bool IsPlayerInRange(float range)
     {
-        if (player == null) return false;
-        return Vector3.Distance(transform.position, this.player.transform.position) <= range;
+       
+        return Vector3.Distance(transform.position, player.transform.position) <= range;
     }
     /*
     private IEnumerator ChooseDirection()
@@ -225,7 +225,7 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (player == null) return;
         FollowAnimation();
-        transform.position = Vector2.MoveTowards(transform.position, this.player.transform.position, speed * Time.deltaTime);     
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);     
     }
     public void Die()
     {
@@ -289,14 +289,14 @@ public class Enemy1Controller : MonoBehaviour
             switch (enemy1Type)
             {
                 case (Enemy1Type.Meele):                   
-                    this.player.GetComponentInParent<PlayerLife>().PlayerDamage();
+                    player.GetComponentInParent<PlayerLife>().PlayerDamage();
                     StartCoroutine(CoolDownAttack());
                     break;
                 case (Enemy1Type.Ranged):
                     GameObject bullet = projectilePrefab;
                     ShootingAnimation();
                     bullet.GetComponent<ProjectileDamage>().isEnemyBullet = true;
-                    bullet.GetComponent<ProjectileDamage>().GetPlayer(this.player.transform);
+                    bullet.GetComponent<ProjectileDamage>().GetPlayer(player.transform);
                     Instantiate(bullet, transform.position, Quaternion.identity);
                     //Debug.Log(bullet.GetComponent<ProjectileDamage>().playerPos);
                     //bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
@@ -351,7 +351,7 @@ public class Enemy1Controller : MonoBehaviour
     }
     private void ShootingAnimation()
     {
-        distancia = this.player.transform.position - transform.position;
+        distancia = player.transform.position - transform.position;
         if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
         {
             if (distancia.y > 0)
@@ -400,8 +400,8 @@ public class Enemy1Controller : MonoBehaviour
     }
     private void ExplosionAnimation()
     {
-        if (player == null) return;
-        distancia = this.player.transform.position - transform.position;
+        
+        distancia = player.transform.position - transform.position;
         if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
         {
 
@@ -453,8 +453,8 @@ public class Enemy1Controller : MonoBehaviour
     }
     private void FollowAnimation()
     {
-        if (player == null) return;
-        distancia = this.player.transform.position - transform.position;
+        
+        distancia = player.transform.position - transform.position;
         if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
         {
             if (distancia.y > 0)

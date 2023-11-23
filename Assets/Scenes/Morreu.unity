@@ -1162,6 +1162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1623456598}
+  highscoreUIElementPrefab: {fileID: 4800449768943253364}
+  elementWrapper: {fileID: 176060812}
 --- !u!1 &1239124158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,5 +2368,10 @@ PrefabInstance:
 --- !u!224 &4800449768943253363 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1120482915837641512, guid: f6791672c1ddcb44281785a3b60977e6, type: 3}
+  m_PrefabInstance: {fileID: 4800449768943253362}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4800449768943253364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2467498400657809586, guid: f6791672c1ddcb44281785a3b60977e6, type: 3}
   m_PrefabInstance: {fileID: 4800449768943253362}
   m_PrefabAsset: {fileID: 0}

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
-    [SerializeField] string playerName;
+    [SerializeField] string playerName = "jj";
     [SerializeField] Highscore highscoreHandler;
     private bool morto = false;
     private Animator animator;
