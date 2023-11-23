@@ -541,17 +541,14 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (comparePlayers[0] == null)
         {
-            GameControl.onePlayerDied = true;
             player = comparePlayers[1];
             return false;
         }
         if (comparePlayers[1] == null)
         {
-            GameControl.onePlayerDied = true;
             player = comparePlayers[0];
             return false;
         }
-        GameControl.onePlayerDied = false;
         return true;
     }
 }
