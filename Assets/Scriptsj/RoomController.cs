@@ -11,6 +11,8 @@ public class RoomInfo
     public int X;
 
     public int Y;
+
+    public bool IsActive;
 }
 public class RoomController : MonoBehaviour
 {
@@ -32,6 +34,10 @@ public class RoomController : MonoBehaviour
     bool spawnBossRoom = false;
 
     bool updatedRooms = false;
+
+    bool Room1 = false;
+
+    private float time = 0f;
 
     void Awake()
     {
