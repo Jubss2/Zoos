@@ -114,12 +114,16 @@ public class Enemy1Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         if (!notInRoom)
         {
             if (died == true)
             {
                 time += Time.deltaTime;
-                if (time > 0.8f)
+                if (time > 0.6f)
                 {
                     Destroy(gameObject);
                 }
@@ -165,9 +169,13 @@ public class Enemy1Controller : MonoBehaviour
                 {
                     currentState = Enemy1State.Wander;
                 }
-                if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
+                if (player != null)
                 {
-                    currentState = Enemy1State.Attack;
+                    
+                    if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
+                    {
+                        currentState = Enemy1State.Attack;
+                    }
                 }
             }
         }
@@ -175,10 +183,11 @@ public class Enemy1Controller : MonoBehaviour
         {
             currentState = Enemy1State.Idle;
         }
+
     }
     private bool IsPlayerInRange(float range)
     {
-       
+        if (player == null) return false;
         return Vector3.Distance(transform.position, player.transform.position) <= range;
     }
     /*
@@ -542,17 +551,21 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (comparePlayers[0] == null)
         {
-            GameControl.onePlayerDied = true;
+           
             player = comparePlayers[1];
             return false;
         }
         if (comparePlayers[1] == null)
         {
-            GameControl.onePlayerDied = true;
+           
             player = comparePlayers[0];
             return false;
         }
         GameControl.onePlayerDied = false;
         return true;
+    }
+    public float getHealth()
+    {
+        return health;
     }
 }

@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 14987140}
   - component: {fileID: 14987142}
-  - component: {fileID: 14987141}
   - component: {fileID: 14987143}
   m_Layer: 0
   m_Name: "Al\xE7ap\xE3o"
@@ -157,18 +156,6 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &14987141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14987139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d105f8918dee17641a81980e2a70167c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &14987142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2859,6 +2846,7 @@ GameObject:
   - component: {fileID: 407226028}
   - component: {fileID: 407226029}
   - component: {fileID: 407226030}
+  - component: {fileID: 407226031}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -3029,6 +3017,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &407226031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407226025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d105f8918dee17641a81980e2a70167c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gato: {fileID: 2001454693}
+  alcapao: {fileID: 14987139}
 --- !u!1 &493437237
 GameObject:
   m_ObjectHideFlags: 0
@@ -8152,6 +8154,11 @@ PrefabInstance:
 --- !u!4 &2001454692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2744257858204291613, guid: 89ff01d4b0da60e4aba12f7a5b710991, type: 3}
+  m_PrefabInstance: {fileID: 2001454691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2001454693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 818231067197582697, guid: 89ff01d4b0da60e4aba12f7a5b710991, type: 3}
   m_PrefabInstance: {fileID: 2001454691}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2012299605
