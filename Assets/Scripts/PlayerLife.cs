@@ -27,7 +27,7 @@ public class PlayerLife : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 0.5f)
                 {
-                    highscoreHandler.AddHighscoreIf(new HighscoreElement(playerName, UIScore.instance.score));
+                    GameControl.onePlayerDied = false;
                     SceneManager.LoadScene("Morreu");
                 }
             }
@@ -36,6 +36,7 @@ public class PlayerLife : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 0.5f)
                 {
+                    GameControl.onePlayerDied = true;
                     Destroy(gameObject);
                 }
             }
