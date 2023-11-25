@@ -190,6 +190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edac37164baf1214ea8c6a2b0f208a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 3
+  playerName: jj
+  highscoreHandler: {fileID: 0}
 --- !u!114 &8368426466519865513
 MonoBehaviour:
   m_ObjectHideFlags: 0
