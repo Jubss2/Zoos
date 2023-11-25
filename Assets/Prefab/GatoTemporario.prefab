@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6438852998971213979}
   - component: {fileID: 4780320514743329773}
   - component: {fileID: 7104625750423103132}
+  - component: {fileID: 5606730594798548324}
   m_Layer: 0
   m_Name: GatoTemporario
   m_TagString: Inimigo
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: -393135615
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.754717, g: 0.39909405, b: 0.046279836, a: 1}
+  m_Sprite: {fileID: -307628229, guid: 723028b30f81fec47873f37fd18b248e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -115,7 +116,7 @@ MonoBehaviour:
   alien: {fileID: 0}
   slime: {fileID: 0}
   attackSpeed: 12
-  cooldown: 2
+  cooldown: 1
   ballOfFur: {fileID: 4839759306696518045, guid: c30500cd6d54b034593aca4725e61166, type: 3}
   ballOfWool: {fileID: 7619860279416240045, guid: 933a6b2c8adcc5849a4565ff15d1ed5f, type: 3}
 --- !u!61 &4780320514743329773
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.23}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -161,7 +162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.58, y: 0.6}
   m_EdgeRadius: 0
 --- !u!50 &7104625750423103132
 Rigidbody2D:
@@ -190,3 +191,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &5606730594798548324
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818231067197582697}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78d0992134e2ea74ea6bb51a4589b616, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

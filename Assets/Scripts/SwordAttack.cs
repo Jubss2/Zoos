@@ -27,6 +27,7 @@ public class SwordAttack : MonoBehaviour
         }
         if (collision.tag == "ObjetoQuebravel")
         {
+
             collision.GetComponent<Quebravel>().DealDamage(1);
         }
     }

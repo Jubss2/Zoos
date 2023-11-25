@@ -82,7 +82,7 @@ public class Enemy1Controller : MonoBehaviour
     [SerializeField] private RuntimeAnimatorController alien;
     [SerializeField] private RuntimeAnimatorController slime;
     private Animator animator;
-    private float time = 0f;
+    protected float time = 0f;
     private Vector2 distancia;
     // Start is called before the first frame update
     protected void Start()
@@ -159,7 +159,6 @@ public class Enemy1Controller : MonoBehaviour
                         AudioManager.instance.PlaySound("RDeteccao");
                     }
                     currentState = Enemy1State.Follow;
-
                 }
                 else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
                 {
@@ -233,13 +232,13 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (health <= 0)
         {
-            if (enemy1Type != Enemy1Type.Boss)
+            if (enemy1Type == Enemy1Type.Boss)
             {
-                animator.SetBool("Morreu", true);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", false);
-                animator.SetBool("SeguindoAbaixo", false);
-                animator.SetBool("SeguindoLados", false);
+                animator.SetBool("Morte", true);
+                animator.SetBool("Parar", false);
+                animator.SetBool("Arranhando", false);
+                animator.SetBool("BolaLa", false);
+                animator.SetBool("BolaPelo", false);
                 FindObjectOfType<AudioManager>().PlaySound("RMorte");
             }
             if (enemy1Type == Enemy1Type.Meele)
@@ -294,7 +293,7 @@ public class Enemy1Controller : MonoBehaviour
         {
             switch (enemy1Type)
             {
-                case (Enemy1Type.Meele):
+                case (Enemy1Type.Meele):                   
                     player.GetComponentInParent<PlayerLife>().PlayerDamage();
                     StartCoroutine(CoolDownAttack());
                     break;

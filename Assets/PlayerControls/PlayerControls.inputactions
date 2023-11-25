@@ -83,7 +83,7 @@
                 {
                     "name": "",
                     "id": "91136f94-ada9-4370-9eb9-828518e55a85",
-                    "path": "<Keyboard>/shift",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -180,34 +180,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Selection",
-            "id": "8b707495-9713-415b-aafe-cd8fa6665f06",
-            "actions": [
-                {
-                    "name": "Apertar",
-                    "type": "Button",
-                    "id": "a0989f2f-0741-4b0d-b82d-9632d0bd1552",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "84a81ec2-26dd-466e-aa86-5a1da8530fb7",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Apertar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

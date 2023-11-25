@@ -35,10 +35,6 @@ public class RoomController : MonoBehaviour
 
     bool updatedRooms = false;
 
-    bool Room1 = false;
-
-    private float time = 0f;
-
     void Awake()
     {
         instance = this;

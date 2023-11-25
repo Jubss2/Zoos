@@ -9,22 +9,48 @@ public class CatStateMachine : Enemy1Controller
     [SerializeField] private float cooldown = 4;
     [SerializeField] private GameObject ballOfFur;
     [SerializeField] private GameObject ballOfWool;
-    private bool startFight = true;
+    private Animator animator;
+    private bool startFight;
     private bool atacando = false;
     public CatBaseState CurrentState { get; private set; }
+
+    private void Awake()
+    {
+        startFight = true;
+        atacando = false;
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
         if (notInRoom == false)
         {
-            if (startFight)
+            if (died == true)
             {
-                SwitchState(new CatAttack());
-                startFight = false;
+                time += Time.deltaTime;
+                if (time > 0.9f)
+                {
+                    Destroy(gameObject);
+                }
             }
             else
             {
-                CurrentState.UpdateState(this);
+                if (GameControl.multiplayer == true)
+                {
+                    if (IsPlayerAlive())
+                    {
+                        GetNearestPlayer();
+                    }
+                }
+                if (startFight)
+                {
+                    SwitchState(new CatAttack());
+                    startFight = false;
+                }
+                else
+                {
+                    CurrentState.UpdateState(this);
+                }
             }
         }
     }
@@ -48,7 +74,7 @@ public class CatStateMachine : Enemy1Controller
     public void SwitchState(CatBaseState catState)
     {
         CurrentState = catState;
-        catState.EnterState(this, cooldown, attackSpeed, ballOfFur, ballOfWool);
+        catState.EnterState(this, cooldown, attackSpeed, ballOfFur, ballOfWool, player);
     }
 
     public CatBaseState RandomState (int select)
@@ -66,5 +92,9 @@ public class CatStateMachine : Enemy1Controller
     public void SetAtacando (bool ataque)
     {
         atacando = ataque;
+    }
+    public Animator GetAnimator()
+    {
+        return animator;
     }
 }

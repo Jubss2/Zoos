@@ -105,7 +105,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""91136f94-ada9-4370-9eb9-828518e55a85"",
-                    ""path"": ""<Keyboard>/shift"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -206,34 +206,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""Selection"",
-            ""id"": ""8b707495-9713-415b-aafe-cd8fa6665f06"",
-            ""actions"": [
-                {
-                    ""name"": ""Apertar"",
-                    ""type"": ""Button"",
-                    ""id"": ""a0989f2f-0741-4b0d-b82d-9632d0bd1552"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""84a81ec2-26dd-466e-aa86-5a1da8530fb7"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Apertar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": []
@@ -246,9 +218,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_Move = m_Player2.FindAction("Move", throwIfNotFound: true);
         m_Player2_Attack = m_Player2.FindAction("Attack", throwIfNotFound: true);
-        // Selection
-        m_Selection = asset.FindActionMap("Selection", throwIfNotFound: true);
-        m_Selection_Apertar = m_Selection.FindAction("Apertar", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -414,52 +383,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     }
     public Player2Actions @Player2 => new Player2Actions(this);
-
-    // Selection
-    private readonly InputActionMap m_Selection;
-    private List<ISelectionActions> m_SelectionActionsCallbackInterfaces = new List<ISelectionActions>();
-    private readonly InputAction m_Selection_Apertar;
-    public struct SelectionActions
-    {
-        private @PlayerControls m_Wrapper;
-        public SelectionActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Apertar => m_Wrapper.m_Selection_Apertar;
-        public InputActionMap Get() { return m_Wrapper.m_Selection; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(SelectionActions set) { return set.Get(); }
-        public void AddCallbacks(ISelectionActions instance)
-        {
-            if (instance == null || m_Wrapper.m_SelectionActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_SelectionActionsCallbackInterfaces.Add(instance);
-            @Apertar.started += instance.OnApertar;
-            @Apertar.performed += instance.OnApertar;
-            @Apertar.canceled += instance.OnApertar;
-        }
-
-        private void UnregisterCallbacks(ISelectionActions instance)
-        {
-            @Apertar.started -= instance.OnApertar;
-            @Apertar.performed -= instance.OnApertar;
-            @Apertar.canceled -= instance.OnApertar;
-        }
-
-        public void RemoveCallbacks(ISelectionActions instance)
-        {
-            if (m_Wrapper.m_SelectionActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(ISelectionActions instance)
-        {
-            foreach (var item in m_Wrapper.m_SelectionActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_SelectionActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public SelectionActions @Selection => new SelectionActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -469,9 +392,5 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
-    }
-    public interface ISelectionActions
-    {
-        void OnApertar(InputAction.CallbackContext context);
     }
 }

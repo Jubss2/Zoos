@@ -147,7 +147,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28472344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 2.059498, y: -0.094539605, z: 0.12558103}
+========
+  m_LocalPosition: {x: 2.010361, y: -0.094539605, z: 0.12558103}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 0.9217315, y: 1.1706603, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -188,7 +192,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56912106}
   m_LocalRotation: {x: 0.702769, y: -0.70448774, z: -0.06996055, w: -0.07013164}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 7.75, y: -0.66174, z: 1.0113}
+========
+  m_LocalPosition: {x: 7.72, y: -0.66174, z: 1.0113}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 6.2124143, y: 4.9833984, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,7 +327,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74193773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 0.84392977, y: 0.88926, z: -0.030000001}
+========
+  m_LocalPosition: {x: 1.0039296, y: 0.88926, z: -0.030000001}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 0.83056647, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -531,7 +543,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107072635}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 0.84392977, y: -0.43074, z: -0.030000001}
+========
+  m_LocalPosition: {x: 1.0039296, y: -0.43074, z: -0.030000001}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 0.83056647, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -718,7 +734,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137213973}
   m_LocalRotation: {x: -0, y: -0, z: -0.0008159709, w: 0.9999997}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 0.019137055, y: 6.1592603, z: -0.03}
+========
+  m_LocalPosition: {x: -0.030000106, y: 6.1592603, z: -0.03}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 0.83056647, y: 1.0151563, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1036,10 +1056,16 @@ Transform:
   - {fileID: 1397025933}
   - {fileID: 56912107}
   - {fileID: 28472345}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
+========
+  - {fileID: 2076289773}
+  - {fileID: 1742006990}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   - {fileID: 1902177811}
   - {fileID: 1819562610}
   - {fileID: 493437240}
   - {fileID: 2045862675}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   - {fileID: 962689903}
   - {fileID: 1297001026}
   - {fileID: 1005845935}
@@ -1052,6 +1078,8 @@ Transform:
   - {fileID: 242951832}
   - {fileID: 777976531}
   - {fileID: 1930716428}
+========
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1087,7 +1115,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_Offset: {x: 0.16693926, y: 0.1752491}
+========
+  m_Offset: {x: 0.05257559, y: 0.1752491}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1098,7 +1130,11 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_Size: {x: 16.868622, y: 14.481646}
+========
+  m_Size: {x: 16.335629, y: 14.481646}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_EdgeRadius: 0
 --- !u!1 &493437237
 GameObject:
@@ -1171,7 +1207,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493437237}
   m_LocalRotation: {x: -0, y: -0, z: -0.0002460096, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 0.8406284, y: -6.460772, z: 0.14625393}
+========
+  m_LocalPosition: {x: 0.7914912, y: -6.460772, z: 0.14625393}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 5.1910405, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1446,7 +1486,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829917853}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 2.35, y: -0.08074019, z: -0.030000001}
+========
+  m_LocalPosition: {x: 2.4299998, y: -0.08074019, z: -0.030000001}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 0.83056647, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1607,6 +1651,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
 --- !u!1001 &842425569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1903,6 +1948,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6172381599130742929, guid: c010190b836bcad468e0c1de6b346859, type: 3}
   m_PrefabInstance: {fileID: 1005845934}
   m_PrefabAsset: {fileID: 0}
+========
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
 --- !u!1 &1105178591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,7 +1976,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105178591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: -0.37, y: 1.01, z: 0}
+========
+  m_LocalPosition: {x: -0.21, y: 1.01, z: 0}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 1.0875938, y: 1.2651851, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3973,7 +4024,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117158285}
   m_LocalRotation: {x: -0, y: -0, z: -0.7072015, w: 0.70701206}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: -7.610863, y: -0.6507402, z: 0.14625393}
+========
+  m_LocalPosition: {x: -7.6600003, y: -0.6507402, z: 0.14625393}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 6.25, y: 4.9833984, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4331,7 +4386,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397025932}
   m_LocalRotation: {x: -0, y: -0, z: -0.0002460096, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 0.009137049, y: -6.460772, z: 0.14625393}
+========
+  m_LocalPosition: {x: -0.04000011, y: -6.460772, z: 0.14625393}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 5.1910405, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4539,7 +4598,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490394078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: -0.57, y: -0.08074019, z: -0.030000001}
+========
+  m_LocalPosition: {x: -0.4100001, y: -0.08074019, z: -0.030000001}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 0.83056647, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4704,6 +4767,7 @@ MonoBehaviour:
   type: 0
   doorCollider: {fileID: 1117158285}
   parCollider: {fileID: 1819562607}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
 --- !u!1001 &1551145951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4778,6 +4842,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6172381599130742929, guid: c010190b836bcad468e0c1de6b346859, type: 3}
   m_PrefabInstance: {fileID: 1551145951}
   m_PrefabAsset: {fileID: 0}
+========
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
 --- !u!1 &1576152216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,7 +4870,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576152216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: -0.058000058, y: 0.6018803, z: -0.03}
+========
+  m_LocalPosition: {x: 0.101999834, y: 0.6018803, z: -0.03}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 1.0134296, y: 1.1068659, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5854,7 +5924,11 @@ Transform:
   m_Father: {fileID: 407226027}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
 --- !u!1001 &1813207834
+========
+--- !u!1001 &1742006989
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5862,6 +5936,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 407226027}
     m_Modifications:
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
     - target: {fileID: 1741789891298924344, guid: dcc35f4b9cb632b4f85a055ef46ae967, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5917,16 +5992,93 @@ PrefabInstance:
     - target: {fileID: 8198450833874089282, guid: dcc35f4b9cb632b4f85a055ef46ae967, type: 3}
       propertyPath: m_Name
       value: ObjetoQuebravel (1)
+========
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7014917
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3321882
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.09044279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431885267498717275, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: items.Array.data[0].weight
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431885267498717275, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: items.Array.data[2].weight
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076025191526206778, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_Name
+      value: ItemSpawn (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076025191526206778, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_SourcePrefab: {fileID: 100100000, guid: dcc35f4b9cb632b4f85a055ef46ae967, type: 3}
 --- !u!4 &1813207835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1741789891298924344, guid: dcc35f4b9cb632b4f85a055ef46ae967, type: 3}
   m_PrefabInstance: {fileID: 1813207834}
+========
+  m_SourcePrefab: {fileID: 100100000, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+--- !u!4 &1742006990 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+  m_PrefabInstance: {fileID: 1742006989}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1819562607
 GameObject:
@@ -5999,7 +6151,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819562607}
   m_LocalRotation: {x: -0, y: -0, z: -0.7072015, w: 0.70701206}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: -8.197933, y: -0.6507402, z: 0.14625393}
+========
+  m_LocalPosition: {x: -8.24707, y: -0.6507402, z: 0.14625393}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 6.25, y: 4.9833984, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6019,6 +6175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Patype: 0
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
 --- !u!1001 &1837316885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6093,6 +6250,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1741789891298924344, guid: dcc35f4b9cb632b4f85a055ef46ae967, type: 3}
   m_PrefabInstance: {fileID: 1837316885}
   m_PrefabAsset: {fileID: 0}
+========
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
 --- !u!1 &1902177808
 GameObject:
   m_ObjectHideFlags: 0
@@ -6164,7 +6323,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902177808}
   m_LocalRotation: {x: -0, y: -0, z: -0.0008159709, w: 0.9999997}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 0.85113704, y: 6.1592603, z: -0.03}
+========
+  m_LocalPosition: {x: 0.80199987, y: 6.1592603, z: -0.03}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 0.83056647, y: 1.0151563, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6184,6 +6347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Patype: 2
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
 --- !u!1001 &1930716427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6258,6 +6422,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1741789891298924344, guid: dcc35f4b9cb632b4f85a055ef46ae967, type: 3}
   m_PrefabInstance: {fileID: 1930716427}
   m_PrefabAsset: {fileID: 0}
+========
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
 --- !u!1 &1975739071
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,7 +6488,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_Offset: {x: 1.3580023, y: 5.2126393}
+========
+  m_Offset: {x: 1.3580021, y: 5.2126393}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6483,7 +6653,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045862672}
   m_LocalRotation: {x: 0.702769, y: -0.70448774, z: -0.06996055, w: -0.07013164}
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
   m_LocalPosition: {x: 10.352137, y: -0.66174, z: 1.0113}
+========
+  m_LocalPosition: {x: 10.3029995, y: -0.66174, z: 1.0113}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
   m_LocalScale: {x: 6.2124143, y: 4.9833984, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6503,3 +6677,88 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Patype: 1
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/New Folder/1WorldEnd99.unity
+========
+--- !u!1001 &2076289772
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 407226027}
+    m_Modifications:
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7014917
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3321882
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.09044279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431885267498717275, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: items.Array.data[0].weight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076025191526206778, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_Name
+      value: ItemSpawn (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076025191526206778, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+--- !u!4 &2076289773 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2624265904920170147, guid: 4ac766aef411e3640b5f681bb3936288, type: 3}
+  m_PrefabInstance: {fileID: 2076289772}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/New Folder/1World1Room66.unity
