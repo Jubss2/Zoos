@@ -990,7 +990,7 @@ PrefabInstance:
     - target: {fileID: 4641225750019025033, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
       propertyPath: otherPlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2025293507}
     m_RemovedComponents:
     - {fileID: 2468124165350371895, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
     m_RemovedGameObjects: []
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1502011029033952716, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
   m_PrefabInstance: {fileID: 640747267}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2025293507}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 670f62dc3c46f3b4c8a87641676f4c9e, type: 3}
@@ -2604,6 +2604,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895251452}
   m_CullTransparentMesh: 1
+--- !u!1 &2025293507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3320093748284287727, guid: 8e9f796effd2d9f43947d513f69f959f, type: 3}
+  m_PrefabInstance: {fileID: 640747267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2029587744
 GameObject:
   m_ObjectHideFlags: 0

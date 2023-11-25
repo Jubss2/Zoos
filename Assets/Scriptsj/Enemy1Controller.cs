@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum Enemy1State
 {
@@ -532,27 +533,45 @@ public class Enemy1Controller : MonoBehaviour
     }
     public void GetNearestPlayer()
     {
-        if (Vector3.Distance(transform.position, comparePlayers[0].transform.position) <= Vector3.Distance(transform.position, comparePlayers[1].transform.position))
+        if ((SceneManager.GetActiveScene().name != "Player1") && (comparePlayers.Length > 1))
         {
-            player = comparePlayers[0];
+            if (Vector3.Distance(transform.position, comparePlayers[0].transform.position) <= Vector3.Distance(transform.position, comparePlayers[1].transform.position))
+            {
+                player = comparePlayers[0];
+            }
+            else
+            {
+                player = comparePlayers[1];
+            }
         }
         else
         {
-            player = comparePlayers[1];
+            player = comparePlayers[0];
         }
     }
     public bool IsPlayerAlive()
     {
-        if (comparePlayers[0] == null)
+        if ((SceneManager.GetActiveScene().name != "Player1")&&(comparePlayers.Length >1 ))
         {
-            player = comparePlayers[1];
-            return false;
+            if (comparePlayers[0] == null)
+            {
+                player = comparePlayers[1];
+                return false;
+            }
+            if (comparePlayers[1] == null)
+            {
+                player = comparePlayers[0];
+                return false;
+            }
+            return true;
         }
-        if (comparePlayers[1] == null)
+        else
         {
-            player = comparePlayers[0];
-            return false;
+            if(comparePlayers == null)
+            {
+                return false;
+            }
+            return true;
         }
-        return true;
     }
 }
