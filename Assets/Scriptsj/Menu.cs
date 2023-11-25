@@ -24,11 +24,8 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
     public void ShowSelection1() {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Joga.SetActive(false);
-            Select1.SetActive(true);
-        }
 
+        GameControl.multiplayer = false;
+        SceneManager.LoadScene("1Player1World");
     }
 }

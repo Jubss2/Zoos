@@ -189,7 +189,7 @@ SpriteRenderer:
   m_Size: {x: 41.560146, y: 27.699999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &205084509
@@ -473,7 +473,7 @@ SpriteRenderer:
   m_Size: {x: 49.219997, y: 12.304999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &716991107
@@ -653,7 +653,7 @@ SpriteRenderer:
   m_Size: {x: 16, y: 3.99}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &736373971
@@ -1253,6 +1253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f4380a1afcf8954e950f9613adea851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Joga: {fileID: 0}
+  Select1: {fileID: 0}
 --- !u!1 &1264143883
 GameObject:
   m_ObjectHideFlags: 0

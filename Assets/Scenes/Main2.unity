@@ -591,7 +591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textScore: {fileID: 990949571}
+  textHighscore: {fileID: 0}
   score: 0
+  highscore: 0
 --- !u!114 &568234488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,6 +1698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edac37164baf1214ea8c6a2b0f208a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  playerName: jj
+  highscoreHandler: {fileID: 0}
 --- !u!61 &1129398185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2320,6 +2325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c18e5b868bf5b443ad0d2da599d4da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   heart: {fileID: 1069559316}
 --- !u!1 &1838436402
 GameObject:

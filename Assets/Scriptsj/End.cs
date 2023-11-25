@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
-    public GameObject gato;
+   // public GameObject gato;
     public GameObject alcapao;
     private int a = 0;
     private void Start()
     {
-        gato = GameObject.FindGameObjectWithTag("Inimigo");
+        //gato = GameObject.FindGameObjectWithTag("Inimigo");
     }
     private void Update()
     {
@@ -27,7 +27,7 @@ public class End : MonoBehaviour
         {
             if (a == 0)
             {
-                SceneManager.LoadScene("Main2");
+                SceneManager.LoadScene("Main 1");
                 a = 1;
             }else if (a == 1)
             {
