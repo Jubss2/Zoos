@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum Enemy1State
@@ -15,13 +16,15 @@ public enum Enemy1Type
 {
     Meele,
     Ranged,
-    Explosive
+    Explosive,
+    Boss
 };
 
 public class Enemy1Controller : MonoBehaviour
 {
-    GameObject player;
+    protected GameObject player;
 
+    protected GameObject[] comparePlayers;
     /*
      Para 2 players:
      GameObject[] player;
@@ -36,17 +39,17 @@ public class Enemy1Controller : MonoBehaviour
 
 
     */
-    public Enemy1State currentState = Enemy1State.Wander;
+    [SerializeField] private Enemy1State currentState = Enemy1State.Wander;
 
-    public Enemy1Type enemy1Type;
+    [SerializeField] protected Enemy1Type enemy1Type;
 
-    public float range;
+    [SerializeField] private float range;
 
-    public float speed;
+    [SerializeField] private float speed;
 
     //private bool chooseDir = false;
 
-    private bool died = false;
+    protected bool died = false;
 
     private Vector3 randomDir;
 
@@ -57,15 +60,15 @@ public class Enemy1Controller : MonoBehaviour
 
     // Dano no player
 
-    public float attackRange;
+    [SerializeField] private float attackRange;
 
-    public int damagePlayerMeele;
+    [SerializeField] private int damagePlayerMeele;
 
 
 
-    public int coolDownEnemy;
+    [SerializeField] private int coolDownEnemy;
 
-    public int coolDownEnemyRanged;
+    [SerializeField] private int coolDownEnemyRanged;
 
     public bool notInRoom = true;
 
@@ -78,12 +81,19 @@ public class Enemy1Controller : MonoBehaviour
     [SerializeField] private RuntimeAnimatorController alien;
     [SerializeField] private RuntimeAnimatorController slime;
     private Animator animator;
-    private float time = 0f;
+    protected float time = 0f;
     private Vector2 distancia;
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (GameControl.multiplayer == true)
+        {
+            comparePlayers = GameObject.FindGameObjectsWithTag("Player");
+        }
+        else
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         //FindGameObjectsWithTag
         health = maxHealth;
         animator = GetComponent<Animator>();
@@ -116,6 +126,13 @@ public class Enemy1Controller : MonoBehaviour
             }
             else
             {
+                if (GameControl.multiplayer == true)
+                {
+                    if (IsPlayerAlive())
+                    {
+                        GetNearestPlayer();
+                    }
+                }
                 switch (currentState)
                 {
                     case (Enemy1State.Wander):
@@ -136,7 +153,12 @@ public class Enemy1Controller : MonoBehaviour
                 }
                 if (IsPlayerInRange(range) && currentState != Enemy1State.Die)
                 {
+                    if (currentState == Enemy1State.Wander || currentState == Enemy1State.Idle)
+                    {
+                        AudioManager.instance.PlaySound("RDeteccao");
+                    }
                     currentState = Enemy1State.Follow;
+                    
                 }
                 else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
                 {
@@ -199,32 +221,50 @@ public class Enemy1Controller : MonoBehaviour
     void Idle() { }
     void Follow()
     {
+      
+
         FollowAnimation();
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        
+
     }
     public void Die()
     {
-       
         if (health <= 0)
         {
-            animator.SetBool("Morreu", true);
-            animator.SetBool("Parou", false);
-            animator.SetBool("SeguindoCima", false);
-            animator.SetBool("SeguindoAbaixo", false);
-            animator.SetBool("SeguindoLados", false);
-
+            if (enemy1Type == Enemy1Type.Boss)
+            {
+                animator.SetBool("Morte", true);
+                animator.SetBool("Parar", false);
+                animator.SetBool("Arranhando", false);
+                animator.SetBool("BolaLa", false);
+                animator.SetBool("BolaPelo", false);
+                FindObjectOfType<AudioManager>().PlaySound("RMorte");
+            }
+            if (enemy1Type == Enemy1Type.Meele)
+            {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
+                FindObjectOfType<AudioManager>().PlaySound("RMorte");
+            }
             if (enemy1Type == Enemy1Type.Ranged)
             {
                 animator.SetBool("AtirandoAbaixo", false);
                 animator.SetBool("AtirandoCima", false);
                 animator.SetBool("AtirandoLados", false);
-                
+                FindObjectOfType<AudioManager>().PlaySound("AMorte");
+
+
             }
             if (enemy1Type == Enemy1Type.Explosive)
             {
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
+                FindObjectOfType<AudioManager>().PlaySound("SMorte");
 
             }
             died = true;
@@ -241,6 +281,7 @@ public class Enemy1Controller : MonoBehaviour
             RoomController.instance.StartCoroutine(RoomController.instance.RoomCourotine());
             Destroy(gameObject);
         }
+
     }
     public void Attack()
     {
@@ -248,8 +289,8 @@ public class Enemy1Controller : MonoBehaviour
         {
             switch (enemy1Type)
             {
-                case (Enemy1Type.Meele):
-                    player.GetComponent<PlayerLife>().PlayerDamage();
+                case (Enemy1Type.Meele):                   
+                    player.GetComponentInParent<PlayerLife>().PlayerDamage();
                     StartCoroutine(CoolDownAttack());
                     break;
                 case (Enemy1Type.Ranged):
@@ -285,7 +326,20 @@ public class Enemy1Controller : MonoBehaviour
 
     public void DealDamage(float damageEnemy)
     {
+
         health -= damageEnemy;
+        if (enemy1Type == Enemy1Type.Ranged)
+        {
+            FindObjectOfType<AudioManager>().PlaySound("RAtingido");
+        }
+        if (enemy1Type == Enemy1Type.Explosive)
+        {
+            FindObjectOfType<AudioManager>().PlaySound("SAtingido");
+        }
+        if (enemy1Type == Enemy1Type.Meele)
+        {
+            FindObjectOfType<AudioManager>().PlaySound("RAtingido");
+        }
         Die();
     }
 
@@ -350,6 +404,7 @@ public class Enemy1Controller : MonoBehaviour
         distancia = player.transform.position - transform.position;
         if (Mathf.Abs(distancia.x) < Mathf.Abs(distancia.y))
         {
+
             if (distancia.y > 0)
             {
                 animator.SetBool("Morreu", false);
@@ -359,6 +414,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoLados", false);
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", true);
+                FindObjectOfType<AudioManager>().PlaySound("SSPulo");
                 animator.SetBool("ExplodindoLados", false);
             }
             if (distancia.y < 0)
@@ -369,6 +425,7 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoAbaixo", false);
                 animator.SetBool("SeguindoLados", false);
                 animator.SetBool("ExplodindoAbaixo", true);
+                FindObjectOfType<AudioManager>().PlaySound("SSPulo");
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
             }
@@ -383,6 +440,7 @@ public class Enemy1Controller : MonoBehaviour
             animator.SetBool("ExplodindoAbaixo", false);
             animator.SetBool("ExplodindoCima", false);
             animator.SetBool("ExplodindoLados", true);
+            FindObjectOfType<AudioManager>().PlaySound("SSPulo");
             if (distancia.x > 0)
             {
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
@@ -467,5 +525,30 @@ public class Enemy1Controller : MonoBehaviour
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
         }
+    }
+    public void GetNearestPlayer()
+    {
+        if (Vector3.Distance(transform.position, comparePlayers[0].transform.position) <= Vector3.Distance(transform.position, comparePlayers[1].transform.position))
+        {
+            player = comparePlayers[0];
+        }
+        else
+        {
+            player = comparePlayers[1];
+        }
+    }
+    public bool IsPlayerAlive()
+    {
+        if (comparePlayers[0] == null)
+        {
+            player = comparePlayers[1];
+            return false;
+        }
+        if (comparePlayers[1] == null)
+        {
+            player = comparePlayers[0];
+            return false;
+        }
+        return true;
     }
 }

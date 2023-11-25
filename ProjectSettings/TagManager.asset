@@ -12,6 +12,7 @@ TagManager:
   - PowerUp
   - Attack
   - Inimigo
+  - ObjetoQuebravel
   - Wall
   layers:
   - Default
@@ -53,11 +54,17 @@ TagManager:
   - name: BackGround
     uniqueID: 3697777039
     locked: 0
-  - name: Objetc
-    uniqueID: 3901831681
+  - name: Wals up
+    uniqueID: 4192372793
+    locked: 0
+  - name: Door Up
+    uniqueID: 2297004619
     locked: 0
   - name: Player
     uniqueID: 2976795097
+    locked: 0
+  - name: Objetc
+    uniqueID: 3901831681
     locked: 0
   - name: Wals
     uniqueID: 3867056609

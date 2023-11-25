@@ -19,9 +19,16 @@ public class SwordAttack : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        AudioManager.instance.PlaySound("SabreP");
         if (collision.tag == "Inimigo")
         {
-            collision.GetComponent<Enemy1Controller>().DealDamage(damage);
+           
+            collision.GetComponentInParent<Enemy1Controller>().DealDamage(damage);
+        }
+        if (collision.tag == "ObjetoQuebravel")
+        {
+
+            collision.GetComponent<Quebravel>().DealDamage(1);
         }
     }
 }
