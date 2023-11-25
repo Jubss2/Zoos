@@ -25,16 +25,19 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime = currentTime - Time.deltaTime;
-        if(currentTime <= 0)
+        if (SceneManager.GetActiveScene().name != "End")
         {
-            playerLife.TimeEnds();
-        }
-        TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString("00");
-        if(currentTime <= 30)
-        {
-            animator.SetBool("tempoAcabando", true);
+            currentTime = currentTime - Time.deltaTime;
+            if (currentTime <= 0)
+            {
+                playerLife.TimeEnds();
+            }
+            TimeSpan time = TimeSpan.FromSeconds(currentTime);
+            currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString("00");
+            if (currentTime <= 30)
+            {
+                animator.SetBool("tempoAcabando", true);
+            }
         }
     }
 }
