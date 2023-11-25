@@ -72,6 +72,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: da0b8236ab0880d4e8fb12204f13c20c, type: 3}
+    - target: {fileID: 3567678420527125090, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567678420527125090, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6894004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567678420527125090, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5062875654111673717, guid: 5efeeec8350f8444aba64484c502ec28, type: 3}
       propertyPath: m_Name
       value: EnemyBullet Variant

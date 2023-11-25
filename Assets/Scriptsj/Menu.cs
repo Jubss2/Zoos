@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("2Player2World");
     }
 
     public void ExitgGame()
