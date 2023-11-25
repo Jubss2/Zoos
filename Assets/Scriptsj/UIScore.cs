@@ -32,7 +32,7 @@ public class UIScore : MonoBehaviour
     // Update is called once per frame
     public void AddPointRobot()
     {
-        score += 1;
+        score += 6;
         textScore.text = score.ToString() + " POINTS";
         MarkHigscore();
     }
@@ -45,13 +45,13 @@ public class UIScore : MonoBehaviour
     }
     public void AddPointAlien()
     {
-        score += 2;
+        score += 8;
         textScore.text = score.ToString() + " POINTS";
         MarkHigscore();
     }
     public void AddPointQuebravel()
     {
-        score += 1;
+        score += 2;
         textScore.text = score.ToString() + " POINTS";
         MarkHigscore();
     }

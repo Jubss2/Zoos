@@ -51,6 +51,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World12Room.unity
     guid: 5e1331537c393214e92bf5875749075e
   - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World13Room.unity
+    guid: 3fd7e7e51984c1f4ab8887f179b9e26c
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World14Room.unity
+    guid: f784a8b85107dc7448e91be56eb5f44d
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World15Room.unity
+    guid: 93d6c753dfd24c848838a328ca05a1e1
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World16Room.unity
+    guid: 9cf9c1c97dd93224490f9108b4606607
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World17Room.unity
+    guid: 603b3595e07b72d4cb4b11b576f4eda9
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World18Room.unity
+    guid: d1f2ceaa3706d214fb42a50215ff59b6
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World20Room.unity
+    guid: 3006180f0016f1b42b4359c8a7cfd587
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1WorldRoom19.unity
+    guid: 2d35525e45692a845970b3a345013d6b
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1WorldRoom21.unity
+    guid: 0daba4223d55e5a41b279a3095c5ec87
+  - enabled: 1
     path: Assets/Scenes/Morreu.unity
     guid: 0f8512e599e7e95499530f0ba3e965ad
   - enabled: 1

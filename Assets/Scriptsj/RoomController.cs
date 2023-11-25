@@ -180,6 +180,15 @@ public class RoomController : MonoBehaviour
             "10Room",
             "11Room",
             "12Room",
+            "13Room",
+            "14Room",
+            "15Room",
+            "16Room",
+            "17Room",
+            "18Room",
+            "19Room",
+            "20Room",
+            "21Room",
         };
         return possiblerooms[Random.Range(0, possiblerooms.Length)];
     }
