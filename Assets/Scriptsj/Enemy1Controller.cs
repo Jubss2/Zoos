@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum Enemy1State
 {
@@ -81,7 +82,7 @@ public class Enemy1Controller : MonoBehaviour
     [SerializeField] private RuntimeAnimatorController alien;
     [SerializeField] private RuntimeAnimatorController slime;
     private Animator animator;
-    private float time = 0f;
+    protected float time = 0f;
     private Vector2 distancia;
     // Start is called before the first frame update
     protected void Start()
@@ -158,7 +159,6 @@ public class Enemy1Controller : MonoBehaviour
                         AudioManager.instance.PlaySound("RDeteccao");
                     }
                     currentState = Enemy1State.Follow;
-                    
                 }
                 else if (!IsPlayerInRange(range) && currentState != Enemy1State.Die)
                 {
@@ -221,24 +221,24 @@ public class Enemy1Controller : MonoBehaviour
     void Idle() { }
     void Follow()
     {
-      
+
 
         FollowAnimation();
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        
+
 
     }
     public void Die()
     {
         if (health <= 0)
         {
-            if (enemy1Type != Enemy1Type.Boss)
+            if (enemy1Type == Enemy1Type.Boss)
             {
-                animator.SetBool("Morreu", true);
-                animator.SetBool("Parou", false);
-                animator.SetBool("SeguindoCima", false);
-                animator.SetBool("SeguindoAbaixo", false);
-                animator.SetBool("SeguindoLados", false);
+                animator.SetBool("Morte", true);
+                animator.SetBool("Parar", false);
+                animator.SetBool("Arranhando", false);
+                animator.SetBool("BolaLa", false);
+                animator.SetBool("BolaPelo", false);
                 FindObjectOfType<AudioManager>().PlaySound("RMorte");
             }
             if (enemy1Type == Enemy1Type.Meele)
@@ -249,22 +249,36 @@ public class Enemy1Controller : MonoBehaviour
                 animator.SetBool("SeguindoAbaixo", false);
                 animator.SetBool("SeguindoLados", false);
                 FindObjectOfType<AudioManager>().PlaySound("RMorte");
+                UIScore.instance.AddPointRobot();
+
             }
             if (enemy1Type == Enemy1Type.Ranged)
             {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
                 animator.SetBool("AtirandoAbaixo", false);
                 animator.SetBool("AtirandoCima", false);
                 animator.SetBool("AtirandoLados", false);
                 FindObjectOfType<AudioManager>().PlaySound("AMorte");
-
+                UIScore.instance.AddPointAlien();
 
             }
             if (enemy1Type == Enemy1Type.Explosive)
             {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", true);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
                 FindObjectOfType<AudioManager>().PlaySound("SMorte");
+                UIScore.instance.AddPointSlime();
+
 
             }
             died = true;
@@ -541,17 +555,14 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (comparePlayers[0] == null)
         {
-            GameControl.onePlayerDied = true;
             player = comparePlayers[1];
             return false;
         }
         if (comparePlayers[1] == null)
         {
-            GameControl.onePlayerDied = true;
             player = comparePlayers[0];
             return false;
         }
-        GameControl.onePlayerDied = false;
         return true;
     }
 }

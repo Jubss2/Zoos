@@ -34,26 +34,26 @@ public class UIScore : MonoBehaviour
     {
         score += 6;
         textScore.text = score.ToString() + " POINTS";
-        MarkHigscore();
+        Debug.Log("alo");
     }
 
     public void AddPointSlime()
     {
         score += 3;
         textScore.text = score.ToString() + " POINTS";
-        MarkHigscore();
+        
     }
     public void AddPointAlien()
     {
         score += 8;
         textScore.text = score.ToString() + " POINTS";
-        MarkHigscore();
+      
     }
     public void AddPointQuebravel()
     {
         score += 2;
         textScore.text = score.ToString() + " POINTS";
-        MarkHigscore();
+        Debug.Log("alo");
     }
 
     public void MarkHigscore()

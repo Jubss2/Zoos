@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World1Room.unity.meta
 guid: bc0f8bcb77a162148bfed6adc28ad39d
+========
+guid: 6173a674c8c951b4282ce3e868cc305e
+>>>>>>>> origin/Gato:Assets/Scenes/Rooms/Realoficial/1World1Room.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -14,7 +14,6 @@ public class Scoreboard : MonoBehaviour
         entryTemplate.gameObject.SetActive(false);
 
         float templateHeight = 30f;
-
         for(int i = 0; i <5; i++)
         {
             Transform entryTransform = Instantiate(entryTemplate, entryContainer); 

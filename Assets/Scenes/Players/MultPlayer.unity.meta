@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Players/MultPlayer.unity.meta
 guid: 4778b69c4880e5743a3c85db1472e8b5
+========
+guid: c381fb859e423f345a59c0851588c75b
+>>>>>>>> origin/Gato:Assets/Scenes/Players/Player2.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

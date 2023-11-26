@@ -120,5 +120,9 @@ public class PlayerAttacks : MonoBehaviour
     {
         return bullets;
     }
+    public void SetBullets(int bullets)
+    {
+        this.bullets = bullets;
+    }
 
 }

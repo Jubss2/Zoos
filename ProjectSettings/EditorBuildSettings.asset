@@ -84,6 +84,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Realoficial/1WorldEnd.unity
     guid: eace75b4c82d6c8449117a150c72282c
   - enabled: 1
-    path: Assets/Scenes/Main2.unity
-    guid: bfaf73b059401c441a8f6e4e7198ce75
+    path: Assets/Scenes/Main 1.unity
+    guid: 1925ec788e585c748b6a09dd3f75df87
+  - enabled: 1
+    path: Assets/Scenes/1Player1World.unity
+    guid: 933db887b7ccfba44a017134199bb571
   m_configObjects: {}
