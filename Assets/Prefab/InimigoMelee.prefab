@@ -108,12 +108,12 @@ Transform:
   m_GameObject: {fileID: 8965074472718680338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.7403, y: -3.63, z: 0}
-  m_LocalScale: {x: 2.8080022, y: 3.9965649, z: 3}
+  m_LocalScale: {x: 2.8, y: 2.8, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3548522371914209514}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7667086913535407074
 SpriteRenderer:
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c961a519420ce304c9cea48b673fa9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   currentState: 2
   enemy1Type: 0
   range: 8
