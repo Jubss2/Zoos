@@ -72,10 +72,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World20Room.unity
     guid: 3006180f0016f1b42b4359c8a7cfd587
   - enabled: 1
-    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1WorldRoom19.unity
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World19Room.unity
     guid: 2d35525e45692a845970b3a345013d6b
   - enabled: 1
-    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1WorldRoom21.unity
+    path: Assets/Scenes/Rooms/Realoficial/LevelLayouts/1World21Room.unity
     guid: 0daba4223d55e5a41b279a3095c5ec87
   - enabled: 1
     path: Assets/Scenes/Morreu.unity
