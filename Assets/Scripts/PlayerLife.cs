@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
-    [SerializeField] string playerName = "jj";
     [SerializeField] Highscore highscoreHandler;
     private bool morto = false;
     private Animator animator;
@@ -27,6 +26,7 @@ public class PlayerLife : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 0.5f)
                 {
+                    
                     GameControl.onePlayerDied = false;
                     SceneManager.LoadScene("Morreu");
                 }
@@ -72,7 +72,7 @@ public class PlayerLife : MonoBehaviour
     }
     public void TimeEnds()
     {
-        highscoreHandler.AddHighscoreIf(new HighscoreElement(playerName, UIScore.instance.score));
+       
         SceneManager.LoadScene("Morreu");
 
     }

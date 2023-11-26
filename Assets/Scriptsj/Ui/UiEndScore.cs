@@ -8,6 +8,7 @@ public class UiEndScore : MonoBehaviour
 {
     public TextMeshProUGUI currentTextScore;
     public TextMeshProUGUI currentTextHighscore;
+   
     // Start is called before the first frame update]
     private void Start()
     {

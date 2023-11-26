@@ -2746,7 +2746,6 @@ MonoBehaviour:
   downPared: {fileID: 493437241}
   doors: []
   walls: []
-  empty: 1
 --- !u!4 &407226027
 Transform:
   m_ObjectHideFlags: 0
