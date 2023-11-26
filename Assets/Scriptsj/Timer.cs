@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "End")
+        if (SceneManager.GetActiveScene().name != "Morreu")
         {
             currentTime = currentTime - Time.deltaTime;
             if (currentTime <= 0)
