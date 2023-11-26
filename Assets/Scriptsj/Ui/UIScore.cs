@@ -16,9 +16,15 @@ public class UIScore : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
-
-        DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     void Start()
     {

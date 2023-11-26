@@ -1263,6 +1263,7 @@ GameObject:
   - component: {fileID: 1129398183}
   - component: {fileID: 1129398182}
   - component: {fileID: 1129398181}
+  - component: {fileID: 1129398190}
   - component: {fileID: 1129398180}
   m_Layer: 3
   m_Name: Player
@@ -1500,6 +1501,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherPlayer: {fileID: 0}
+--- !u!114 &1129398190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129398179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a4cbf8ba1b7af4ea6b2cc225fae092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1162886006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,12 +2156,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1458889022755120476, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1641828589}
-    - targetCorrespondingSourceObject: {fileID: 1458889022755120476, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1641828587}
-    - targetCorrespondingSourceObject: {fileID: 1458889022755120476, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1641828586}
   m_SourcePrefab: {fileID: 100100000, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
 --- !u!1 &1641828584 stripped
 GameObject:
@@ -2160,37 +2167,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8486716281569993056, guid: 4bb21daa99b9f3d4694f4868594c43ae, type: 3}
   m_PrefabInstance: {fileID: 1641828583}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1641828586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641828584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3837f1864196fce4896f8788944c1202, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textScore: {fileID: 120264972}
-  textHighscore: {fileID: 0}
-  score: 0
-  highscore: 0
---- !u!114 &1641828587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641828584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c18e5b868bf5b443ad0d2da599d4da3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1129398184}
-  heart: {fileID: 2082055281}
-  ui: {fileID: 1641828584}
 --- !u!114 &1641828589
 MonoBehaviour:
   m_ObjectHideFlags: 0

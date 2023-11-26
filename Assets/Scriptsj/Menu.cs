@@ -28,6 +28,7 @@ public class Menu : MonoBehaviour
     public void ShowSelection1() {
 
         GameControl.multiplayer = false;
+        GameControl.onePlayerDied = false;
         Debug.Log(GameControl.multiplayer);
         SceneManager.LoadScene("1Player1World");
     }

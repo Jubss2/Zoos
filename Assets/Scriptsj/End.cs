@@ -6,34 +6,28 @@ using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
-   // public GameObject gato;
+    public GameObject gato;
     public GameObject alcapao;
     private int a = 0;
-    private void Start()
-    {
-        //gato = GameObject.FindGameObjectWithTag("Inimigo");
-    }
     private void Update()
     {
-       // if (gato.GetComponent<CatStateMachine>().health == 0)
+        if (gato ==null)
         {
-            alcapao.SetActive(true);
+            alcapao.GetComponent<SpriteRenderer>().enabled = true;
+            alcapao.GetComponent<BoxCollider2D>().enabled = true;
         }
-        
+
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.tag == "Player" && GameControl.multiplayer == false)
         {
-            if (a == 0)
-            {
-                SceneManager.LoadScene("Main 1");
-                a = 1;
-            }else if (a == 1)
-            {
-                SceneManager.LoadScene("Main3");
-            }
+            SceneManager.LoadScene("1Player1World");
+        }
+        if (collision.gameObject.tag == "Player" && GameControl.multiplayer == true)
+        {
+            SceneManager.LoadScene("Main");
         }
     }
-        // Start is called before the first frame update
+    // Start is called before the first frame update
 }
