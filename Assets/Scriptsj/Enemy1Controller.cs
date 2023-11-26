@@ -254,6 +254,11 @@ public class Enemy1Controller : MonoBehaviour
             }
             if (enemy1Type == Enemy1Type.Ranged)
             {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", false);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
                 animator.SetBool("AtirandoAbaixo", false);
                 animator.SetBool("AtirandoCima", false);
                 animator.SetBool("AtirandoLados", false);
@@ -263,6 +268,11 @@ public class Enemy1Controller : MonoBehaviour
             }
             if (enemy1Type == Enemy1Type.Explosive)
             {
+                animator.SetBool("Morreu", true);
+                animator.SetBool("Parou", false);
+                animator.SetBool("SeguindoCima", true);
+                animator.SetBool("SeguindoAbaixo", false);
+                animator.SetBool("SeguindoLados", false);
                 animator.SetBool("ExplodindoAbaixo", false);
                 animator.SetBool("ExplodindoCima", false);
                 animator.SetBool("ExplodindoLados", false);
@@ -532,45 +542,27 @@ public class Enemy1Controller : MonoBehaviour
     }
     public void GetNearestPlayer()
     {
-        if ((SceneManager.GetActiveScene().name != "Player1") && (comparePlayers.Length > 1))
+        if (Vector3.Distance(transform.position, comparePlayers[0].transform.position) <= Vector3.Distance(transform.position, comparePlayers[1].transform.position))
         {
-            if (Vector3.Distance(transform.position, comparePlayers[0].transform.position) <= Vector3.Distance(transform.position, comparePlayers[1].transform.position))
-            {
-                player = comparePlayers[0];
-            }
-            else
-            {
-                player = comparePlayers[1];
-            }
+            player = comparePlayers[0];
         }
         else
         {
-            player = comparePlayers[0];
+            player = comparePlayers[1];
         }
     }
     public bool IsPlayerAlive()
     {
-        if ((SceneManager.GetActiveScene().name != "Player1")&&(comparePlayers.Length >1 ))
+        if (comparePlayers[0] == null)
         {
-            if (comparePlayers[0] == null)
-            {
-                player = comparePlayers[1];
-                return false;
-            }
-            if (comparePlayers[1] == null)
-            {
-                player = comparePlayers[0];
-                return false;
-            }
-            return true;
+            player = comparePlayers[1];
+            return false;
         }
-        else
+        if (comparePlayers[1] == null)
         {
-            if(comparePlayers == null)
-            {
-                return false;
-            }
-            return true;
+            player = comparePlayers[0];
+            return false;
         }
+        return true;
     }
 }

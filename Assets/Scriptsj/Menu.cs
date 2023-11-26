@@ -12,6 +12,8 @@ public class Menu : MonoBehaviour
     
     public void StartGame()
     {
+        GameControl.multiplayer = true;
+        GameControl.onePlayerDied = false;
         SceneManager.LoadScene("Main");
     }
 
@@ -26,6 +28,7 @@ public class Menu : MonoBehaviour
     public void ShowSelection1() {
 
         GameControl.multiplayer = false;
+        Debug.Log(GameControl.multiplayer);
         SceneManager.LoadScene("1Player1World");
     }
 }

@@ -83,4 +83,12 @@ public class Player2Movement : MonoBehaviour
             lastMove = movementDirection;
         }
     }
+    public int GetSpeed()
+    {
+        return speed;
+    }
+    public void SetSpeed(int speed)
+    {
+        this.speed = speed;
+    }
 }
