@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UIElements;
 
 public class Menu : MonoBehaviour
 {
-public void StartGame()
+    [SerializeField] private GameObject Joga;
+    [SerializeField] private GameObject Select1;
+    
+    public void StartGame()
     {
+        GameControl.multiplayer = true;
+        GameControl.onePlayerDied = false;
         SceneManager.LoadScene("Main");
     }
 
@@ -16,6 +23,14 @@ public void StartGame()
     }
     public void StartMenu()
     {
+        
         SceneManager.LoadScene("Menu");
+    }
+    public void ShowSelection1() {
+
+        GameControl.multiplayer = false;
+        GameControl.onePlayerDied = false;
+        Debug.Log(GameControl.multiplayer);
+        SceneManager.LoadScene("1Player1World");
     }
 }

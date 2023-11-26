@@ -5,27 +5,44 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] private static int health;
+    [SerializeField] private int maxHealth;
+    [SerializeField] Highscore highscoreHandler;
     private bool morto = false;
     private Animator animator;
     private float time = 0;
+    private int health;
     private void Start()
     {
+        morto = false;
         animator = GetComponent<Animator>();
-        health = 3;
+        health = maxHealth;
     }
     private void Update()
     {
         if (morto)
         {
-            time += Time.deltaTime;
-            if (time > 0.5f)
+            if ((GameControl.multiplayer == false) ||(GameControl.onePlayerDied == true))
             {
-                SceneManager.LoadScene("Morreu");
+                time += Time.deltaTime;
+                if (time > 0.5f)
+                {
+                    
+                    GameControl.onePlayerDied = false;
+                    SceneManager.LoadScene("Morreu");
+                }
+            }
+            else
+            {
+                time += Time.deltaTime;
+                if (time > 0.5f)
+                {
+                    GameControl.onePlayerDied = true;
+                    Destroy(gameObject);
+                }
             }
         }
     }
-    public static int GetHealth()
+    public int GetHealth()
     {
         return health;
     }
@@ -35,12 +52,28 @@ public class PlayerLife : MonoBehaviour
         FindObjectOfType<AudioManager>().PlaySound("PAtingido");
         if (health <= 0)
         {
-            
+
             animator.SetBool("Morreu", true);
             AudioManager.instance.PlaySound("PMorto");
             morto = true;
-            Destroy(GetComponent<PlayerMovement>());
-
+            if (GameControl.multiplayer)
+            {
+                gameObject.tag = "Untagged";
+            }
+            //Destroy(GetComponent<PlayerMovement>());
         }
+    }
+    public void RestoreLife(int h)
+    {
+        if (health < maxHealth)
+        {
+            health += h;
+        }
+    }
+    public void TimeEnds()
+    {
+       
+        SceneManager.LoadScene("Morreu");
+
     }
 }

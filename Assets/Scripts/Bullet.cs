@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
     }
     public void SetMovimento(Vector3 movimento)
     {
+        AudioManager.instance.PlaySound("BalaPlayer");
         rb = GetComponent<Rigidbody2D>();
         this.movimento = movimento;
         rb.velocity = movimento * speed;
