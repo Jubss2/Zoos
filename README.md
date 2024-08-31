@@ -3,5 +3,13 @@ Este é um jogo 2D desenvolvido na Unity, inspirado no estilo de The Binding of 
 Funcionalidades: 
 
 Mapas Gerados Proceduralmente: Cada partida oferece um mapa único, garantindo uma experiência diferente a cada vez.
+
 Sistema de Combate Intenso: Enfrente hordas de inimigos com uma variedade de armas e habilidades.
+
 Estilo Pixel Art: Gráficos retrô em pixel art, criando uma atmosfera nostálgica.
+
+Como Jogar
+
+Clone o repositório para o seu computador.
+Abra o projeto no Unity.
+Compile e execute o jogo.
